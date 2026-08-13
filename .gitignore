@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+*.egg-info/
+dist/
+.env
+.DS_Store
+.vscode/
+.idea/
+.claude/
+
+# Paper builds and reference literature kept alongside the repo — not part of
+# the released artefact.
+*.pdf
+
+# Generated knowledge-graph output — rebuilt on demand, not part of the repo.
+graphify-out/
