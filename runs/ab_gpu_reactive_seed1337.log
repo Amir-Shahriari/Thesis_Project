@@ -1,0 +1,55 @@
+========================================================================
+50x50 HEADLINE-IDENTICAL SWEEP
+========================================================================
+Grid:        {'grid_width': 50, 'grid_height': 50, 'extra_edges': 3, 'deactivate_prob': 0.22, 'node_deactivate_prob': 0.05}
+Train 1x:    n_iter=10, eps/iter=200, batch=64
+Oracles:     ['ClassicalAStar', 'QuantumInspiredStochasticOracle', 'FaithfulSimulatedQAOA']
+mask_visited: False
+Seeds:       [1337]  (5 scenarios each = 5 cells)
+S4 fix:      target_encoder.eval() in learn_from_batch (gnn_dqn.py)
+Output dir:  runs\sweep_50x50_reactive_ctrl\seed1337/
+
+Sampling scenarios ...
+  5 cells saved to runs\sweep_50x50_reactive_ctrl\seed1337\cells.json
+
+Buffer pre-check (seed=1337, q=('Node_2435', 'Node_906')) ...
+  Pre-seed buffer:  79 transitions (library: 67, goal-adj: 12)
+  Batch size:       64
+  Passes:           True
+  Pre-seed >= batch_size. Grad steps from episode 1.
+  Estimated grad steps in iter 1: ~800
+
+========================================================================
+1x TIER -- 10 iters x 200 eps/iter x 64 batch
+========================================================================
+
+[ 1/5] seed=1337  Node_2435 -> Node_906  euclid=41.7  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1119.7430447741967  dij=53.57155443838012  warm_grad=8000  wall=2797s
+
+[ 2/5] seed=1337  Node_555 -> Node_1047  euclid=43.0  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=663.4652657054443  dij=52.311412115538104  warm_grad=8000  wall=2843s
+
+[ 3/5] seed=1337  Node_2254 -> Node_1149  euclid=50.5  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1993.5634928304419  dij=59.515751069394156  warm_grad=8000  wall=2802s
+
+[ 4/5] seed=1337  Node_231 -> Node_2061  euclid=42.1  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1624.8225177922216  dij=50.02233809178831  warm_grad=8000  wall=2781s
+
+[ 5/5] seed=1337  Node_2136 -> Node_557  euclid=42.4  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=58.15779545182806  dij=58.15779545182806  warm_grad=8000  wall=2813s
+
+1x complete: 5 cells in 3.90 h (2807 s/cell)
+
+4x projection: 15.6 h  deadline: 120 h (5 days)
+Skipping 4x: QWARM_SKIP_4X=1 set by the operator.
+Report written to runs\sweep_50x50_reactive_ctrl\seed1337\REPORT.md
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+  M1_win_ge_80pct: PASS  value=1.0000
+  M2_mean_cost_ratio_le_5: FAIL  value=20.1126
+  M3_paired_p_lt_001: FAIL  value=N/A
+
+  Output: runs\sweep_50x50_reactive_ctrl\seed1337/
+========================================================================

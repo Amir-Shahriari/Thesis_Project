@@ -1,0 +1,1082 @@
+[
+  {
+    "n_library_entries": 65,
+    "n_library_states": 33,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 324,
+    "n_far": 76,
+    "library_coverage_fraction": 0.05602716468590832,
+    "mean_best_hop": 1.95,
+    "mean_random_hop": 3.7034848484848486,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9491941928863525,
+        "sim_max_std": 0.05446123331785202,
+        "sim_max_p05": 0.8329187631607056,
+        "sim_max_frac_above_0.95": 0.67,
+        "mean_retrieved_hop": 3.515,
+        "retrieval_quality": 0.08906710264037321,
+        "gate_auc_near_vs_far": 0.5317576348278102
+      },
+      "centred": {
+        "sim_max_mean": 0.7878560423851013,
+        "sim_max_std": 0.11865021288394928,
+        "sim_max_p05": 0.5685849189758301,
+        "sim_max_frac_above_0.95": 0.035,
+        "mean_retrieved_hop": 3.525,
+        "retrieval_quality": 0.10187647980379298,
+        "gate_auc_near_vs_far": 0.5765513320337882
+      },
+      "whitened": {
+        "sim_max_mean": 0.4145538806915283,
+        "sim_max_std": 0.1755463182926178,
+        "sim_max_p05": 0.15166792273521423,
+        "sim_max_frac_above_0.95": 0.0025,
+        "mean_retrieved_hop": 3.58,
+        "retrieval_quality": 0.061356205183585796,
+        "gate_auc_near_vs_far": 0.6225633528265108
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.515,
+        "retrieval_quality": 0.08906710264037321,
+        "gate_auc_near_vs_far": 0.5317576348278102,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s0",
+    "checkpoint": "warm_25x25_s0.pt"
+  },
+  {
+    "n_library_entries": 65,
+    "n_library_states": 33,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 326,
+    "n_far": 74,
+    "library_coverage_fraction": 0.05602716468590832,
+    "mean_best_hop": 1.9475,
+    "mean_random_hop": 3.70719696969697,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9714998006820679,
+        "sim_max_std": 0.02332061529159546,
+        "sim_max_p05": 0.9233605861663818,
+        "sim_max_frac_above_0.95": 0.865,
+        "mean_retrieved_hop": 3.6075,
+        "retrieval_quality": 0.05562284301202673,
+        "gate_auc_near_vs_far": 0.5858895705521472
+      },
+      "centred": {
+        "sim_max_mean": 0.8434699177742004,
+        "sim_max_std": 0.15061822533607483,
+        "sim_max_p05": 0.518955647945404,
+        "sim_max_frac_above_0.95": 0.2475,
+        "mean_retrieved_hop": 3.5975,
+        "retrieval_quality": 0.06275343445464741,
+        "gate_auc_near_vs_far": 0.5664483501906815
+      },
+      "whitened": {
+        "sim_max_mean": 0.4383181035518646,
+        "sim_max_std": 0.1601140797138214,
+        "sim_max_p05": 0.19870376586914062,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.5725,
+        "retrieval_quality": 0.08293299440633999,
+        "gate_auc_near_vs_far": 0.611755927706848
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.6075,
+        "retrieval_quality": 0.05562284301202673,
+        "gate_auc_near_vs_far": 0.5858895705521472,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s0",
+    "checkpoint": "cold_25x25_s0.pt"
+  },
+  {
+    "n_library_entries": 78,
+    "n_library_states": 37,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 340,
+    "n_far": 60,
+    "library_coverage_fraction": 0.06281833616298811,
+    "mean_best_hop": 1.9125,
+    "mean_random_hop": 3.765405405405405,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9507572650909424,
+        "sim_max_std": 0.044464096426963806,
+        "sim_max_p05": 0.8512389659881592,
+        "sim_max_frac_above_0.95": 0.7025,
+        "mean_retrieved_hop": 3.54,
+        "retrieval_quality": 0.10795818598058467,
+        "gate_auc_near_vs_far": 0.5787254901960784
+      },
+      "centred": {
+        "sim_max_mean": 0.8235051035881042,
+        "sim_max_std": 0.10615239292383194,
+        "sim_max_p05": 0.6439268589019775,
+        "sim_max_frac_above_0.95": 0.085,
+        "mean_retrieved_hop": 3.5075,
+        "retrieval_quality": 0.12887310612277475,
+        "gate_auc_near_vs_far": 0.5774509803921568
+      },
+      "whitened": {
+        "sim_max_mean": 0.395629346370697,
+        "sim_max_std": 0.14809873700141907,
+        "sim_max_p05": 0.18612909317016602,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.54,
+        "retrieval_quality": 0.11506284862992487,
+        "gate_auc_near_vs_far": 0.6088725490196079
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.54,
+        "retrieval_quality": 0.10795818598058467,
+        "gate_auc_near_vs_far": 0.5787254901960784,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s1",
+    "checkpoint": "warm_25x25_s1.pt"
+  },
+  {
+    "n_library_entries": 78,
+    "n_library_states": 37,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 335,
+    "n_far": 65,
+    "library_coverage_fraction": 0.06281833616298811,
+    "mean_best_hop": 1.9025,
+    "mean_random_hop": 3.7614189189189187,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9621883630752563,
+        "sim_max_std": 0.06570049375295639,
+        "sim_max_p05": 0.8726767897605896,
+        "sim_max_frac_above_0.95": 0.81,
+        "mean_retrieved_hop": 3.565,
+        "retrieval_quality": 0.10099399791653565,
+        "gate_auc_near_vs_far": 0.5642250287026407
+      },
+      "centred": {
+        "sim_max_mean": 0.826724112033844,
+        "sim_max_std": 0.1193285584449768,
+        "sim_max_p05": 0.5931580066680908,
+        "sim_max_frac_above_0.95": 0.1025,
+        "mean_retrieved_hop": 3.545,
+        "retrieval_quality": 0.10979028967122806,
+        "gate_auc_near_vs_far": 0.6002755453501722
+      },
+      "whitened": {
+        "sim_max_mean": 0.49347442388534546,
+        "sim_max_std": 0.1756124496459961,
+        "sim_max_p05": 0.20445431768894196,
+        "sim_max_frac_above_0.95": 0.0025,
+        "mean_retrieved_hop": 3.5175,
+        "retrieval_quality": 0.12685175409508984,
+        "gate_auc_near_vs_far": 0.5424110218140069
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.49999999999999994,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.565,
+        "retrieval_quality": 0.10099399791653565,
+        "gate_auc_near_vs_far": 0.5642250287026407,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s1",
+    "checkpoint": "cold_25x25_s1.pt"
+  },
+  {
+    "n_library_entries": 81,
+    "n_library_states": 39,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 336,
+    "n_far": 64,
+    "library_coverage_fraction": 0.06621392190152801,
+    "mean_best_hop": 1.8875,
+    "mean_random_hop": 3.78,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9442254900932312,
+        "sim_max_std": 0.05022343620657921,
+        "sim_max_p05": 0.8393233418464661,
+        "sim_max_frac_above_0.95": 0.605,
+        "mean_retrieved_hop": 3.5525,
+        "retrieval_quality": 0.11853940643772519,
+        "gate_auc_near_vs_far": 0.5698939732142857
+      },
+      "centred": {
+        "sim_max_mean": 0.822695791721344,
+        "sim_max_std": 0.118098184466362,
+        "sim_max_p05": 0.5829159617424011,
+        "sim_max_frac_above_0.95": 0.095,
+        "mean_retrieved_hop": 3.585,
+        "retrieval_quality": 0.10044723844639952,
+        "gate_auc_near_vs_far": 0.5306454613095238
+      },
+      "whitened": {
+        "sim_max_mean": 0.41654151678085327,
+        "sim_max_std": 0.16750726103782654,
+        "sim_max_p05": 0.18763123452663422,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.5775,
+        "retrieval_quality": 0.100978397429597,
+        "gate_auc_near_vs_far": 0.5638950892857143
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.5525,
+        "retrieval_quality": 0.11853940643772519,
+        "gate_auc_near_vs_far": 0.5698939732142857,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s2",
+    "checkpoint": "warm_25x25_s2.pt"
+  },
+  {
+    "n_library_entries": 81,
+    "n_library_states": 39,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 335,
+    "n_far": 65,
+    "library_coverage_fraction": 0.06621392190152801,
+    "mean_best_hop": 1.8775,
+    "mean_random_hop": 3.778269230769231,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9857720136642456,
+        "sim_max_std": 0.010999040678143501,
+        "sim_max_p05": 0.963640034198761,
+        "sim_max_frac_above_0.95": 0.99,
+        "mean_retrieved_hop": 3.4625,
+        "retrieval_quality": 0.16529936993199074,
+        "gate_auc_near_vs_far": 0.5539380022962113
+      },
+      "centred": {
+        "sim_max_mean": 0.8611318469047546,
+        "sim_max_std": 0.09945966303348541,
+        "sim_max_p05": 0.6770426034927368,
+        "sim_max_frac_above_0.95": 0.195,
+        "mean_retrieved_hop": 3.53,
+        "retrieval_quality": 0.1265755343489965,
+        "gate_auc_near_vs_far": 0.5555912743972445
+      },
+      "whitened": {
+        "sim_max_mean": 0.4277595281600952,
+        "sim_max_std": 0.13828252255916595,
+        "sim_max_p05": 0.20758792757987976,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.59,
+        "retrieval_quality": 0.1017761036209146,
+        "gate_auc_near_vs_far": 0.5696900114810562
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.4625,
+        "retrieval_quality": 0.16529936993199074,
+        "gate_auc_near_vs_far": 0.5539380022962113,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s2",
+    "checkpoint": "cold_25x25_s2.pt"
+  },
+  {
+    "n_library_entries": 70,
+    "n_library_states": 34,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 330,
+    "n_far": 70,
+    "library_coverage_fraction": 0.057724957555178265,
+    "mean_best_hop": 1.935,
+    "mean_random_hop": 3.7266911764705877,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9411236047744751,
+        "sim_max_std": 0.044449642300605774,
+        "sim_max_p05": 0.8634152412414551,
+        "sim_max_frac_above_0.95": 0.5375,
+        "mean_retrieved_hop": 3.5675,
+        "retrieval_quality": 0.07210026876071907,
+        "gate_auc_near_vs_far": 0.6597402597402597
+      },
+      "centred": {
+        "sim_max_mean": 0.7657315135002136,
+        "sim_max_std": 0.1428988128900528,
+        "sim_max_p05": 0.5205004215240479,
+        "sim_max_frac_above_0.95": 0.07,
+        "mean_retrieved_hop": 3.5825,
+        "retrieval_quality": 0.06696810300813688,
+        "gate_auc_near_vs_far": 0.6357142857142857
+      },
+      "whitened": {
+        "sim_max_mean": 0.4297707676887512,
+        "sim_max_std": 0.15906603634357452,
+        "sim_max_p05": 0.19837898015975952,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.5675,
+        "retrieval_quality": 0.07625937257040252,
+        "gate_auc_near_vs_far": 0.5805194805194805
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.5675,
+        "retrieval_quality": 0.07210026876071907,
+        "gate_auc_near_vs_far": 0.6597402597402597,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s3",
+    "checkpoint": "warm_25x25_s3.pt"
+  },
+  {
+    "n_library_entries": 70,
+    "n_library_states": 34,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 329,
+    "n_far": 71,
+    "library_coverage_fraction": 0.057724957555178265,
+    "mean_best_hop": 1.9575,
+    "mean_random_hop": 3.7422794117647062,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9855877757072449,
+        "sim_max_std": 0.00918473582714796,
+        "sim_max_p05": 0.9673600792884827,
+        "sim_max_frac_above_0.95": 0.995,
+        "mean_retrieved_hop": 3.6,
+        "retrieval_quality": 0.06333510815173106,
+        "gate_auc_near_vs_far": 0.6362857999058179
+      },
+      "centred": {
+        "sim_max_mean": 0.8480720520019531,
+        "sim_max_std": 0.11730135232210159,
+        "sim_max_p05": 0.6087077260017395,
+        "sim_max_frac_above_0.95": 0.2025,
+        "mean_retrieved_hop": 3.6025,
+        "retrieval_quality": 0.06571125910170092,
+        "gate_auc_near_vs_far": 0.5358962284344364
+      },
+      "whitened": {
+        "sim_max_mean": 0.4219266474246979,
+        "sim_max_std": 0.12938350439071655,
+        "sim_max_p05": 0.23377132415771484,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.6225,
+        "retrieval_quality": 0.05008006977272279,
+        "gate_auc_near_vs_far": 0.5730553533969777
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.6,
+        "retrieval_quality": 0.06333510815173106,
+        "gate_auc_near_vs_far": 0.6362857999058179,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s3",
+    "checkpoint": "cold_25x25_s3.pt"
+  },
+  {
+    "n_library_entries": 81,
+    "n_library_states": 32,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 317,
+    "n_far": 83,
+    "library_coverage_fraction": 0.05432937181663837,
+    "mean_best_hop": 1.9775,
+    "mean_random_hop": 3.738046875,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.949523389339447,
+        "sim_max_std": 0.04791402816772461,
+        "sim_max_p05": 0.8611670732498169,
+        "sim_max_frac_above_0.95": 0.675,
+        "mean_retrieved_hop": 3.5,
+        "retrieval_quality": 0.12653986027528866,
+        "gate_auc_near_vs_far": 0.5938580821709551
+      },
+      "centred": {
+        "sim_max_mean": 0.8199470639228821,
+        "sim_max_std": 0.09935809671878815,
+        "sim_max_p05": 0.6219151020050049,
+        "sim_max_frac_above_0.95": 0.0375,
+        "mean_retrieved_hop": 3.4975,
+        "retrieval_quality": 0.12381608689265061,
+        "gate_auc_near_vs_far": 0.6247196989852153
+      },
+      "whitened": {
+        "sim_max_mean": 0.41304028034210205,
+        "sim_max_std": 0.1357606053352356,
+        "sim_max_p05": 0.21806633472442627,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.54,
+        "retrieval_quality": 0.10344721024067692,
+        "gate_auc_near_vs_far": 0.5969366424689293
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.5,
+        "retrieval_quality": 0.12653986027528866,
+        "gate_auc_near_vs_far": 0.5938580821709551,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s4",
+    "checkpoint": "warm_25x25_s4.pt"
+  },
+  {
+    "n_library_entries": 81,
+    "n_library_states": 32,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 331,
+    "n_far": 69,
+    "library_coverage_fraction": 0.05432937181663837,
+    "mean_best_hop": 1.9425,
+    "mean_random_hop": 3.727890625,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9930551052093506,
+        "sim_max_std": 0.004954586271196604,
+        "sim_max_p05": 0.9839456677436829,
+        "sim_max_frac_above_0.95": 1.0,
+        "mean_retrieved_hop": 3.4875,
+        "retrieval_quality": 0.1304089790038177,
+        "gate_auc_near_vs_far": 0.5661368711414685
+      },
+      "centred": {
+        "sim_max_mean": 0.8472239971160889,
+        "sim_max_std": 0.10051289200782776,
+        "sim_max_p05": 0.6612871289253235,
+        "sim_max_frac_above_0.95": 0.155,
+        "mean_retrieved_hop": 3.505,
+        "retrieval_quality": 0.12988588426654565,
+        "gate_auc_near_vs_far": 0.5643416962213758
+      },
+      "whitened": {
+        "sim_max_mean": 0.44415122270584106,
+        "sim_max_std": 0.1401902586221695,
+        "sim_max_p05": 0.21547643840312958,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 3.5625,
+        "retrieval_quality": 0.08050413616947599,
+        "gate_auc_near_vs_far": 0.5883795262489601
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 3.4875,
+        "retrieval_quality": 0.1304089790038177,
+        "gate_auc_near_vs_far": 0.5661368711414685,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "25x25",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s4",
+    "checkpoint": "cold_25x25_s4.pt"
+  },
+  {
+    "n_library_entries": 77,
+    "n_library_states": 44,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 215,
+    "n_far": 6,
+    "library_coverage_fraction": 0.01851072780816155,
+    "mean_best_hop": 2.39,
+    "mean_random_hop": 4.166306818181818,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9492993354797363,
+        "sim_max_std": 0.06430383026599884,
+        "sim_max_p05": 0.8199058771133423,
+        "sim_max_frac_above_0.95": 0.7,
+        "mean_retrieved_hop": 4.185,
+        "retrieval_quality": -0.01660978363488247,
+        "gate_auc_near_vs_far": 0.7372093023255814
+      },
+      "centred": {
+        "sim_max_mean": 0.8485834002494812,
+        "sim_max_std": 0.11716414988040924,
+        "sim_max_p05": 0.5994298458099365,
+        "sim_max_frac_above_0.95": 0.1975,
+        "mean_retrieved_hop": 4.145,
+        "retrieval_quality": 0.009367606087582057,
+        "gate_auc_near_vs_far": 0.5961240310077519
+      },
+      "whitened": {
+        "sim_max_mean": 0.6124889254570007,
+        "sim_max_std": 0.24086064100265503,
+        "sim_max_p05": 0.13708505034446716,
+        "sim_max_frac_above_0.95": 0.035,
+        "mean_retrieved_hop": 4.1275,
+        "retrieval_quality": 0.02170194247034991,
+        "gate_auc_near_vs_far": 0.603875968992248
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.185,
+        "retrieval_quality": -0.01660978363488247,
+        "gate_auc_near_vs_far": 0.7372093023255814,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s0",
+    "checkpoint": "warm_50x50.pt"
+  },
+  {
+    "n_library_entries": 77,
+    "n_library_states": 44,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 228,
+    "n_far": 172,
+    "library_coverage_fraction": 0.01851072780816155,
+    "mean_best_hop": 2.335,
+    "mean_random_hop": 4.147272727272727,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9330955743789673,
+        "sim_max_std": 0.06022191420197487,
+        "sim_max_p05": 0.797511637210846,
+        "sim_max_frac_above_0.95": 0.525,
+        "mean_retrieved_hop": 4.1025,
+        "retrieval_quality": 0.029320869541785078,
+        "gate_auc_near_vs_far": 0.5498521011831905
+      },
+      "centred": {
+        "sim_max_mean": 0.8184095025062561,
+        "sim_max_std": 0.11259178817272186,
+        "sim_max_p05": 0.6068981289863586,
+        "sim_max_frac_above_0.95": 0.0725,
+        "mean_retrieved_hop": 4.1,
+        "retrieval_quality": 0.029833897366974827,
+        "gate_auc_near_vs_far": 0.5607915136678907
+      },
+      "whitened": {
+        "sim_max_mean": 0.5290459990501404,
+        "sim_max_std": 0.18975141644477844,
+        "sim_max_p05": 0.13539594411849976,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.14,
+        "retrieval_quality": -0.002865567787293182,
+        "gate_auc_near_vs_far": 0.552172582619339
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.1025,
+        "retrieval_quality": 0.029320869541785078,
+        "gate_auc_near_vs_far": 0.5498521011831905,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s0",
+    "checkpoint": "cold_50x50.pt"
+  },
+  {
+    "n_library_entries": 91,
+    "n_library_states": 55,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 239,
+    "n_far": 161,
+    "library_coverage_fraction": 0.023138409760201935,
+    "mean_best_hop": 2.3,
+    "mean_random_hop": 4.187454545454545,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9496520757675171,
+        "sim_max_std": 0.04596463963389397,
+        "sim_max_p05": 0.8642192482948303,
+        "sim_max_frac_above_0.95": 0.6425,
+        "mean_retrieved_hop": 4.1225,
+        "retrieval_quality": 0.033286921401476065,
+        "gate_auc_near_vs_far": 0.5988721120611242
+      },
+      "centred": {
+        "sim_max_mean": 0.8445202112197876,
+        "sim_max_std": 0.09148502349853516,
+        "sim_max_p05": 0.6848932504653931,
+        "sim_max_frac_above_0.95": 0.09,
+        "mean_retrieved_hop": 4.095,
+        "retrieval_quality": 0.0486686904577836,
+        "gate_auc_near_vs_far": 0.5935185425816679
+      },
+      "whitened": {
+        "sim_max_mean": 0.5585730075836182,
+        "sim_max_std": 0.16472862660884857,
+        "sim_max_p05": 0.28111445903778076,
+        "sim_max_frac_above_0.95": 0.005,
+        "mean_retrieved_hop": 4.055,
+        "retrieval_quality": 0.07260644264078182,
+        "gate_auc_near_vs_far": 0.5766781881026014
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.49999999999999994,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.1225,
+        "retrieval_quality": 0.033286921401476065,
+        "gate_auc_near_vs_far": 0.5988721120611242,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s1",
+    "checkpoint": "warm_50x50_s1.pt"
+  },
+  {
+    "n_library_entries": 91,
+    "n_library_states": 55,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 247,
+    "n_far": 153,
+    "library_coverage_fraction": 0.023138409760201935,
+    "mean_best_hop": 2.27,
+    "mean_random_hop": 4.1765,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.95655357837677,
+        "sim_max_std": 0.04504188522696495,
+        "sim_max_p05": 0.8805001378059387,
+        "sim_max_frac_above_0.95": 0.74,
+        "mean_retrieved_hop": 4.045,
+        "retrieval_quality": 0.06428431812559285,
+        "gate_auc_near_vs_far": 0.48410997327405997
+      },
+      "centred": {
+        "sim_max_mean": 0.8095592260360718,
+        "sim_max_std": 0.09938562661409378,
+        "sim_max_p05": 0.6063547730445862,
+        "sim_max_frac_above_0.95": 0.0225,
+        "mean_retrieved_hop": 4.035,
+        "retrieval_quality": 0.06753951715407372,
+        "gate_auc_near_vs_far": 0.5374824693710143
+      },
+      "whitened": {
+        "sim_max_mean": 0.5135955214500427,
+        "sim_max_std": 0.14577312767505646,
+        "sim_max_p05": 0.26283738017082214,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.095,
+        "retrieval_quality": 0.02093456282506532,
+        "gate_auc_near_vs_far": 0.5214204440210632
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.045,
+        "retrieval_quality": 0.06428431812559285,
+        "gate_auc_near_vs_far": 0.48410997327405997,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s1",
+    "checkpoint": "cold_50x50_s1.pt"
+  },
+  {
+    "n_library_entries": 75,
+    "n_library_states": 46,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 243,
+    "n_far": 157,
+    "library_coverage_fraction": 0.019352124526714348,
+    "mean_best_hop": 2.285,
+    "mean_random_hop": 4.1142391304347825,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9398884773254395,
+        "sim_max_std": 0.03762684017419815,
+        "sim_max_p05": 0.8657404184341431,
+        "sim_max_frac_above_0.95": 0.4875,
+        "mean_retrieved_hop": 4.085,
+        "retrieval_quality": 0.010744067436778621,
+        "gate_auc_near_vs_far": 0.5483997798222852
+      },
+      "centred": {
+        "sim_max_mean": 0.8600553274154663,
+        "sim_max_std": 0.09653235226869583,
+        "sim_max_p05": 0.6788403987884521,
+        "sim_max_frac_above_0.95": 0.1525,
+        "mean_retrieved_hop": 4.1325,
+        "retrieval_quality": -0.013090200626439114,
+        "gate_auc_near_vs_far": 0.5508636732982097
+      },
+      "whitened": {
+        "sim_max_mean": 0.551615297794342,
+        "sim_max_std": 0.2121555656194687,
+        "sim_max_p05": 0.13911980390548706,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.105,
+        "retrieval_quality": 0.004806168961614248,
+        "gate_auc_near_vs_far": 0.5923304762653666
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.085,
+        "retrieval_quality": 0.010744067436778621,
+        "gate_auc_near_vs_far": 0.5483997798222852,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s2",
+    "checkpoint": "warm_50x50_s2.pt"
+  },
+  {
+    "n_library_entries": 75,
+    "n_library_states": 46,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 250,
+    "n_far": 150,
+    "library_coverage_fraction": 0.019352124526714348,
+    "mean_best_hop": 2.2425,
+    "mean_random_hop": 4.120815217391304,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9466364979743958,
+        "sim_max_std": 0.04241280257701874,
+        "sim_max_p05": 0.8563709259033203,
+        "sim_max_frac_above_0.95": 0.59,
+        "mean_retrieved_hop": 4.075,
+        "retrieval_quality": 0.022961906230575802,
+        "gate_auc_near_vs_far": 0.5557333333333333
+      },
+      "centred": {
+        "sim_max_mean": 0.8206489682197571,
+        "sim_max_std": 0.11288579553365707,
+        "sim_max_p05": 0.5994372367858887,
+        "sim_max_frac_above_0.95": 0.09,
+        "mean_retrieved_hop": 4.06,
+        "retrieval_quality": 0.03215109764727621,
+        "gate_auc_near_vs_far": 0.5350933333333333
+      },
+      "whitened": {
+        "sim_max_mean": 0.510643720626831,
+        "sim_max_std": 0.18334095180034637,
+        "sim_max_p05": 0.19785591959953308,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.0475,
+        "retrieval_quality": 0.03701157060153945,
+        "gate_auc_near_vs_far": 0.57344
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.2893977268006092,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.075,
+        "retrieval_quality": 0.022961906230575802,
+        "gate_auc_near_vs_far": 0.5557333333333333,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s2",
+    "checkpoint": "cold_50x50_s2.pt"
+  },
+  {
+    "n_library_entries": 71,
+    "n_library_states": 37,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 199,
+    "n_far": 6,
+    "library_coverage_fraction": 0.015565839293226757,
+    "mean_best_hop": 2.445,
+    "mean_random_hop": 4.1260810810810815,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9372716546058655,
+        "sim_max_std": 0.056801263242959976,
+        "sim_max_p05": 0.8233005404472351,
+        "sim_max_frac_above_0.95": 0.565,
+        "mean_retrieved_hop": 4.07,
+        "retrieval_quality": 0.02319053507208528,
+        "gate_auc_near_vs_far": 0.8685092127303182
+      },
+      "centred": {
+        "sim_max_mean": 0.8248521685600281,
+        "sim_max_std": 0.13196304440498352,
+        "sim_max_p05": 0.5563338398933411,
+        "sim_max_frac_above_0.95": 0.12,
+        "mean_retrieved_hop": 4.075,
+        "retrieval_quality": 0.02878579381284812,
+        "gate_auc_near_vs_far": 0.7772194304857621
+      },
+      "whitened": {
+        "sim_max_mean": 0.528722882270813,
+        "sim_max_std": 0.20956973731517792,
+        "sim_max_p05": 0.18125225603580475,
+        "sim_max_frac_above_0.95": 0.0025,
+        "mean_retrieved_hop": 4.03,
+        "retrieval_quality": 0.06253777992487222,
+        "gate_auc_near_vs_far": 0.8341708542713567
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.49999999999999994,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.07,
+        "retrieval_quality": 0.02319053507208528,
+        "gate_auc_near_vs_far": 0.8685092127303182,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s3",
+    "checkpoint": "warm_50x50_s3.pt"
+  },
+  {
+    "n_library_entries": 71,
+    "n_library_states": 37,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 212,
+    "n_far": 5,
+    "library_coverage_fraction": 0.015565839293226757,
+    "mean_best_hop": 2.3975,
+    "mean_random_hop": 4.118040540540541,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9441280364990234,
+        "sim_max_std": 0.05306575447320938,
+        "sim_max_p05": 0.8293383717536926,
+        "sim_max_frac_above_0.95": 0.575,
+        "mean_retrieved_hop": 4.035,
+        "retrieval_quality": 0.058414454815385826,
+        "gate_auc_near_vs_far": 0.6264150943396226
+      },
+      "centred": {
+        "sim_max_mean": 0.8202217221260071,
+        "sim_max_std": 0.10752185434103012,
+        "sim_max_p05": 0.6222401261329651,
+        "sim_max_frac_above_0.95": 0.09,
+        "mean_retrieved_hop": 4.0575,
+        "retrieval_quality": 0.03855273420690225,
+        "gate_auc_near_vs_far": 0.7537735849056604
+      },
+      "whitened": {
+        "sim_max_mean": 0.5236717462539673,
+        "sim_max_std": 0.19667264819145203,
+        "sim_max_p05": 0.18267904222011566,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.0725,
+        "retrieval_quality": 0.014398112572433897,
+        "gate_auc_near_vs_far": 0.6386792452830189
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.035,
+        "retrieval_quality": 0.058414454815385826,
+        "gate_auc_near_vs_far": 0.6264150943396226,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s3",
+    "checkpoint": "cold_50x50_s3.pt"
+  },
+  {
+    "n_library_entries": 74,
+    "n_library_states": 39,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 212,
+    "n_far": 7,
+    "library_coverage_fraction": 0.016407236011779555,
+    "mean_best_hop": 2.3825,
+    "mean_random_hop": 4.157628205128205,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9295322299003601,
+        "sim_max_std": 0.06382808089256287,
+        "sim_max_p05": 0.7910703420639038,
+        "sim_max_frac_above_0.95": 0.5025,
+        "mean_retrieved_hop": 4.1225,
+        "retrieval_quality": 0.003251463872521,
+        "gate_auc_near_vs_far": 0.8214285714285714
+      },
+      "centred": {
+        "sim_max_mean": 0.7776941061019897,
+        "sim_max_std": 0.1241881400346756,
+        "sim_max_p05": 0.5531375408172607,
+        "sim_max_frac_above_0.95": 0.0375,
+        "mean_retrieved_hop": 4.0975,
+        "retrieval_quality": 0.02143852708109496,
+        "gate_auc_near_vs_far": 0.6677897574123989
+      },
+      "whitened": {
+        "sim_max_mean": 0.5214092135429382,
+        "sim_max_std": 0.19345061480998993,
+        "sim_max_p05": 0.1406341940164566,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.1375,
+        "retrieval_quality": -0.0009085053742823868,
+        "gate_auc_near_vs_far": 0.7574123989218329
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.1225,
+        "retrieval_quality": 0.003251463872521,
+        "gate_auc_near_vs_far": 0.8214285714285714,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "warm",
+    "scenario_id": "seed191664964_s4",
+    "checkpoint": "warm_50x50_s4.pt"
+  },
+  {
+    "n_library_entries": 74,
+    "n_library_states": 39,
+    "n_library_paths": 12,
+    "n_queries": 400,
+    "n_near": 208,
+    "n_far": 8,
+    "library_coverage_fraction": 0.016407236011779555,
+    "mean_best_hop": 2.4125,
+    "mean_random_hop": 4.147564102564103,
+    "treatments": {
+      "raw": {
+        "sim_max_mean": 0.9246644377708435,
+        "sim_max_std": 0.04198902100324631,
+        "sim_max_p05": 0.844764769077301,
+        "sim_max_frac_above_0.95": 0.3225,
+        "mean_retrieved_hop": 4.15,
+        "retrieval_quality": -0.0035218394433516997,
+        "gate_auc_near_vs_far": 0.5709134615384616
+      },
+      "centred": {
+        "sim_max_mean": 0.7846882343292236,
+        "sim_max_std": 0.11862149089574814,
+        "sim_max_p05": 0.5513737797737122,
+        "sim_max_frac_above_0.95": 0.045,
+        "mean_retrieved_hop": 4.1675,
+        "retrieval_quality": -0.012534860351994971,
+        "gate_auc_near_vs_far": 0.6742788461538461
+      },
+      "whitened": {
+        "sim_max_mean": 0.442850798368454,
+        "sim_max_std": 0.16958636045455933,
+        "sim_max_p05": 0.17358963191509247,
+        "sim_max_frac_above_0.95": 0.0,
+        "mean_retrieved_hop": 4.15,
+        "retrieval_quality": -0.009354092990510305,
+        "gate_auc_near_vs_far": 0.5739182692307693
+      },
+      "raw+pctl": {
+        "sim_max_mean": 0.5,
+        "sim_max_std": 0.28939772680060927,
+        "sim_max_p05": 0.05,
+        "sim_max_frac_above_0.95": 0.05,
+        "mean_retrieved_hop": 4.15,
+        "retrieval_quality": -0.0035218394433516997,
+        "gate_auc_near_vs_far": 0.5709134615384616,
+        "note": "rank-preserving recalibration; retrieval_quality and AUC inherited from raw by construction"
+      }
+    },
+    "scale": "50x50",
+    "arm": "cold",
+    "scenario_id": "seed191664964_s4",
+    "checkpoint": "cold_50x50_s4.pt"
+  }
+]

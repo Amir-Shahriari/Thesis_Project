@@ -1,0 +1,7 @@
+Pilot: seed191664964_s1 (Node_1744 -> Node_504), device=cuda:0, deactivate_mult_range=(0.5, 2.0), density_block_size=5, budget_override={}
+[warm] training...
+[warm] done in 512s, saved C:\Users\amirh\Desktop\qwarm-gnn-rl\demo_agents_ood\warm_50x50_s1.pt
+[cold] training...
+[cold] done in 388s, saved C:\Users\amirh\Desktop\qwarm-gnn-rl\demo_agents_ood\cold_50x50_s1.pt
+
+Pilot checkpoints in C:\Users\amirh\Desktop\qwarm-gnn-rl\demo_agents_ood/

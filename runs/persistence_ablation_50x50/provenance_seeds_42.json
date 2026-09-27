@@ -1,0 +1,46 @@
+{
+  "label": "50x50 persistence ablation",
+  "recorded_at": "2026-09-26 15:24:05",
+  "torch_version": "2.11.0+cu128",
+  "torch_file": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_available": true,
+  "resolved_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "sys_executable": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe",
+  "sys_prefix": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv",
+  "python": "3.11.15",
+  "git_rev": "1e9719c",
+  "git_dirty_files": [
+    "demo_app/static/index.html",
+    "scripts/run_multi_seed_warm_vs_cold.py",
+    "scripts/run_sweep_50x50.py",
+    "src/qwarm/agents/gnn_dqn.py",
+    "src/qwarm/env/dynamic_graph.py",
+    "src/qwarm/env/pathfinding_env.py",
+    "src/qwarm/training/train_gnn_dqn.py"
+  ],
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "arms": [
+    "persistent",
+    "dqfd_pretrain",
+    "bc_pretrain",
+    "cold"
+  ],
+  "n_pretrain": 1000,
+  "n_iterations": 10,
+  "episodes_per_iteration": 200,
+  "smoke": false,
+  "env": {
+    "QWARM_MASK_VISITED": "1",
+    "QWARM_SEEDS": "42",
+    "QWARM_ARMS": null,
+    "QWARM_N_PRETRAIN": null,
+    "QWARM_OUT_DIR": "runs/persistence_ablation_50x50",
+    "QWARM_SMOKE": null,
+    "CUDA_VISIBLE_DEVICES": null
+  }
+}

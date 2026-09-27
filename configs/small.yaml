@@ -1,0 +1,14 @@
+grid_width: 25
+grid_height: 25
+extra_edges: 2
+deactivate_prob: 0.10
+n_iterations: 5
+episodes_per_iteration: 50
+hidden_dim: 64
+expert_ratio: 0.40
+
+library:
+  enabled: false             # default-off; sweep script sets to true via --use-library
+  lambda_retr: 0.5           # weight on retrieval Q-values
+  k_neighbors: 5             # how many expert entries to retrieve per query
+  similarity: "cosine"       # cosine | dot | euclidean

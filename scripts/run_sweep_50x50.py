@@ -40,6 +40,13 @@ import heapq
 import json
 import math
 import pathlib
+import os as _os
+
+# Exclude visited nodes from the TRAINING action set (the MDP of
+# Chapter 3). Off by default so existing 50x50 artefacts stay
+# reproducible.  QWARM_MASK_VISITED=1 enables it,
+# QWARM_OUT_DIR redirects output, QWARM_SKIP_4X=1 runs 1x only.
+MASK_VISITED: bool = _os.environ.get("QWARM_MASK_VISITED", "") == "1"
 import sys
 import time
 from typing import Any
@@ -66,9 +73,14 @@ except ImportError:
     _HAS_FAITHFUL_QAOA = False
 
 # ── Fixed configuration ───────────────────────────────────────────────────────
-SEEDS = [42, 1337, 2024, 7, 314159]   # identical outer seeds to 100x100 headline
+# QWARM_SEEDS lets one seed (or a subset) be run per process so the 25 cells
+# can be sharded across concurrent workers; unset means all five, as before.
+_ALL_SEEDS = [42, 1337, 2024, 7, 314159]
+_seed_env = _os.environ.get("QWARM_SEEDS", "").strip()
+SEEDS = [int(s) for s in _seed_env.split(",") if s] if _seed_env else _ALL_SEEDS
 N_SCENARIOS = 5                         # 5 seeds x 5 scenarios = 25 cells
-OUT_DIR = pathlib.Path("runs/sweep_50x50")
+OUT_DIR = pathlib.Path(_os.environ.get("QWARM_OUT_DIR",
+                                       "runs/sweep_50x50"))
 
 GRID_CFG: dict[str, Any] = dict(
     grid_width=50,
@@ -321,6 +333,7 @@ def run_cell(seed: int, scenario, n_iterations: int) -> dict:
         seed=seed,
         pre_seed_n_states=TRAIN_CFG["pre_seed_n_states"],
         pre_seed_k_paths=TRAIN_CFG["pre_seed_k_paths"],
+        env_kwargs={"mask_visited": MASK_VISITED},
     )
     warm_train_s = time.perf_counter() - t_warm
     warm_grad_steps = warm_agent._step_count  # total grad steps across all iterations
@@ -351,6 +364,7 @@ def run_cell(seed: int, scenario, n_iterations: int) -> dict:
         batch_size=TRAIN_CFG["batch_size"],
         re_seed_experts_each_iteration=False,
         seed=seed,
+        env_kwargs={"mask_visited": MASK_VISITED},
     )
     cold_train_s = time.perf_counter() - t_cold
     cold_grad_steps = cold_agent._step_count
@@ -826,6 +840,7 @@ def main() -> None:
           f"eps/iter={TRAIN_CFG['episodes_per_iteration']}, "
           f"batch={TRAIN_CFG['batch_size']}")
     print(f"Oracles:     {ORACLES_USED}")
+    print(f"mask_visited: {MASK_VISITED}"          + ("   <-- MASKED ACTION SPACE" if MASK_VISITED else ""))
     print(f"Seeds:       {SEEDS}  ({N_SCENARIOS} scenarios each = {len(SEEDS)*N_SCENARIOS} cells)")
     print(f"S4 fix:      target_encoder.eval() in learn_from_batch (gnn_dqn.py)")
     print(f"Output dir:  {OUT_DIR}/")
@@ -926,7 +941,10 @@ def main() -> None:
     print(f"\n4x projection: {proj_4x_s/3600:.1f} h  "
           f"deadline: {DEADLINE_SECS/3600:.0f} h (5 days)", flush=True)
 
-    if proj_4x_s <= DEADLINE_SECS:
+    if _os.environ.get("QWARM_SKIP_4X", "") == "1":
+        skipped_4x_reason = "QWARM_SKIP_4X=1 set by the operator."
+        print(f"Skipping 4x: {skipped_4x_reason}", flush=True)
+    elif proj_4x_s <= DEADLINE_SECS:
         print("4x within deadline. Running 4x tier ...", flush=True)
         print(f"\n{'='*72}")
         print(f"4x TIER -- {TRAIN_CFG['n_iterations_4x']} iters x "

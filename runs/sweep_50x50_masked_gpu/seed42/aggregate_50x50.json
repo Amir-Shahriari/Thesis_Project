@@ -1,0 +1,102 @@
+{
+  "config": {
+    "grid": {
+      "grid_width": 50,
+      "grid_height": 50,
+      "extra_edges": 3,
+      "deactivate_prob": 0.22,
+      "node_deactivate_prob": 0.05
+    },
+    "train_1x_n_iterations": 10,
+    "train_4x_n_iterations": 40,
+    "episodes_per_iteration": 200,
+    "grad_steps_per_episode": 4,
+    "batch_size": 64,
+    "hidden_dim": 128,
+    "expert_ratio": 0.3,
+    "pre_seed_n_states": 3,
+    "pre_seed_k_paths": 3,
+    "gamma": 0.95,
+    "seeds": [
+      42
+    ],
+    "n_scenarios": 5,
+    "eval_budgets": [
+      300,
+      1000
+    ],
+    "oracles": [
+      "ClassicalAStar",
+      "QuantumInspiredStochasticOracle",
+      "FaithfulSimulatedQAOA"
+    ],
+    "s4_fix_applied": true,
+    "s4_fix_description": "target_encoder.eval() called before target embeddings in learn_from_batch (gnn_dqn.py)"
+  },
+  "buffer_prereq": {
+    "buf_size": 25,
+    "n_from_library": 18,
+    "n_goal_adj": 7,
+    "batch_size": 64,
+    "passes": true,
+    "hard_fail": false,
+    "pre_seed_below_batch": true,
+    "episode_grad_starts": 1,
+    "expected_grad_steps_iter1": 796
+  },
+  "tier_1x": {
+    "tier": "1x",
+    "n_cells": 5,
+    "grad_steps": {
+      "warm_avg_total": 8000.0,
+      "cold_avg_total": 8000.0
+    },
+    "budget_300": {
+      "win_rate": 1.0,
+      "warm_strict_reach_rate": 1.0,
+      "cold_strict_reach_rate": 0.4,
+      "n_warm_reached": 5,
+      "mean_warm_cost_ratio": 9.052989030173848,
+      "n_ratio_cells": 5,
+      "paired_t": -3.8796250454677437,
+      "paired_p": 0.16059740588492874,
+      "binomial_ci_warm_reach_95": [
+        0.5655,
+        1.0
+      ],
+      "mcnemar_warm_vs_cold_p": 0.24821307898992362
+    },
+    "budget_1000": {
+      "win_rate": 1.0,
+      "warm_strict_reach_rate": 1.0,
+      "cold_strict_reach_rate": 0.6,
+      "n_warm_reached": 5,
+      "mean_warm_cost_ratio": 9.052989030173848,
+      "n_ratio_cells": 5,
+      "paired_t": -1.5096249461386304,
+      "paired_p": 0.27020720571906703
+    },
+    "gates": {
+      "M1_win_ge_80pct": {
+        "pass": true,
+        "value": 1.0,
+        "threshold": 0.8,
+        "description": "warm win rate (warm_cost < cold_cost) >= 80% (budget 300)"
+      },
+      "M2_mean_cost_ratio_le_5": {
+        "pass": false,
+        "value": 9.052989030173848,
+        "threshold": 5.0,
+        "description": "mean warm cost ratio vs Dijkstra <= 5.0x (budget 300, reached cells)"
+      },
+      "M3_paired_p_lt_001": {
+        "pass": false,
+        "value": 0.16059740588492874,
+        "threshold": 0.01,
+        "description": "paired t-test p < 0.01 (warm vs cold cost, budget 300)"
+      }
+    }
+  },
+  "wall_1x_s": 15874.542461,
+  "skipped_4x_reason": "QWARM_SKIP_4X=1 set by the operator."
+}

@@ -1,0 +1,29 @@
+========================================================================
+50x50 HEADLINE-IDENTICAL SWEEP
+========================================================================
+Grid:        {'grid_width': 50, 'grid_height': 50, 'extra_edges': 3, 'deactivate_prob': 0.22, 'node_deactivate_prob': 0.05}
+Train 1x:    n_iter=10, eps/iter=200, batch=64
+Oracles:     ['ClassicalAStar', 'QuantumInspiredStochasticOracle', 'FaithfulSimulatedQAOA']
+mask_visited: False
+Seeds:       [7]  (5 scenarios each = 5 cells)
+S4 fix:      target_encoder.eval() in learn_from_batch (gnn_dqn.py)
+Output dir:  runs\sweep_50x50_reactive_ctrl\seed7/
+
+Sampling scenarios ...
+  5 cells saved to runs\sweep_50x50_reactive_ctrl\seed7\cells.json
+
+Buffer pre-check (seed=7, q=('Node_14', 'Node_1250')) ...
+  Pre-seed buffer:  75 transitions (library: 68, goal-adj: 7)
+  Batch size:       64
+  Passes:           True
+  Pre-seed >= batch_size. Grad steps from episode 1.
+  Estimated grad steps in iter 1: ~800
+
+========================================================================
+1x TIER -- 10 iters x 200 eps/iter x 64 batch
+========================================================================
+
+[ 1/5] seed=7  Node_14 -> Node_1250  euclid=43.3  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=487.9584470524624  dij=48.74725801693423  warm_grad=8000  wall=755s
+
+[ 2/5] seed=7  Node_2054 -> Node_329  euclid=43.0  n_iter=10

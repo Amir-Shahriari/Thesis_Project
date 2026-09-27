@@ -29,6 +29,7 @@ from qwarm.training.expert_seeding import (
     seed_buffer_from_path_library,
     compute_demo_diversity,
 )
+from qwarm.training.her import relabel_trajectory
 from qwarm.utils.seeding import set_global_seed
 
 
@@ -52,12 +53,59 @@ def train_gnn_dqn(
     pre_seed_k_paths: int = 5,
     gamma: float = 0.95,
     env_kwargs: "dict | None" = None,
+    iteration_callback=None,
+    her_k: int = 0,
+    her_strategy: str = "future",
+    deactivate_mult_range: "tuple[float, float] | None" = None,
+    density_block_size: int = 1,
 ) -> dict:
     """Train a GNNDQN agent with mixed expert+online batches.
 
     Returns a per-iteration log dict with keys:
         iteration, mean_return, goal_reach_rate,
         expert_pool_size, online_pool_size, mean_loss
+
+    Args:
+        iteration_callback: optional fn(iteration, agent, dyn_graph, logs)
+            invoked at the END of each iteration, after that iteration's logs
+            are appended. Used to snapshot the encoder mid-training so
+            representation geometry can be tracked against goal-reach on one
+            time axis. Purely observational: it must not mutate the agent or
+            the graph, and it draws no random numbers, so enabling it leaves
+            the training trajectory bit-identical.
+        her_k: Hindsight Experience Replay goals per transition. 0 disables it
+            (the default, so existing runs are unaffected). When > 0, every
+            rollout is relabelled against goals it actually reached and the
+            result pushed as extra online experience. This targets the
+            memorisation seen in the fleet-mode pilot, where the agent solved
+            16/20 trained goals but only 5/20 held-out ones: expert data and
+            the warm-only goal-adjacent seeding both exist solely for the
+            training destinations, so nothing teaches the agent to route toward
+            a goal it has never been given.
+        her_strategy: "future" (sample relabel goals from later states in the
+            same trajectory) or "final" (use the trajectory's last state).
+        deactivate_mult_range: optional (low, high). When set, at the start of
+            EVERY iteration dyn_graph.deactivate_prob and
+            .node_deactivate_prob are resampled from
+            base_value * Uniform(low, high) (capped at 0.95), where
+            base_value is whatever dyn_graph was constructed with. Mirrors
+            demo_app/server.py's post_reach OOD branch, so training exposes
+            the policy to the same density range the demo's perturbation
+            selector evaluates at, instead of the single fixed density it was
+            constructed with. None (default) never touches these attributes,
+            so existing callers are bit-identical. Uses a dedicated RNG
+            stream, so enabling it does not shift any other random draw.
+        density_block_size: resample the density draw every N iterations
+            instead of every iteration (default 1 = every iteration, the
+            original behaviour). A single 50x50_s1 pilot found per-iteration
+            resampling (block_size=1) collapsed reach at every density
+            including the training level, and tripling the training budget
+            made it worse rather than better -- consistent with the density
+            switch being a moving target the replay buffer/target network
+            can't track, rather than a sample-count shortfall. Holding a
+            drawn density fixed across a block of consecutive iterations
+            gives the policy sustained exposure per density before the next
+            switch. Ignored when deactivate_mult_range is None.
     """
     set_global_seed(seed)
 
@@ -135,8 +183,30 @@ def train_gnn_dqn(
     eps_decay = (epsilon_start - epsilon_end) / max(n_iterations - 1, 1)
     epsilon = epsilon_start
     global_episode = 0
+    # Dedicated stream so toggling HER cannot shift the RNG the policy uses,
+    # keeping her_k=0 runs bit-identical to before this feature existed.
+    her_rng = np.random.default_rng(seed + 977) if her_k > 0 else None
+
+    # Same isolation for density randomization: a separate stream so
+    # deactivate_mult_range=None runs never see a different draw sequence
+    # than before this feature existed. Base values are captured once, before
+    # the loop starts overwriting the live attributes each iteration.
+    density_rng = None
+    base_deactivate_prob = dyn_graph.deactivate_prob
+    base_node_deactivate_prob = dyn_graph.node_deactivate_prob
+    if deactivate_mult_range is not None:
+        density_rng = np.random.default_rng(seed + 1931)
 
     for iteration in range(n_iterations):
+        if density_rng is not None and iteration % density_block_size == 0:
+            lo, hi = deactivate_mult_range
+            dyn_graph.deactivate_prob = min(
+                0.95, base_deactivate_prob * density_rng.uniform(lo, hi)
+            )
+            dyn_graph.node_deactivate_prob = min(
+                0.95, base_node_deactivate_prob * density_rng.uniform(lo, hi)
+            )
+
         # ── CRITICAL FIX: Seed experts BEFORE perturbing the graph ───────────────
         # Save the pre-perturbation state so expert transitions are valid
         state_before_perturb = dyn_graph.save_state()
@@ -177,6 +247,10 @@ def train_gnn_dqn(
                 done = False
                 ep_return = 0.0
                 termination = None
+                # Executed steps kept for hindsight relabelling. Recorded even
+                # on success: a trajectory that reached its goal still carries
+                # valid experience about every intermediate node it passed.
+                traj: list[tuple[str, str, float, str, list[str]]] = []
 
                 while not done:
                     valid = env.get_valid_actions()
@@ -220,7 +294,16 @@ def train_gnn_dqn(
                             goal_node=dst,  # ← Track the goal for this transition
                         )
                     )
+                    if her_k > 0:
+                        traj.append((state, action, reward, next_state, next_valid))
                     state = next_state
+
+                if her_k > 0 and len(traj) >= 2:
+                    for t in relabel_trajectory(
+                        traj, k=her_k, strategy=her_strategy,
+                        rng=her_rng, iteration=iteration,
+                    ):
+                        buffer.add_online_transition(t)
 
                 ep_returns.append(ep_return)
                 ep_goals.append(float(state == dst))
@@ -259,6 +342,9 @@ def train_gnn_dqn(
         logs["expert_pool_size"].append(len(buffer.expert_pool))
         logs["online_pool_size"].append(len(buffer.online_pool))
         logs["mean_loss"].append(float(np.mean(ep_losses)) if ep_losses else 0.0)
+
+        if iteration_callback is not None:
+            iteration_callback(iteration, agent, dyn_graph, logs)
 
     if trace_dir is not None:
         agent.close_trace()

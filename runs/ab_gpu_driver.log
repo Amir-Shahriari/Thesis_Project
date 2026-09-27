@@ -1,0 +1,70 @@
+
+======================================================
+  ARM: reactive   (mask_visited=0)
+  out: runs/sweep_50x50_reactive_ctrl
+  started 2026-08-12 10:20:33
+======================================================
+provenance -> runs\sweep_50x50_reactive_ctrl\provenance.json
+  torch 2.11.0+cu128  device cuda:0  NVIDIA GeForce RTX 5080
+[skip] seed 42 already complete
+[skip] seed 1337 already complete
+[skip] seed 2024 already complete
+[skip] seed 7 already complete
+[skip] seed 314159 already complete
+[reactive] shards finished 2026-08-12 10:20:38, 0 non-zero exits
+  seed 42      5 cells   (runs\sweep_50x50_reactive_ctrl\seed42\sweep_v1_50x50_1x.json)
+  seed 1337    5 cells   (runs\sweep_50x50_reactive_ctrl\seed1337\sweep_v1_50x50_1x.json)
+  seed 2024    5 cells   (runs\sweep_50x50_reactive_ctrl\seed2024\sweep_v1_50x50_1x.json)
+  seed 7       5 cells   (runs\sweep_50x50_reactive_ctrl\seed7\sweep_v1_50x50_1x.json)
+  seed 314159  5 cells   (runs\sweep_50x50_reactive_ctrl\seed314159\sweep_v1_50x50_1x.json)
+
+  merged 25 cells; duplicates: none
+  wrote runs\sweep_50x50_reactive_ctrl\sweep_v1_50x50_1x.json
+  warm 22/25   cold 3/25
+
+======================================================
+  ARM: masked   (mask_visited=1)
+  out: runs/sweep_50x50_masked_gpu
+  started 2026-08-12 10:20:38
+======================================================
+provenance -> runs\sweep_50x50_masked_gpu\provenance.json
+  torch 2.11.0+cu128  device cuda:0  NVIDIA GeForce RTX 5080
+[launch] seed 42 -> runs/sweep_50x50_masked_gpu/seed42
+[launch] seed 1337 -> runs/sweep_50x50_masked_gpu/seed1337
+[launch] seed 2024 -> runs/sweep_50x50_masked_gpu/seed2024
+[launch] seed 7 -> runs/sweep_50x50_masked_gpu/seed7
+[launch] seed 314159 -> runs/sweep_50x50_masked_gpu/seed314159
+[masked] shards finished 2026-08-12 14:50:40, 0 non-zero exits
+  seed 42      5 cells   (runs\sweep_50x50_masked_gpu\seed42\sweep_v1_50x50_1x.json)
+  seed 1337    5 cells   (runs\sweep_50x50_masked_gpu\seed1337\sweep_v1_50x50_1x.json)
+  seed 2024    5 cells   (runs\sweep_50x50_masked_gpu\seed2024\sweep_v1_50x50_1x.json)
+  seed 7       5 cells   (runs\sweep_50x50_masked_gpu\seed7\sweep_v1_50x50_1x.json)
+  seed 314159  5 cells   (runs\sweep_50x50_masked_gpu\seed314159\sweep_v1_50x50_1x.json)
+
+  merged 25 cells; duplicates: none
+  wrote runs\sweep_50x50_masked_gpu\sweep_v1_50x50_1x.json
+  warm 22/25   cold 9/25
+
+--- A/B analysis (same-stack) ---
+========================================================================
+ 50x50 A/B -- ONE ENVIRONMENT, ACTION SPACE THE ONLY VARIABLE
+========================================================================
+
+REACTIVE  (mask_visited=False)
+  warm 22/25 (88%)   cold 3/25 (12%)
+  discordant  warm-only 19  cold-only 0   exact McNemar p = 3.815e-06
+  both-reached 3: warm cheaper on 2   median warm 663 vs cold 2523
+Traceback (most recent call last):
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\scripts\analysis\ab_50x50_action_space.py", line 96, in <module>
+    mask = summarise("MASKED    (mask_visited=True)", load(MASK))
+                                                      ^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\scripts\analysis\ab_50x50_action_space.py", line 53, in load
+    d = json.loads(p.read_text())
+                   ^^^^^^^^^^^^^
+  File "C:\Users\amirh\miniconda3\envs\qwarm_env\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amirh\miniconda3\envs\qwarm_env\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\runs\\runs\\sweep_50x50_masked_gpu\\sweep_v1_50x50_1x.json'

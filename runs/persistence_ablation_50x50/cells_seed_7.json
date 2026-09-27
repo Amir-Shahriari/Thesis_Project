@@ -1,0 +1,297 @@
+[
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s0",
+    "grid_seed": 2029167941,
+    "source": "Node_14",
+    "destination": "Node_1250",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1930.1145877999952,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 48.74725801693423,
+        "strict": true,
+        "cost": 555.272419916551,
+        "strict_1000": true,
+        "cost_1000": 555.272419916551
+      },
+      "dqfd_pretrain": {
+        "arm": "dqfd_pretrain",
+        "train_s": 4652.67238080001,
+        "grad_steps_total": 8996,
+        "dijkstra_cost": 48.74725801693423,
+        "expert_pool_size": 80,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 302.2250231933594,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "bc_pretrain": {
+        "arm": "bc_pretrain",
+        "train_s": 1669.9324514000036,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 48.74725801693423,
+        "expert_pool_size": 80,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 1.4922304630279541,
+        "bc_examples_used": 64000,
+        "bc_examples_skipped": 0,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": true,
+        "cost_1000": 16377.248254382905
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1484.39096650001,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 48.74725801693423,
+        "strict": true,
+        "cost": 1049.583757597586,
+        "strict_1000": true,
+        "cost_1000": 1049.583757597586
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s1",
+    "grid_seed": 2029167941,
+    "source": "Node_2054",
+    "destination": "Node_329",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1936.2841198999959,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 46.39396092796405,
+        "strict": true,
+        "cost": 46.39396092796406,
+        "strict_1000": true,
+        "cost_1000": 46.39396092796406
+      },
+      "dqfd_pretrain": {
+        "arm": "dqfd_pretrain",
+        "train_s": 1864.938621999987,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 46.39396092796405,
+        "expert_pool_size": 53,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 165.69606323242186,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": true,
+        "cost_1000": 11897.577790962952
+      },
+      "bc_pretrain": {
+        "arm": "bc_pretrain",
+        "train_s": 1598.4226522999816,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 46.39396092796405,
+        "expert_pool_size": 53,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 1.3005003929138184,
+        "bc_examples_used": 53000,
+        "bc_examples_skipped": 0,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1426.7914770000207,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 46.39396092796405,
+        "strict": true,
+        "cost": 5023.975700582521,
+        "strict_1000": true,
+        "cost_1000": 5023.975700582521
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s2",
+    "grid_seed": 2029167941,
+    "source": "Node_401",
+    "destination": "Node_2144",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1944.399628299987,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 51.32874587815299,
+        "strict": true,
+        "cost": 670.4251611052745,
+        "strict_1000": true,
+        "cost_1000": 670.4251611052745
+      },
+      "dqfd_pretrain": {
+        "arm": "dqfd_pretrain",
+        "train_s": 1948.7636683000019,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 51.32874587815299,
+        "expert_pool_size": 65,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 134.23696334838868,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "bc_pretrain": {
+        "arm": "bc_pretrain",
+        "train_s": 1630.4633708000183,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 51.32874587815299,
+        "expert_pool_size": 65,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 1.6818185329437256,
+        "bc_examples_used": 64000,
+        "bc_examples_skipped": 0,
+        "rl_steps_start": 1000,
+        "strict": true,
+        "cost": 4881.021789289022,
+        "strict_1000": true,
+        "cost_1000": 4881.021789289022
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1499.3743414999917,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 51.32874587815299,
+        "strict": true,
+        "cost": 3223.96803244791,
+        "strict_1000": true,
+        "cost_1000": 3223.96803244791
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s3",
+    "grid_seed": 2029167941,
+    "source": "Node_10",
+    "destination": "Node_1544",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1933.8127340999781,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 66.55332921033745,
+        "strict": true,
+        "cost": 870.523355778201,
+        "strict_1000": true,
+        "cost_1000": 870.523355778201
+      },
+      "dqfd_pretrain": {
+        "arm": "dqfd_pretrain",
+        "train_s": 1938.80300179997,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": 66.55332921033745,
+        "expert_pool_size": 54,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 265.0296691894531,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "bc_pretrain": {
+        "arm": "bc_pretrain",
+        "train_s": 6175.646728400025,
+        "grad_steps_total": 8996,
+        "dijkstra_cost": 66.55332921033745,
+        "expert_pool_size": 54,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 1.6404592442512511,
+        "bc_examples_used": 54000,
+        "bc_examples_skipped": 0,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": true,
+        "cost_1000": 10801.058359724371
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1561.5856900999788,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 66.55332921033745,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s4",
+    "grid_seed": 2029167941,
+    "source": "Node_1600",
+    "destination": "Node_106",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1935.1209321999922,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "dqfd_pretrain": {
+        "arm": "dqfd_pretrain",
+        "train_s": 1873.7094126000302,
+        "grad_steps_total": 9000,
+        "dijkstra_cost": null,
+        "expert_pool_size": 103,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 275.97347076416014,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "bc_pretrain": {
+        "arm": "bc_pretrain",
+        "train_s": 1596.4782814999926,
+        "grad_steps_total": 8996,
+        "dijkstra_cost": null,
+        "expert_pool_size": 103,
+        "pretrain_steps": 1000,
+        "pretrain_final_loss": 1.5497314786911012,
+        "bc_examples_used": 64000,
+        "bc_examples_skipped": 0,
+        "rl_steps_start": 1000,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1296.8388054000097,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  }
+]

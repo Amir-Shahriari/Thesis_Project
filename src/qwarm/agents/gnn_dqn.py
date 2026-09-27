@@ -61,10 +61,48 @@ class GraphSAGEEncoder(nn.Module):
 
 
 class QHead(nn.Module):
-    def __init__(self, hidden_dim: int = 128) -> None:
+    """Q(s, a, g) from concatenated node embeddings.
+
+    With goal_relative=False (default) the input is [h_cur || h_act || h_goal],
+    the original 3*hidden_dim schema, so released checkpoints load unchanged.
+
+    With goal_relative=True two difference terms are appended:
+
+        [h_cur || h_act || h_goal || h_act - h_goal || h_cur - h_goal]
+
+    The fleet-mode pilot found the agent memorising its training destinations,
+    and plain concatenation is part of why: with a small set of goals the
+    cheapest function the head can fit is a lookup keyed on h_goal, and nothing
+    pushes it toward "move so as to reduce distance to whatever the goal is".
+    Supplying the relation directly gives the head a usable "does this action
+    close the gap?" signal instead of requiring it to be inferred.
+
+    The extra terms live in the HEAD, never the encoder, so node embeddings are
+    still computed once per graph and reused across every query -- the
+    amortisation the batched-inference throughput result depends on.
+    """
+
+    def __init__(self, hidden_dim: int = 128, goal_relative: bool = False) -> None:
         super().__init__()
-        self.fc1 = nn.Linear(hidden_dim * 3, hidden_dim)
+        self.goal_relative = goal_relative
+        n_blocks = 5 if goal_relative else 3
+        self.fc1 = nn.Linear(hidden_dim * n_blocks, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, 1)
+
+    @staticmethod
+    def build_features(
+        h_cur: torch.Tensor,
+        h_actions: torch.Tensor,
+        h_goal: torch.Tensor,
+        goal_relative: bool,
+    ) -> torch.Tensor:
+        """Concatenate along the last axis. All three inputs must already be
+        broadcast to a common shape [..., D]; both the single-query and the
+        vectorised batch path route through here so they cannot drift apart."""
+        parts = [h_cur, h_actions, h_goal]
+        if goal_relative:
+            parts += [h_actions - h_goal, h_cur - h_goal]
+        return torch.cat(parts, dim=-1)
 
     def forward(
         self,
@@ -81,7 +119,9 @@ class QHead(nn.Module):
         k = h_actions.shape[0]
         cur_exp = h_cur.unsqueeze(0).expand(k, -1)
         goal_exp = h_goal.unsqueeze(0).expand(k, -1)
-        combined = torch.cat([cur_exp, h_actions, goal_exp], dim=1)
+        combined = self.build_features(
+            cur_exp, h_actions, goal_exp, self.goal_relative
+        )
         return self.fc2(F.relu(self.fc1(combined))).squeeze(-1)
 
 
@@ -98,10 +138,12 @@ class GNNDQN:
         imitation_lambda: float = 1.0,
         device: str | torch.device = "auto",
         seed: int = 0,
+        goal_relative: bool = False,
     ) -> None:
         set_global_seed(seed)
         self.device = resolve_device(device)
 
+        self.goal_relative = goal_relative
         self.hidden_dim = hidden_dim
         self.gamma = gamma
         self.target_update_interval = target_update_interval
@@ -112,7 +154,7 @@ class GNNDQN:
 
         # Raw (uncompiled) refs kept for optimizer + grad clipping
         self._encoder_raw = GraphSAGEEncoder(node_in_dim, hidden_dim).to(self.device)
-        self._q_head_raw = QHead(hidden_dim).to(self.device)
+        self._q_head_raw = QHead(hidden_dim, goal_relative=goal_relative).to(self.device)
 
         self.optimizer = torch.optim.AdamW(
             list(self._encoder_raw.parameters()) + list(self._q_head_raw.parameters()),
@@ -412,11 +454,12 @@ class GNNDQN:
                 h_cur  = h[current]
                 h_goal = h[goals_t]
                 h_nbrs = h[nbrs.clamp(0, N - 1)]
-                combined = torch.cat([
+                combined = QHead.build_features(
                     h_cur.unsqueeze(1).expand(-1, max_deg, -1),
                     h_nbrs,
                     h_goal.unsqueeze(1).expand(-1, max_deg, -1),
-                ], dim=-1)
+                    self._q_head_raw.goal_relative,
+                )
 
                 q = self._q_head_raw.fc2(
                     F.relu(self._q_head_raw.fc1(combined))

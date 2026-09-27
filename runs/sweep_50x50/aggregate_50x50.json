@@ -1,0 +1,160 @@
+{
+  "config": {
+    "grid": {
+      "grid_width": 50,
+      "grid_height": 50,
+      "extra_edges": 3,
+      "deactivate_prob": 0.22,
+      "node_deactivate_prob": 0.05
+    },
+    "train_1x_n_iterations": 10,
+    "train_4x_n_iterations": 40,
+    "episodes_per_iteration": 200,
+    "grad_steps_per_episode": 4,
+    "batch_size": 64,
+    "hidden_dim": 128,
+    "expert_ratio": 0.3,
+    "pre_seed_n_states": 3,
+    "pre_seed_k_paths": 3,
+    "gamma": 0.95,
+    "seeds": [
+      42,
+      1337,
+      2024,
+      7,
+      314159
+    ],
+    "n_scenarios": 5,
+    "eval_budgets": [
+      300,
+      1000
+    ],
+    "oracles": [
+      "ClassicalAStar",
+      "QuantumInspiredStochasticOracle",
+      "FaithfulSimulatedQAOA"
+    ],
+    "s4_fix_applied": true,
+    "s4_fix_description": "target_encoder.eval() called before target embeddings in learn_from_batch (gnn_dqn.py)"
+  },
+  "buffer_prereq": {
+    "buf_size": 25,
+    "n_from_library": 18,
+    "n_goal_adj": 7,
+    "batch_size": 64,
+    "passes": true,
+    "hard_fail": false,
+    "pre_seed_below_batch": true,
+    "episode_grad_starts": 1,
+    "expected_grad_steps_iter1": 796
+  },
+  "tier_1x": {
+    "tier": "1x",
+    "n_cells": 25,
+    "grad_steps": {
+      "warm_avg_total": 7999.36,
+      "cold_avg_total": 7961.44
+    },
+    "budget_300": {
+      "win_rate": 0.84,
+      "warm_strict_reach_rate": 0.88,
+      "cold_strict_reach_rate": 0.12,
+      "n_warm_reached": 22,
+      "mean_warm_cost_ratio": 17.319333717759022,
+      "n_ratio_cells": 22,
+      "paired_t": -1.0425196704285367,
+      "paired_p": 0.4066284939609983,
+      "binomial_ci_warm_reach_95": [
+        0.7004,
+        0.9583
+      ],
+      "mcnemar_warm_vs_cold_p": 3.635795520295915e-05
+    },
+    "budget_1000": {
+      "win_rate": 0.84,
+      "warm_strict_reach_rate": 0.88,
+      "cold_strict_reach_rate": 0.12,
+      "n_warm_reached": 22,
+      "mean_warm_cost_ratio": 17.319333717759022,
+      "n_ratio_cells": 22,
+      "paired_t": -1.0425196704285367,
+      "paired_p": 0.4066284939609983
+    },
+    "gates": {
+      "M1_win_ge_80pct": {
+        "pass": true,
+        "value": 0.84,
+        "threshold": 0.8,
+        "description": "warm win rate (warm_cost < cold_cost) >= 80% (budget 300)"
+      },
+      "M2_mean_cost_ratio_le_5": {
+        "pass": false,
+        "value": 17.319333717759022,
+        "threshold": 5.0,
+        "description": "mean warm cost ratio vs Dijkstra <= 5.0x (budget 300, reached cells)"
+      },
+      "M3_paired_p_lt_001": {
+        "pass": false,
+        "value": 0.4066284939609983,
+        "threshold": 0.01,
+        "description": "paired t-test p < 0.01 (warm vs cold cost, budget 300)"
+      }
+    }
+  },
+  "wall_1x_s": 25018.3418232,
+  "tier_4x": {
+    "tier": "4x",
+    "n_cells": 25,
+    "grad_steps": {
+      "warm_avg_total": 31999.36,
+      "cold_avg_total": 31961.44
+    },
+    "budget_300": {
+      "win_rate": 0.96,
+      "warm_strict_reach_rate": 1.0,
+      "cold_strict_reach_rate": 0.08,
+      "n_warm_reached": 25,
+      "mean_warm_cost_ratio": 14.827046276519056,
+      "n_ratio_cells": 25,
+      "paired_t": 0.8198195462323147,
+      "paired_p": 0.5628270021922297,
+      "binomial_ci_warm_reach_95": [
+        0.8668,
+        1.0
+      ],
+      "mcnemar_warm_vs_cold_p": 4.489784498629135e-06
+    },
+    "budget_1000": {
+      "win_rate": 0.96,
+      "warm_strict_reach_rate": 1.0,
+      "cold_strict_reach_rate": 0.2,
+      "n_warm_reached": 25,
+      "mean_warm_cost_ratio": 14.827046276519056,
+      "n_ratio_cells": 25,
+      "paired_t": -1.830160454260209,
+      "paired_p": 0.14120126150618434
+    },
+    "gates": {
+      "M1_win_ge_80pct": {
+        "pass": true,
+        "value": 0.96,
+        "threshold": 0.8,
+        "description": "warm win rate (warm_cost < cold_cost) >= 80% (budget 300)"
+      },
+      "M2_mean_cost_ratio_le_5": {
+        "pass": false,
+        "value": 14.827046276519056,
+        "threshold": 5.0,
+        "description": "mean warm cost ratio vs Dijkstra <= 5.0x (budget 300, reached cells)"
+      },
+      "M3_paired_p_lt_001": {
+        "pass": false,
+        "value": 0.5628270021922297,
+        "threshold": 0.01,
+        "description": "paired t-test p < 0.01 (warm vs cold cost, budget 300)"
+      }
+    }
+  },
+  "wall_4x_s": null,
+  "mcnemar_1x_vs_4x_p": 0.24821307898992362
+}

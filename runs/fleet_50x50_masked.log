@@ -1,0 +1,166 @@
+=== fleet-mode 50x50 seed=42 grid_seed=191664964 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 10 x 80 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet\agents\snapshots
+
+--- warm ---
+Traceback (most recent call last):
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\scripts\run_fleet_mode.py", line 393, in <module>
+    main()
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\scripts\run_fleet_mode.py", line 326, in main
+    agent, g, logs = train_arm(
+                     ^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\scripts\run_fleet_mode.py", line 182, in train_arm
+    logs = train_gnn_dqn(g, PathfindingEnv, agent, buf, oracles,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\src\qwarm\training\train_gnn_dqn.py", line 286, in train_gnn_dqn
+    loss = agent.learn_from_batch(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\src\qwarm\agents\gnn_dqn.py", line 656, in learn_from_batch
+    self.update_target()
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\src\qwarm\agents\gnn_dqn.py", line 662, in update_target
+    self.target_encoder.load_state_dict(self._encoder_raw.state_dict())
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch\nn\modules\module.py", line 2269, in state_dict
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch\nn\modules\module.py", line 2269, in state_dict
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch\nn\modules\module.py", line 2266, in state_dict
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch_geometric\nn\dense\linear.py", line 140, in _save_to_state_dict
+    or torch.onnx.is_in_onnx_export() or keep_vars):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch\onnx\__init__.py", line 358, in is_in_onnx_export
+ImportError: cannot import name '_flags' from 'torch.onnx._internal.exporter' (C:\Users\amirh\Desktop\qwarm-gnn-rl\.venv\Lib\site-packages\torch\onnx\_internal\exporter\__init__.py)
+no results file at C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet\fleet_results_seed42_50x50_mq_masked.json
+=== fleet-mode 50x50 seed=1337 grid_seed=1173222464 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 10 x 80 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet\agents\snapshots
+
+--- warm ---
+    trained in 188.8 min
+    train  queries: reach 17/20 (85%)  median ratio 34.61975685146781
+    HELD-OUT      : reach 3/20 (15%)  median ratio 74.86705927746607
+
+--- cold ---
+=== fleet-mode 50x50 seed=42 grid_seed=191664964 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 10 x 80 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet\agents\snapshots
+
+--- warm ---
+    trained in 92.9 min
+    train  queries: reach 18/20 (90%)  median ratio 38.01087751286498
+    HELD-OUT      : reach 2/20 (10%)  median ratio 20.019959834236964
+
+--- cold ---
+    trained in 76.2 min
+    train  queries: reach 5/20 (25%)  median ratio 28.278202973373926
+    HELD-OUT      : reach 2/20 (10%)  median ratio 26.148942957067266
+
+Wrote runs\fleet\fleet_results_seed42_50x50_mq_masked.json
+Wrote runs\fleet\agents\manifest_fleet_50x50_seed42_mq_masked.json
+
+HELD-OUT warm vs cold: 2/20 vs 2/20  (10% vs 10%)
+=== re-eval fleet_50x50_seed42_mq_masked ===
+    ablation : {'her_k': 0, 'her_strategy': 'future', 'goal_relative': False, 'iterations': 10, 'episodes_per_iteration': 80}
+    train queries 20   held-out 150 (was 20)
+
+  --- TRAIN QUERIES ---
+  queries 20  solvable 20  (unsolvable at eval state: 0)
+  reach   warm  18/20  cold   5/20   both   5  warm-only  13  cold-only   0
+  reach McNemar (exact): warm-only 13 vs cold-only 0  p=0.0002
+  PAIRED cost on 5 commonly-reached: warm median   18.67  cold median   28.28  warm better 1/5  wilcoxon p=0.6250
+
+  --- HELD-OUT ---
+  queries 150  solvable 142  (unsolvable at eval state: 8)
+  reach   warm  19/142  cold  14/142   both   4  warm-only  15  cold-only  10
+  reach McNemar (exact): warm-only 15 vs cold-only 10  p=0.4244
+  PAIRED cost on 4 commonly-reached: warm median   17.24  cold median   26.66  warm better 3/4  wilcoxon p=0.3750
+
+Wrote C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet\reeval_seed42_50x50_mq_masked.json
+=== fleet-mode 50x50 seed=1337 grid_seed=1173222464 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 10 x 80 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet\agents\snapshots
+
+--- warm ---
+    trained in 89.8 min
+    train  queries: reach 17/20 (85%)  median ratio 34.61975685146781
+    HELD-OUT      : reach 3/20 (15%)  median ratio 74.86705927746607
+
+--- cold ---
+    trained in 68.3 min
+    train  queries: reach 4/20 (20%)  median ratio 24.864921095219827
+    HELD-OUT      : reach 4/20 (20%)  median ratio 33.85592122231682
+
+Wrote runs\fleet\fleet_results_seed1337_50x50_mq_masked.json
+Wrote runs\fleet\agents\manifest_fleet_50x50_seed1337_mq_masked.json
+
+HELD-OUT warm vs cold: 3/20 vs 4/20  (15% vs 20%)
+=== re-eval fleet_50x50_seed1337_mq_masked ===
+    ablation : {'her_k': 0, 'her_strategy': 'future', 'goal_relative': False, 'iterations': 10, 'episodes_per_iteration': 80}
+    train queries 20   held-out 150 (was 20)
+
+  --- TRAIN QUERIES ---
+  queries 20  solvable 19  (unsolvable at eval state: 1)
+  reach   warm  17/19  cold   4/19   both   4  warm-only  13  cold-only   0
+  reach McNemar (exact): warm-only 13 vs cold-only 0  p=0.0002
+  PAIRED cost on 4 commonly-reached: warm median   64.76  cold median   24.86  warm better 0/4  wilcoxon p=0.1250
+
+  --- HELD-OUT ---
+  queries 150  solvable 144  (unsolvable at eval state: 6)
+  reach   warm  25/144  cold  19/144   both   4  warm-only  21  cold-only  15
+  reach McNemar (exact): warm-only 21 vs cold-only 15  p=0.4050
+  PAIRED cost on 4 commonly-reached: warm median   86.36  cold median   27.66  warm better 0/4  wilcoxon p=0.1250
+
+Wrote C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet\reeval_seed1337_50x50_mq_masked.json
+=== fleet-mode 50x50 seed=2024 grid_seed=518677876 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 10 x 80 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet\agents\snapshots
+
+--- warm ---
+    trained in 82.3 min
+    train  queries: reach 18/20 (90%)  median ratio 33.08555042020804
+    HELD-OUT      : reach 4/20 (20%)  median ratio 59.461625110133674
+
+--- cold ---
+    trained in 72.5 min
+    train  queries: reach 2/20 (10%)  median ratio 51.105623944263385
+    HELD-OUT      : reach 4/20 (20%)  median ratio 50.65543598100943
+
+Wrote runs\fleet\fleet_results_seed2024_50x50_mq_masked.json
+Wrote runs\fleet\agents\manifest_fleet_50x50_seed2024_mq_masked.json
+
+HELD-OUT warm vs cold: 4/20 vs 4/20  (20% vs 20%)
+=== re-eval fleet_50x50_seed2024_mq_masked ===
+    ablation : {'her_k': 0, 'her_strategy': 'future', 'goal_relative': False, 'iterations': 10, 'episodes_per_iteration': 80}
+    train queries 20   held-out 150 (was 20)
+
+  --- TRAIN QUERIES ---
+  queries 20  solvable 19  (unsolvable at eval state: 1)
+  reach   warm  18/19  cold   2/19   both   2  warm-only  16  cold-only   0
+  reach McNemar (exact): warm-only 16 vs cold-only 0  p=0.0000
+  PAIRED cost: only 2 commonly-reached cells -- too few to test. Raise --n-eval-queries.
+
+  --- HELD-OUT ---
+  queries 150  solvable 145  (unsolvable at eval state: 5)
+  reach   warm  18/145  cold  27/145   both   6  warm-only  12  cold-only  21
+  reach McNemar (exact): warm-only 12 vs cold-only 21  p=0.1628
+  PAIRED cost on 6 commonly-reached: warm median   43.27  cold median   32.93  warm better 1/6  wilcoxon p=0.4375
+
+Wrote C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet\reeval_seed2024_50x50_mq_masked.json

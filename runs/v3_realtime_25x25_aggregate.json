@@ -1,0 +1,131 @@
+{
+  "inf": {
+    "A": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 521.0209,
+      "mean_cost_ratio": 11.9246,
+      "mean_decision_time_ms": 8.829,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "B": {
+      "n_cells": 6,
+      "reach_count": 5,
+      "mean_cost": 1518.6447,
+      "mean_cost_ratio": 21.4033,
+      "mean_decision_time_ms": 194.965,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "C": {
+      "n_cells": 6,
+      "reach_count": 5,
+      "mean_cost": 2215.487,
+      "mean_cost_ratio": 42.5151,
+      "mean_decision_time_ms": 280.648,
+      "mean_lambda_effective": 0.9985,
+      "mean_max_similarity": 0.9985
+    }
+  },
+  "50": {
+    "A": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 521.0209,
+      "mean_cost_ratio": 11.9246,
+      "mean_decision_time_ms": 6.222,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "B": {
+      "n_cells": 6,
+      "reach_count": 5,
+      "mean_cost": 1417.3704,
+      "mean_cost_ratio": 19.7587,
+      "mean_decision_time_ms": 172.682,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "C": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 2052.2126,
+      "mean_cost_ratio": 47.0193,
+      "mean_decision_time_ms": 267.405,
+      "mean_lambda_effective": 0.9985,
+      "mean_max_similarity": 0.9985
+    }
+  },
+  "30": {
+    "A": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 686.0083,
+      "mean_cost_ratio": 15.2033,
+      "mean_decision_time_ms": 8.603,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "B": {
+      "n_cells": 6,
+      "reach_count": 5,
+      "mean_cost": 1711.1075,
+      "mean_cost_ratio": 21.8837,
+      "mean_decision_time_ms": 210.944,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "C": {
+      "n_cells": 6,
+      "reach_count": 5,
+      "mean_cost": 2603.0149,
+      "mean_cost_ratio": 59.0048,
+      "mean_decision_time_ms": 342.874,
+      "mean_lambda_effective": 0.9981,
+      "mean_max_similarity": 0.9981
+    }
+  },
+  "15": {
+    "A": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 520.1571,
+      "mean_cost_ratio": 11.7983,
+      "mean_decision_time_ms": 6.309,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "B": {
+      "n_cells": 6,
+      "reach_count": 6,
+      "mean_cost": 1494.0461,
+      "mean_cost_ratio": 31.2666,
+      "mean_decision_time_ms": 181.56,
+      "mean_lambda_effective": null,
+      "mean_max_similarity": null
+    },
+    "C": {
+      "n_cells": 6,
+      "reach_count": 3,
+      "mean_cost": 2698.0401,
+      "mean_cost_ratio": 20.54,
+      "mean_decision_time_ms": 352.169,
+      "mean_lambda_effective": 0.998,
+      "mean_max_similarity": 0.998
+    }
+  },
+  "t_tests_at_freq30": {
+    "V3_vs_V1_cost": {
+      "t": 3.0589,
+      "p": 0.0281
+    },
+    "V3_vs_V2_cost": {
+      "t": 0.8461,
+      "p": 0.4361
+    },
+    "mean_lambda_inf": 0.9984666666666667,
+    "mean_lambda_30": 0.9981,
+    "mean_lambda_15": 0.9980000000000001
+  }
+}

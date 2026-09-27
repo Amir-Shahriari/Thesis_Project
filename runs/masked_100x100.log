@@ -1,0 +1,185 @@
+  [MASKED] training action set excludes visited nodes
+  Config loaded from configs/default.yaml
+  Grid: {'grid_width': 100, 'grid_height': 100, 'extra_edges': 4, 'deactivate_prob': 0.3}
+  Train: {'n_iterations': 10, 'episodes_per_iteration': 200, 'grad_steps_per_episode': 4, 'batch_size': 64, 'hidden_dim': 128, 'expert_ratio': 0.3, 'pre_seed_n_states': 3, 'pre_seed_k_paths': 3, 'oracle_pool': 'full', 'mask_visited': True}
+
+Phase 3 — Multi-seed x Multi-scenario Sweep
+Seeds: [42, 1337, 2024, 7, 314159]  Scenarios/seed: 5
+Total cells: 25  k_threshold=3.0
+
+  [ 1/25] seed=42 Node_639->Node_8583 (dist=90.4)
+         [warm: pre-seeding...]
+         [warm: done in 945s, evaluating...]
+         [cold: training...]
+         [cold: done in 620s]
+         warm=739  cold=inf  warm<cold  (1612s)
+  [ 2/25] seed=42 Node_9676->Node_4109 (dist=86.7)
+         [warm: pre-seeding...]
+         [warm: done in 758s, evaluating...]
+         [cold: training...]
+         [cold: done in 617s]
+         warm=inf  cold=inf  COLD<warm  (1422s)
+  [ 3/25] seed=42 Node_6699->Node_9404 (dist=99.0)
+         [warm: pre-seeding...]
+         [warm: done in 733s, evaluating...]
+         [cold: training...]
+         [cold: done in 619s]
+         warm=inf  cold=inf  COLD<warm  (1399s)
+  [ 4/25] seed=42 Node_7003->Node_973 (dist=92.8)
+         [warm: pre-seeding...]
+         [warm: done in 733s, evaluating...]
+         [cold: training...]
+         [cold: done in 601s]
+         warm=inf  cold=inf  COLD<warm  (1380s)
+  [ 5/25] seed=42 Node_1398->Node_8328 (dist=99.0)
+         [warm: pre-seeding...]
+         [warm: done in 714s, evaluating...]
+         [cold: training...]
+         [cold: done in 604s]
+         warm=1401  cold=inf  warm<cold  (1369s)
+  [ 6/25] seed=1337 Node_8905->Node_4587 (dist=93.1)
+         [warm: pre-seeding...]
+         [warm: done in 733s, evaluating...]
+         [cold: training...]
+         [cold: done in 613s]
+         warm=3939  cold=inf  warm<cold  (1392s)
+  [ 7/25] seed=1337 Node_4596->Node_8916 (dist=91.3)
+         [warm: pre-seeding...]
+         [warm: done in 739s, evaluating...]
+         [cold: training...]
+         [cold: done in 607s]
+         warm=inf  cold=inf  COLD<warm  (1391s)
+  [ 8/25] seed=1337 Node_655->Node_7203 (dist=84.0)
+         [warm: pre-seeding...]
+         [warm: done in 742s, evaluating...]
+         [cold: training...]
+         [cold: done in 593s]
+         warm=inf  cold=inf  COLD<warm  (1380s)
+  [ 9/25] seed=1337 Node_6288->Node_9609 (dist=86.0)
+         [warm: pre-seeding...]
+         [warm: done in 676s, evaluating...]
+         [cold: training...]
+         [cold: done in 599s]
+         warm=2916  cold=inf  warm<cold  (1322s)
+  [10/25] seed=1337 Node_1336->Node_7099 (dist=85.0)
+         [warm: pre-seeding...]
+         [warm: done in 720s, evaluating...]
+         [cold: training...]
+         [cold: done in 600s]
+         warm=inf  cold=inf  COLD<warm  (1370s)
+  [11/25] seed=2024 Node_9959->Node_786 (dist=95.9)
+         [warm: pre-seeding...]
+         [warm: done in 687s, evaluating...]
+         [cold: training...]
+         [cold: done in 589s]
+         warm=214  cold=inf  warm<cold  (1320s)
+  [12/25] seed=2024 Node_1423->Node_8680 (dist=91.8)
+         [warm: pre-seeding...]
+         [warm: done in 728s, evaluating...]
+         [cold: training...]
+         [cold: done in 594s]
+         warm=inf  cold=inf  COLD<warm  (1367s)
+  [13/25] seed=2024 Node_5888->Node_8002 (dist=88.8)
+         [warm: pre-seeding...]
+         [warm: done in 618s, evaluating...]
+         [cold: training...]
+         [cold: done in 552s]
+         warm=inf  cold=inf  COLD<warm  (1216s)
+  [14/25] seed=2024 Node_2781->Node_7210 (dist=84.1)
+         [warm: pre-seeding...]
+         [warm: done in 639s, evaluating...]
+         [cold: training...]
+         [cold: done in 1015s]
+         warm=800  cold=inf  warm<cold  (1698s)
+  [15/25] seed=2024 Node_8339->Node_882 (dist=86.5)
+         [warm: pre-seeding...]
+         [warm: done in 605s, evaluating...]
+         [cold: training...]
+         [cold: done in 627s]
+         warm=inf  cold=inf  COLD<warm  (1282s)
+  [16/25] seed=7 Node_2549->Node_9905 (dist=86.1)
+         [warm: pre-seeding...]
+         [warm: done in 693s, evaluating...]
+         [cold: training...]
+         [cold: done in 666s]
+         warm=1502  cold=inf  warm<cold  (1407s)
+  [17/25] seed=7 Node_1603->Node_8575 (dist=99.7)
+         [warm: pre-seeding...]
+         [warm: done in 766s, evaluating...]
+         [cold: training...]
+         [cold: done in 928s]
+         warm=inf  cold=inf  COLD<warm  (1749s)
+  [18/25] seed=7 Node_2476->Node_9933 (dist=86.5)
+         [warm: pre-seeding...]
+         [warm: done in 796s, evaluating...]
+         [cold: training...]
+         [cold: done in 629s]
+         warm=inf  cold=inf  COLD<warm  (1482s)
+  [19/25] seed=7 Node_1925->Node_9691 (dist=101.4)
+         [warm: pre-seeding...]
+         [warm: done in 616s, evaluating...]
+         [cold: training...]
+         [cold: done in 674s]
+         warm=inf  cold=inf  COLD<warm  (1339s)
+  [20/25] seed=7 Node_8804->Node_1863 (dist=91.5)
+         [warm: pre-seeding...]
+         [warm: done in 658s, evaluating...]
+         [cold: training...]
+         [cold: done in 613s]
+         warm=inf  cold=inf  COLD<warm  (1324s)
+  [21/25] seed=314159 Node_1222->Node_7894 (dist=97.7)
+         [warm: pre-seeding...]
+         [warm: done in 602s, evaluating...]
+         [cold: training...]
+         [cold: done in 590s]
+         warm=inf  cold=inf  COLD<warm  (1234s)
+  [22/25] seed=314159 Node_5210->Node_9988 (dist=91.1)
+         [warm: pre-seeding...]
+         [warm: done in 596s, evaluating...]
+         [cold: training...]
+         [cold: done in 587s]
+         warm=inf  cold=inf  COLD<warm  (1225s)
+  [23/25] seed=314159 Node_581->Node_4507 (dist=84.1)
+         [warm: pre-seeding...]
+         [warm: done in 595s, evaluating...]
+         [cold: training...]
+         [cold: done in 589s]
+         warm=inf  cold=inf  COLD<warm  (1226s)
+  [24/25] seed=314159 Node_433->Node_8666 (dist=88.4)
+         [warm: pre-seeding...]
+         [warm: done in 676s, evaluating...]
+         [cold: training...]
+         [cold: done in 653s]
+         warm=2982  cold=inf  warm<cold  (1377s)
+  [25/25] seed=314159 Node_2002->Node_9162 (dist=93.0)
+         [warm: pre-seeding...]
+         [warm: done in 660s, evaluating...]
+         [cold: training...]
+         [cold: done in 600s]
+         warm=inf  cold=inf  COLD<warm  (1309s)
+C:\Users\amirh\Desktop\qwarm-gnn-rl\src\qwarm\eval\statistics.py:34: RuntimeWarning: All-NaN slice encountered
+  finite_max = max(finite_max, np.nanmax(np.where(np.isfinite(b), b, np.nan)), 1.0)
+
+Sweep complete in 578.2 min
+
+=================================================================
+  MULTI-SEED x MULTI-SCENARIO SWEEP — AGGREGATE RESULTS
+=================================================================
+  Cells: 25  (5 seeds x 5 scenarios)
+  Training config: 100x100 grid, 10 iters x 200 eps, expert_ratio=0.3
+-----------------------------------------------------------------
+  Metric                                         Warm       Cold  p-val
+  ---------------------------------------- ---------- ----------  ------
+  Composite cost (mean+/-std)                  1812+-1315       nan+-nan  0.0026
+  Reasonable-reach rate (k=3)                   4.00%       0.00%
+  Inference latency ms (mean+/-std)           87.6+-39.5    101.0+-34.1  0.0169
+  Win rate (warm < cold)                       32.00%
+-----------------------------------------------------------------
+
+  Gates:
+    M1  win_rate >= 0.80:             32.00%  FAIL
+    M2  mean warm/dijkstra <= 5.0:    27.39  FAIL
+    M3  paired t-test p < 0.01:       0.0026  PASS
+=================================================================
+
+  Results saved to runs\sweep_100x100_masked.json

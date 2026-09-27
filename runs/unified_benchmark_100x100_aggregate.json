@@ -1,0 +1,280 @@
+{
+  "headline_table": [
+    {
+      "regime": "static",
+      "condition": "V1",
+      "n_cells": 25,
+      "reach": 11,
+      "reach_rate": 0.44,
+      "mean_cost_reached": 8934.071640946802,
+      "mean_cost_ratio": 168.6667663024446,
+      "mean_decision_ms": 540.9246279182844,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "static",
+      "condition": "V2",
+      "n_cells": 25,
+      "reach": 10,
+      "reach_rate": 0.4,
+      "mean_cost_reached": 7387.548033217169,
+      "mean_cost_ratio": 132.16424923610347,
+      "mean_decision_ms": 5961.617715957109,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "static",
+      "condition": "V3",
+      "n_cells": 25,
+      "reach": 12,
+      "reach_rate": 0.48,
+      "mean_cost_reached": 8096.597142924987,
+      "mean_cost_ratio": 127.78033960364387,
+      "mean_decision_ms": 5011.291028015548,
+      "mean_survival": 0.0,
+      "v3_mean_lambda": 0.36485591388794125,
+      "v3_mean_max_sim": 0.36485591388794125
+    },
+    {
+      "regime": "static",
+      "condition": "Astar",
+      "n_cells": 25,
+      "reach": 24,
+      "reach_rate": 0.96,
+      "mean_cost_reached": 83.68918182675804,
+      "mean_cost_ratio": 1.3640230486978047,
+      "mean_decision_ms": 21.44992399844341,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "static",
+      "condition": "Cold",
+      "n_cells": 25,
+      "reach": 2,
+      "reach_rate": 0.08,
+      "mean_cost_reached": 11467.186484649097,
+      "mean_cost_ratio": 270.99197826501,
+      "mean_decision_ms": 613.8797280634753,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "light",
+      "condition": "V1",
+      "n_cells": 25,
+      "reach": 11,
+      "reach_rate": 0.44,
+      "mean_cost_reached": 10185.329621595338,
+      "mean_cost_ratio": 165.31742793326532,
+      "mean_decision_ms": 611.7270358919632,
+      "mean_survival": 14.72
+    },
+    {
+      "regime": "light",
+      "condition": "V2",
+      "n_cells": 25,
+      "reach": 8,
+      "reach_rate": 0.32,
+      "mean_cost_reached": 6737.163312922645,
+      "mean_cost_ratio": 125.11661649042793,
+      "mean_decision_ms": 5954.864892088808,
+      "mean_survival": 13.04
+    },
+    {
+      "regime": "light",
+      "condition": "V3",
+      "n_cells": 25,
+      "reach": 11,
+      "reach_rate": 0.44,
+      "mean_cost_reached": 7721.24177372032,
+      "mean_cost_ratio": 130.10120658376692,
+      "mean_decision_ms": 6226.667035873979,
+      "mean_survival": 13.12,
+      "v3_mean_lambda": 0.3656655570984384,
+      "v3_mean_max_sim": 0.3656655570984384
+    },
+    {
+      "regime": "light",
+      "condition": "Astar",
+      "n_cells": 25,
+      "reach": 24,
+      "reach_rate": 0.96,
+      "mean_cost_reached": 83.68918182675804,
+      "mean_cost_ratio": 1.3640230486978047,
+      "mean_decision_ms": 27.31851599062793,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "light",
+      "condition": "Cold",
+      "n_cells": 25,
+      "reach": 3,
+      "reach_rate": 0.12,
+      "mean_cost_reached": 12821.411927478244,
+      "mean_cost_ratio": 191.0629739434465,
+      "mean_decision_ms": 753.2146880216897,
+      "mean_survival": 17.92
+    },
+    {
+      "regime": "medium",
+      "condition": "V1",
+      "n_cells": 25,
+      "reach": 11,
+      "reach_rate": 0.44,
+      "mean_cost_reached": 11304.447083276133,
+      "mean_cost_ratio": 208.79670671390167,
+      "mean_decision_ms": 628.7429801083636,
+      "mean_survival": 24.76
+    },
+    {
+      "regime": "medium",
+      "condition": "V2",
+      "n_cells": 25,
+      "reach": 10,
+      "reach_rate": 0.4,
+      "mean_cost_reached": 7321.086716645221,
+      "mean_cost_ratio": 123.48135192136836,
+      "mean_decision_ms": 6046.684624092886,
+      "mean_survival": 23.32
+    },
+    {
+      "regime": "medium",
+      "condition": "V3",
+      "n_cells": 25,
+      "reach": 10,
+      "reach_rate": 0.4,
+      "mean_cost_reached": 7873.976265693114,
+      "mean_cost_ratio": 138.86449064585753,
+      "mean_decision_ms": 6696.287436019629,
+      "mean_survival": 22.8,
+      "v3_mean_lambda": 0.3653753133817114,
+      "v3_mean_max_sim": 0.3653753133817114
+    },
+    {
+      "regime": "medium",
+      "condition": "Astar",
+      "n_cells": 25,
+      "reach": 24,
+      "reach_rate": 0.96,
+      "mean_cost_reached": 83.68918182675804,
+      "mean_cost_ratio": 1.3640230486978047,
+      "mean_decision_ms": 20.92963999719359,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "medium",
+      "condition": "Cold",
+      "n_cells": 25,
+      "reach": 2,
+      "reach_rate": 0.08,
+      "mean_cost_reached": 13077.739206249564,
+      "mean_cost_ratio": 233.3033912609833,
+      "mean_decision_ms": 904.0382720134221,
+      "mean_survival": 31.28
+    },
+    {
+      "regime": "heavy",
+      "condition": "V1",
+      "n_cells": 25,
+      "reach": 13,
+      "reach_rate": 0.52,
+      "mean_cost_reached": 9957.393357649455,
+      "mean_cost_ratio": 161.69879982109973,
+      "mean_decision_ms": 763.2441479538102,
+      "mean_survival": 47.12
+    },
+    {
+      "regime": "heavy",
+      "condition": "V2",
+      "n_cells": 25,
+      "reach": 9,
+      "reach_rate": 0.36,
+      "mean_cost_reached": 6333.435825741545,
+      "mean_cost_ratio": 101.16333936684362,
+      "mean_decision_ms": 7474.476195978932,
+      "mean_survival": 42.44
+    },
+    {
+      "regime": "heavy",
+      "condition": "V3",
+      "n_cells": 25,
+      "reach": 11,
+      "reach_rate": 0.44,
+      "mean_cost_reached": 10858.484166382475,
+      "mean_cost_ratio": 190.214458650065,
+      "mean_decision_ms": 7681.763871958246,
+      "mean_survival": 48.88,
+      "v3_mean_lambda": 0.36547796655499426,
+      "v3_mean_max_sim": 0.36547796655499426
+    },
+    {
+      "regime": "heavy",
+      "condition": "Astar",
+      "n_cells": 25,
+      "reach": 24,
+      "reach_rate": 0.96,
+      "mean_cost_reached": 83.68918182675804,
+      "mean_cost_ratio": 1.3640230486978047,
+      "mean_decision_ms": 15.76908400398679,
+      "mean_survival": 0.0
+    },
+    {
+      "regime": "heavy",
+      "condition": "Cold",
+      "n_cells": 25,
+      "reach": 3,
+      "reach_rate": 0.12,
+      "mean_cost_reached": 12408.837228027958,
+      "mean_cost_ratio": 254.1149267170077,
+      "mean_decision_ms": 906.3029719842598,
+      "mean_survival": 60.56
+    }
+  ],
+  "winner_summary": [
+    {
+      "regime": "static",
+      "best_reach": "Astar",
+      "best_cost": "Astar",
+      "best_latency": "Astar",
+      "best_survival": "n/a"
+    },
+    {
+      "regime": "light",
+      "best_reach": "Astar",
+      "best_cost": "Astar",
+      "best_latency": "Astar",
+      "best_survival": "Cold"
+    },
+    {
+      "regime": "medium",
+      "best_reach": "Astar",
+      "best_cost": "Astar",
+      "best_latency": "Astar",
+      "best_survival": "Cold"
+    },
+    {
+      "regime": "heavy",
+      "best_reach": "Astar",
+      "best_cost": "Astar",
+      "best_latency": "Astar",
+      "best_survival": "Cold"
+    }
+  ],
+  "paired_stats": {
+    "regime": "medium",
+    "V3_vs_V1_cost_t": -2.355880398831307,
+    "V3_vs_V1_cost_p": 0.042889892159861,
+    "V3_vs_V2_cost_t": 0.9268575491590304,
+    "V3_vs_V2_cost_p": 0.3811122525147215,
+    "V3_vs_Astar_cost_t": 5.654213293320265,
+    "V3_vs_Astar_cost_p": 0.0004790780183387878,
+    "V3_vs_V1_reach_mcnemar_p": 1.0
+  },
+  "v3_lambda_trend": {
+    "static": 0.36485591388794125,
+    "light": 0.3656655570984384,
+    "medium": 0.3653753133817114,
+    "heavy": 0.36547796655499426
+  },
+  "v3_lambda_monotone_decreasing": false,
+  "v3_lambda_interpretation": "V3 lambda trend is not strictly monotone-decreasing across regimes; adaptive blending does not fully self-attenuate as predicted."
+}

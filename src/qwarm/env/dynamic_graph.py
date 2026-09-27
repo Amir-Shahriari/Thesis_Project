@@ -16,6 +16,7 @@ class DynamicGraph:
         deactivate_prob: float = 0.1,
         node_deactivate_prob: float = 0.05,
         seed: int = 0,
+        n_chords: int | None = None,
     ) -> None:
         self._rng = np.random.default_rng(seed)
         self.deactivate_prob = deactivate_prob
@@ -38,9 +39,11 @@ class DynamicGraph:
 
         self.graph: dict[str, dict] = {node: {} for node in self.nodes}
         self.num_nodes = len(self.nodes)
-        self._init_grid_edges(extra_edges)
+        self._init_grid_edges(extra_edges, n_chords)
 
-    def _init_grid_edges(self, extra_edges: int) -> None:
+    def _init_grid_edges(
+        self, extra_edges: int, n_chords: int | None = None
+    ) -> None:
         node_list = list(self.nodes.keys())
 
         for row in range(self.grid_height):
@@ -52,11 +55,24 @@ class DynamicGraph:
                 if row < self.grid_height - 1:
                     self._add_edge(current, node_list[idx + self.grid_width])
 
-        for node in node_list:
-            for _ in range(extra_edges):
-                neighbor = str(self._rng.choice(node_list))
-                if neighbor != node:
-                    self._add_edge(node, neighbor)
+        if n_chords is None:
+            # Legacy path: extra_edges chords PER NODE. Left byte-identical so
+            # that every result already in runs/ stays reproducible.
+            for node in node_list:
+                for _ in range(extra_edges):
+                    neighbor = str(self._rng.choice(node_list))
+                    if neighbor != node:
+                        self._add_edge(node, neighbor)
+            return
+
+        # Density-controlled path: n_chords TOTAL long-range edges, giving a
+        # continuous axis between a pure grid (0) and the small-world regime
+        # the legacy setting produces (extra_edges * |V|). The per-node integer
+        # knob cannot express anything between 0 and |V| chords.
+        for _ in range(int(n_chords)):
+            a, b = self._rng.choice(node_list, size=2, replace=False)
+            if a != b:
+                self._add_edge(str(a), str(b))
 
     def _add_edge(self, node_a: str, node_b: str) -> None:
         if node_b not in self.graph[node_a]:

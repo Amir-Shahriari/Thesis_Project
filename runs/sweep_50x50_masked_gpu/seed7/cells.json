@@ -1,0 +1,42 @@
+[
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s0",
+    "grid_seed": 2029167941,
+    "source": "Node_14",
+    "destination": "Node_1250",
+    "euclidean_distance": 43.266615305567875
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s1",
+    "grid_seed": 2029167941,
+    "source": "Node_2054",
+    "destination": "Node_329",
+    "euclidean_distance": 43.01162633521314
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s2",
+    "grid_seed": 2029167941,
+    "source": "Node_401",
+    "destination": "Node_2144",
+    "euclidean_distance": 54.817880294662984
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s3",
+    "grid_seed": 2029167941,
+    "source": "Node_10",
+    "destination": "Node_1544",
+    "euclidean_distance": 45.34313619501854
+  },
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s4",
+    "grid_seed": 2029167941,
+    "source": "Node_1600",
+    "destination": "Node_106",
+    "euclidean_distance": 52.69724850502159
+  }
+]
