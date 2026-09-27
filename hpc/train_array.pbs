@@ -1,0 +1,79 @@
+#!/bin/bash
+#PBS -N qwarm-train
+#PBS -P $PROJECT
+#PBS -q normal
+#PBS -l ncpus=8
+#PBS -l mem=32GB
+#PBS -l jobfs=10GB
+#PBS -l walltime=24:00:00
+#PBS -l storage=scratch/$PROJECT
+#PBS -l wd
+#PBS -j oe
+#PBS -o logs/
+#PBS -J 0-14
+#
+# Multi-seed checkpoint training -- one array task per (seed, scale) pair.
+# This is the experiment that removes the single-grid-topology limitation from
+# the geometry study: the released demo_agents/ checkpoints all come from
+# grid_seed=191664964, so the current results are n=1 in the dimension a
+# reviewer cares about most.
+#
+# SUBMIT:
+#   mkdir -p logs
+#   qsub -P <your_project> -l storage=scratch/<your_project> hpc/train_array.pbs
+#
+# The -J range must equal len(SEEDS) * len(SCALES) - 1. Defaults below give
+# 5 seeds x 3 scales = 15 tasks -> -J 0-14.
+#
+# TUNING NOTES
+#   * The faithful QAOA oracle is the wall-clock driver: your own manifest
+#     records 36,866 s for a single 25x25 warm cell under the full pool, versus
+#     93-155 s for a cold cell. If you only need the geometry results, run
+#     ORACLE_POOL=classical_only and the array finishes in a fraction of the
+#     time. Use the full pool only where the demonstration-source claim needs it.
+#   * ncpus=8 gives Qiskit Aer threads to work with. Raise it for 100x100.
+#   * 100x100 with the full pool will not fit in 24 h; either use
+#     classical_only, split scenarios across more tasks, or request 48 h
+#     (small jobs on `normal` allow it -- confirm with `qstat -Qf normal`).
+
+set -euo pipefail
+
+SEEDS=(42 1337 2024 7 314159)
+SCALES=(25x25 50x50 100x100)
+ORACLE_POOL="${ORACLE_POOL:-classical_only}"
+N_SCENARIOS="${N_SCENARIOS:-5}"
+
+IDX=${PBS_ARRAY_INDEX:-0}
+N_SCALES=${#SCALES[@]}
+SEED=${SEEDS[$((IDX / N_SCALES))]}
+SCALE=${SCALES[$((IDX % N_SCALES))]}
+
+PROJECT_ROOT="${PBS_O_WORKDIR:-$PWD}"
+cd "${PROJECT_ROOT}"
+
+module purge
+module load "${PYTHON_MODULE:-python3/3.11.7}"
+source "${PROJECT_ROOT}/.venv-gadi/bin/activate"
+
+# Match thread pools to the allocated cores; unset, both torch and Aer will
+# happily oversubscribe the node and slow each other down.
+export OMP_NUM_THREADS="${PBS_NCPUS:-8}"
+export MKL_NUM_THREADS="${PBS_NCPUS:-8}"
+
+AGENTS_DIR="${PROJECT_ROOT}/runs/agents"
+mkdir -p "${AGENTS_DIR}"
+
+echo "=== task ${IDX}: seed=${SEED} scale=${SCALE} pool=${ORACLE_POOL} ==="
+echo "=== host $(hostname)  ncpus=${PBS_NCPUS:-?}  started $(date) ==="
+
+python scripts/train_checkpoints.py \
+    --seed "${SEED}" \
+    --scale "${SCALE}" \
+    --n-scenarios "${N_SCENARIOS}" \
+    --oracle-pool "${ORACLE_POOL}" \
+    --agents-dir "${AGENTS_DIR}" \
+    --manifest "${AGENTS_DIR}/manifest_seed${SEED}_${SCALE}.json" \
+    --device cpu \
+    --skip-existing
+
+echo "=== task ${IDX} finished $(date) ==="

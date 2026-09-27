@@ -1,0 +1,165 @@
+{
+  "scale": "25x25",
+  "variant": "_gr",
+  "seeds": [
+    7,
+    42,
+    1337,
+    2024,
+    314159
+  ],
+  "per_seed": {
+    "7": {
+      "warm": {
+        "n_solvable": 143,
+        "base_reach": 49,
+        "var_reach": 32,
+        "gained": 14,
+        "lost": 31,
+        "discordant": 45,
+        "mcnemar_p": 0.016094360031274842,
+        "cost_n": 18,
+        "cost_base_median": 30.761303143105575,
+        "cost_var_median": 15.07820078171656
+      },
+      "cold": {
+        "n_solvable": 143,
+        "base_reach": 51,
+        "var_reach": 48,
+        "gained": 17,
+        "lost": 20,
+        "discordant": 37,
+        "mcnemar_p": 0.7428293587290682,
+        "cost_n": 31,
+        "cost_base_median": 20.60111276872222,
+        "cost_var_median": 17.67262150399229
+      }
+    },
+    "42": {
+      "warm": {
+        "n_solvable": 145,
+        "base_reach": 48,
+        "var_reach": 71,
+        "gained": 38,
+        "lost": 15,
+        "discordant": 53,
+        "mcnemar_p": 0.0021901868838920535,
+        "cost_n": 33,
+        "cost_base_median": 16.154376635154517,
+        "cost_var_median": 26.9991322431655
+      },
+      "cold": {
+        "n_solvable": 145,
+        "base_reach": 68,
+        "var_reach": 70,
+        "gained": 26,
+        "lost": 24,
+        "discordant": 50,
+        "mcnemar_p": 0.887724827340783,
+        "cost_n": 44,
+        "cost_base_median": 30.5125975573295,
+        "cost_var_median": 24.740448025425394
+      }
+    },
+    "1337": {
+      "warm": {
+        "n_solvable": 139,
+        "base_reach": 43,
+        "var_reach": 37,
+        "gained": 11,
+        "lost": 17,
+        "discordant": 28,
+        "mcnemar_p": 0.34492845088243484,
+        "cost_n": 26,
+        "cost_base_median": 36.18998037984878,
+        "cost_var_median": 30.102481472992572
+      },
+      "cold": {
+        "n_solvable": 139,
+        "base_reach": 73,
+        "var_reach": 75,
+        "gained": 22,
+        "lost": 20,
+        "discordant": 42,
+        "mcnemar_p": 0.8776143287523154,
+        "cost_n": 53,
+        "cost_base_median": 42.74717410406892,
+        "cost_var_median": 26.904122691121458
+      }
+    },
+    "2024": {
+      "warm": {
+        "n_solvable": 141,
+        "base_reach": 75,
+        "var_reach": 62,
+        "gained": 19,
+        "lost": 32,
+        "discordant": 51,
+        "mcnemar_p": 0.09191454981585423,
+        "cost_n": 43,
+        "cost_base_median": 31.049038318389794,
+        "cost_var_median": 28.59122235362222
+      },
+      "cold": {
+        "n_solvable": 141,
+        "base_reach": 67,
+        "var_reach": 49,
+        "gained": 9,
+        "lost": 27,
+        "discordant": 36,
+        "mcnemar_p": 0.00393317302223295,
+        "cost_n": 40,
+        "cost_base_median": 18.552385815028167,
+        "cost_var_median": 14.575927632819742
+      }
+    },
+    "314159": {
+      "warm": {
+        "n_solvable": 141,
+        "base_reach": 64,
+        "var_reach": 63,
+        "gained": 25,
+        "lost": 26,
+        "discordant": 51,
+        "mcnemar_p": 1.0,
+        "cost_n": 38,
+        "cost_base_median": 17.102026417897548,
+        "cost_var_median": 31.666673119162667
+      },
+      "cold": {
+        "n_solvable": 141,
+        "base_reach": 42,
+        "var_reach": 61,
+        "gained": 26,
+        "lost": 7,
+        "discordant": 33,
+        "mcnemar_p": 0.0013187271542847157,
+        "cost_n": 35,
+        "cost_base_median": 25.44800265258904,
+        "cost_var_median": 15.95064800463555
+      }
+    }
+  },
+  "summary": {
+    "warm": {
+      "mean_delta_reach": -2.8,
+      "seeds_positive": 1,
+      "n_seeds": 5,
+      "sign_p": 0.375,
+      "wilcoxon_p": 0.625,
+      "pooled_gained": 107,
+      "pooled_lost": 121,
+      "pooled_mcnemar_p": 0.3893136854661541
+    },
+    "cold": {
+      "mean_delta_reach": 0.4,
+      "seeds_positive": 3,
+      "n_seeds": 5,
+      "sign_p": 1.0,
+      "wilcoxon_p": 1.0,
+      "pooled_gained": 100,
+      "pooled_lost": 98,
+      "pooled_mcnemar_p": 0.9433683628047678
+    }
+  }
+}

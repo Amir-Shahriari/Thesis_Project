@@ -1,0 +1,188 @@
+{
+  "n_cells_evaluated": 10,
+  "n_cells_skipped_4x_failed": 5,
+  "V1": {
+    "n_cells": 10,
+    "n_reached": 6,
+    "reach_rate": 0.6,
+    "mean_cost_reached": 5344.466159051338,
+    "mean_cost_ratio_reached": 83.95972891317236
+  },
+  "V2": {
+    "n_cells": 10,
+    "n_reached": 7,
+    "reach_rate": 0.7,
+    "mean_cost_reached": 6648.712426846535,
+    "mean_cost_ratio_reached": 116.56723021524216,
+    "mean_max_similarity": null
+  },
+  "V3": {
+    "n_cells": 10,
+    "n_reached": 4,
+    "reach_rate": 0.4,
+    "mean_cost_reached": 5595.482205747335,
+    "mean_cost_ratio_reached": 94.60446581127572,
+    "mean_max_similarity": 0.9737778642787068,
+    "mean_lambda_effective": 0.9737778642787068
+  },
+  "statistics": {
+    "mcnemar_v1_vs_v3": {
+      "b_v1_failed_v3_reached": 2,
+      "c_v1_reached_v3_failed": 4,
+      "p_value": 0.6875
+    },
+    "mcnemar_v1_vs_v2": {
+      "b_v1_failed_v2_reached": 2,
+      "c_v1_reached_v2_failed": 1,
+      "p_value": 1.0
+    },
+    "paired_ttest_v1_vs_v3_cost": {
+      "n_paired": 2,
+      "t_statistic": 6.492751096294769,
+      "p_value": 0.09728639753588766
+    },
+    "onesample_ttest_lambda_vs_1x_baseline": {
+      "h0_lambda": 0.365,
+      "observed_mean_lambda": 0.9737778642787068,
+      "n_lambda_vals": 10,
+      "t_statistic": 290.0548758014305,
+      "p_value": 1.0,
+      "alternative": "less"
+    }
+  },
+  "interpretation_hints": [
+    "V3 self-attenuation NOT confirmed at n=10: mean lam_eff remains at 0.974. The single-cell finding (0.31 -> 0.10) does not generalise. The mechanism's regime-adaptive property is weaker than initially suggested."
+  ],
+  "per_cell_detail": [
+    {
+      "cell_idx": 1,
+      "seed": 1337,
+      "scenario_id": "seed1173222464_s0",
+      "V1_reached": true,
+      "V2_reached": true,
+      "V3_reached": true,
+      "V1_cost": 5823.965820075249,
+      "V2_cost": 2070.228409753917,
+      "V3_cost": 2416.5544241418306,
+      "V3_mean_lambda": 0.9836755907812784,
+      "V3_mean_max_sim": 0.9836755907812784
+    },
+    {
+      "cell_idx": 2,
+      "seed": 2024,
+      "scenario_id": "seed518677876_s1",
+      "V1_reached": false,
+      "V2_reached": true,
+      "V3_reached": true,
+      "V1_cost": null,
+      "V2_cost": 17943.503666164732,
+      "V3_cost": 10653.566087091287,
+      "V3_mean_lambda": 0.9783994611897691,
+      "V3_mean_max_sim": 0.9783994611897691
+    },
+    {
+      "cell_idx": 3,
+      "seed": 7,
+      "scenario_id": "seed2029167941_s2",
+      "V1_reached": false,
+      "V2_reached": true,
+      "V3_reached": true,
+      "V1_cost": null,
+      "V2_cost": 8283.606569350897,
+      "V3_cost": 5209.7269985960875,
+      "V3_mean_lambda": 0.9778431831665759,
+      "V3_mean_max_sim": 0.9778431831665759
+    },
+    {
+      "cell_idx": 4,
+      "seed": 314159,
+      "scenario_id": "seed1830621171_s0",
+      "V1_reached": true,
+      "V2_reached": true,
+      "V3_reached": true,
+      "V1_cost": 8750.18661136484,
+      "V2_cost": 3177.438521247179,
+      "V3_cost": 4102.081313160135,
+      "V3_mean_lambda": 0.9664289264806679,
+      "V3_mean_max_sim": 0.9664289264806679
+    },
+    {
+      "cell_idx": 5,
+      "seed": 42,
+      "scenario_id": "seed191664964_s0",
+      "V1_reached": true,
+      "V2_reached": true,
+      "V3_reached": false,
+      "V1_cost": 2438.204129687412,
+      "V2_cost": 8861.630096252313,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9630688330351981,
+      "V3_mean_max_sim": 0.9630688330351981
+    },
+    {
+      "cell_idx": 6,
+      "seed": 42,
+      "scenario_id": "seed191664964_s2",
+      "V1_reached": true,
+      "V2_reached": false,
+      "V3_reached": false,
+      "V1_cost": 10187.370381126997,
+      "V2_cost": null,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9672585914301318,
+      "V3_mean_max_sim": 0.9672585914301318
+    },
+    {
+      "cell_idx": 8,
+      "seed": 1337,
+      "scenario_id": "seed1173222464_s1",
+      "V1_reached": true,
+      "V2_reached": true,
+      "V3_reached": false,
+      "V1_cost": 503.80506965585465,
+      "V2_cost": 1311.2634214312716,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9716557748913764,
+      "V3_mean_max_sim": 0.9716557748913764
+    },
+    {
+      "cell_idx": 11,
+      "seed": 2024,
+      "scenario_id": "seed518677876_s4",
+      "V1_reached": false,
+      "V2_reached": false,
+      "V3_reached": false,
+      "V1_cost": null,
+      "V2_cost": null,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9726119534146764,
+      "V3_mean_max_sim": 0.9726119534146764
+    },
+    {
+      "cell_idx": 12,
+      "seed": 7,
+      "scenario_id": "seed2029167941_s3",
+      "V1_reached": true,
+      "V2_reached": true,
+      "V3_reached": false,
+      "V1_cost": 4363.264942397673,
+      "V2_cost": 4893.316303725438,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9789136210680008,
+      "V3_mean_max_sim": 0.9789136210680008
+    },
+    {
+      "cell_idx": 14,
+      "seed": 314159,
+      "scenario_id": "seed1830621171_s2",
+      "V1_reached": false,
+      "V2_reached": false,
+      "V3_reached": false,
+      "V1_cost": null,
+      "V2_cost": null,
+      "V3_cost": null,
+      "V3_mean_lambda": 0.9779227073293938,
+      "V3_mean_max_sim": 0.9779227073293938
+    }
+  ]
+}

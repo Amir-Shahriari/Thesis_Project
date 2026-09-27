@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2026-05-23T19:04:51.481174",
+    "agent_path": "runs\\agents_v1_long\\warm_seed42_4x_compute.pt",
+    "library_path": "runs\\libraries_long\\seed_42_long.pt",
+    "grid_seed": 191664964,
+    "source": "Node_639",
+    "destination": "Node_8583",
+    "dijkstra_cost": 59.499511256927335,
+    "perturbation_steps": 5,
+    "v1_strict": true,
+    "v1_cost": 2438.204129687412,
+    "v1_reasonable": false,
+    "v1_cost_ratio": 40.97855727182196,
+    "v1_infer_ms": 173.00429998431355,
+    "v2_strict": false,
+    "v2_cost": null,
+    "v2_reasonable": false,
+    "v2_cost_ratio": null,
+    "v2_infer_ms": 2997.185700049158,
+    "v3_strict": true,
+    "v3_cost": 1758.0468823070837,
+    "v3_reasonable": false,
+    "v3_cost_ratio": 29.547249131435514,
+    "v3_infer_ms": 292.0901000034064,
+    "v3_mean_lambda": 0.09593436533683225,
+    "v3_mean_max_sim": 0.09551852447421927
+  }
+]

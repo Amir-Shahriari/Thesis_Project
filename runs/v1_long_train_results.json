@@ -1,0 +1,35 @@
+[
+  {
+    "timestamp": "2026-05-24T02:41:42.725196",
+    "seed": 42,
+    "scenario_id": "seed191664964_s0",
+    "source": "Node_639",
+    "destination": "Node_8583",
+    "grid": {
+      "grid_width": 100,
+      "grid_height": 100,
+      "extra_edges": 4,
+      "deactivate_prob": 0.3
+    },
+    "training_config": {
+      "n_iterations": 40,
+      "episodes_per_iteration": 200,
+      "grad_steps_per_episode": 4,
+      "batch_size": 64,
+      "hidden_dim": 128,
+      "expert_ratio": 0.3,
+      "pre_seed_n_states": 3,
+      "pre_seed_k_paths": 3,
+      "total_rollouts": 8000
+    },
+    "warm_cost": 1034.694659442363,
+    "warm_strict": true,
+    "warm_reasonable": false,
+    "warm_cost_ratio": 15.728217608863645,
+    "dijkstra_cost": 65.78588147580437,
+    "warm_infer_ms": 118.23819996789098,
+    "warm_train_s": 8241.187949899992,
+    "k_threshold": 3.0,
+    "checkpoint": "C:\\Users\\amirh\\Desktop\\backups\\V1\\runs\\agents_v1_long\\warm_seed42_4x_compute.pt"
+  }
+]

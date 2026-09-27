@@ -19,6 +19,10 @@ class PathfindingEnv:
         invalid_penalty_mode: str = "legacy",
         invalid_scaled_floor: float = -50.0,
         invalid_nonterminal_penalty: float = -40.0,
+        mask_visited: bool = False,
+        mask_fallback: bool = False,
+        goal_bonus: float = 100.0,
+        cost_scale: float = 1.0,
     ) -> None:
         if invalid_penalty_mode not in ("legacy", "scaled", "nonterminal"):
             raise ValueError(
@@ -37,6 +41,33 @@ class PathfindingEnv:
         self.invalid_penalty_mode = invalid_penalty_mode
         self.invalid_scaled_floor = invalid_scaled_floor
         self.invalid_nonterminal_penalty = invalid_nonterminal_penalty
+        # When True, get_valid_actions() excludes already-visited nodes, which
+        # is the action space the MDP of Chapter 3 actually specifies. The
+        # default False preserves the reactive behaviour every result in runs/
+        # was produced under: a visited neighbour stays in the candidate set
+        # and selecting it costs -5 and ends the episode. Measured on uniform
+        # rollouts, the reactive rule terminates 98.2% of trajectories on a
+        # revisit within a median of 5 steps even at the dense preset, so this
+        # flag materially changes exploration and must not be switched on for
+        # comparisons against existing artefacts.
+        self.mask_visited = mask_visited
+        # When masking empties the candidate set the episode dead-ends, which
+        # at low degree accounts for 91% of uniform rollouts. mask_fallback
+        # instead re-admits visited neighbours in that case and continues
+        # without penalty, lifting the uniform goal rate from 10.0% to 49.8%
+        # at n_chords=0. It diverges further from the MDP of Chapter 3 than
+        # plain masking does, so it is off by default and should not be used
+        # for the control that tests the stated action space.
+        self.mask_fallback = mask_fallback
+        # Reward scaling. Defaults reproduce the published reward exactly:
+        # step reward = -(composite cost), terminal bonus = +100. Setting
+        # cost_scale to the instance's mean per-step cost and goal_bonus to
+        # beta * E[C*] (in those same normalised units) makes the
+        # reach-versus-efficiency weighting invariant to graph density, which
+        # a fixed +100 does not: the bonus-to-optimal-cost ratio otherwise
+        # varies 4.7x to 21.9x across the chord densities under study.
+        self.goal_bonus = goal_bonus
+        self.cost_scale = cost_scale
         self.current_node: str | None = None
         self.steps_taken: int = 0
         self.visited_nodes: set[str] = set()
@@ -116,14 +147,14 @@ class PathfindingEnv:
         if not (edge_data["active"] and self.nodes[action]["active"]):
             return self._invalid_action_result()
 
-        if action in self.visited_nodes:
+        if action in self.visited_nodes and not self._revisit_permitted():
             return self._invalid_action_result()
 
         dist = edge_data["distance"]
         t_val = edge_data["time"]
         node_penalty = self.nodes[action]["node_penalty"]
         step_cost = dist + 0.1 * t_val + node_penalty
-        reward = -step_cost
+        reward = -step_cost / self.cost_scale
 
         if self.lambda_shape > 0.0:
             d_prev = self._static_dist_to_goal.get(self.current_node, float("inf"))
@@ -136,7 +167,7 @@ class PathfindingEnv:
         self.visited_nodes.add(action)
 
         if self.current_node == self.destination:
-            reward += 100.0
+            reward += self.goal_bonus
             return self.current_node, reward, True
 
         done = self.steps_taken >= self.max_steps
@@ -150,13 +181,30 @@ class PathfindingEnv:
             return self.current_node, -10.0, True
         return self.current_node, reward, done
 
+    def _revisit_permitted(self) -> bool:
+        """Under mask_fallback a revisit is legal only when the agent is boxed
+        in, i.e. every active neighbour has already been visited. Outside that
+        case the revisit rule is unchanged."""
+        if not (self.mask_visited and self.mask_fallback):
+            return False
+        return not any(
+            nb not in self.visited_nodes
+            for nb, d in self.graph[self.current_node].items()
+            if d["active"] and self.nodes[nb]["active"]
+        )
+
     def get_valid_actions(self) -> list[str]:
         assert self.current_node is not None
-        return [
+        acts = [
             nb
             for nb, data in self.graph[self.current_node].items()
             if data["active"] and self.nodes[nb]["active"]
         ]
+        if self.mask_visited:
+            unvisited = [nb for nb in acts if nb not in self.visited_nodes]
+            if unvisited or not self.mask_fallback:
+                acts = unvisited
+        return acts
 
     def _apply_realtime_perturbation(self) -> None:
         active = [n for n, d in self.nodes.items() if d["active"]]

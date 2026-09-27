@@ -1,0 +1,111 @@
+arms=['persistent', 'dqfd_pretrain', 'bc_pretrain', 'cold']  n_pre=1000  iters=10  eps=200  torch=2.11.0+cu128  device=cuda:0  smoke=False
+  seed=2024 seed518677876_s0 persistent       reach=True cost=2772.3022136597374 steps=8000 t=1923s
+  seed=2024 seed518677876_s0 dqfd_pretrain    reach=True cost=3399.3194632843224 steps=9000 t=4692s
+  seed=2024 seed518677876_s0 bc_pretrain      reach=False cost=None steps=9000 t=1706s
+  seed=2024 seed518677876_s0 cold             reach=False cost=None steps=8000 t=1517s
+  seed=2024 seed518677876_s1 persistent       reach=True cost=912.0340536526684 steps=8000 t=1913s
+  seed=2024 seed518677876_s1 dqfd_pretrain    reach=False cost=None steps=9000 t=1733s
+  seed=2024 seed518677876_s1 bc_pretrain      reach=False cost=None steps=9000 t=1609s
+  seed=2024 seed518677876_s1 cold             reach=False cost=None steps=8000 t=1539s
+  seed=2024 seed518677876_s2 persistent       reach=False cost=None steps=8000 t=1945s
+  seed=2024 seed518677876_s2 dqfd_pretrain    reach=False cost=None steps=9000 t=1947s
+  seed=2024 seed518677876_s2 bc_pretrain      reach=False cost=None steps=9000 t=1712s
+  seed=2024 seed518677876_s2 cold             reach=False cost=None steps=8000 t=1539s
+  seed=2024 seed518677876_s3 persistent       reach=True cost=619.545795369505 steps=8000 t=1973s
+  seed=2024 seed518677876_s3 dqfd_pretrain    reach=True cost=3044.9982237141726 steps=9000 t=1849s
+  seed=2024 seed518677876_s3 bc_pretrain      reach=True cost=642.6357711634415 steps=9000 t=6083s
+  seed=2024 seed518677876_s3 cold             reach=True cost=567.5693835702798 steps=8000 t=1512s
+  seed=2024 seed518677876_s4 persistent       reach=True cost=1772.4468135934453 steps=8000 t=2000s
+  seed=2024 seed518677876_s4 dqfd_pretrain    reach=False cost=None steps=9000 t=2055s
+  seed=2024 seed518677876_s4 bc_pretrain      reach=False cost=None steps=9000 t=1768s
+  seed=2024 seed518677876_s4 cold             reach=False cost=None steps=8000 t=1192s
+{
+  "n_cells": 24,
+  "arms": {
+    "persistent": {
+      "reach": 21,
+      "n": 24,
+      "reach_1000": 21
+    },
+    "dqfd_pretrain": {
+      "reach": 9,
+      "n": 24,
+      "reach_1000": 11
+    },
+    "bc_pretrain": {
+      "reach": 7,
+      "n": 24,
+      "reach_1000": 10
+    },
+    "cold": {
+      "reach": 8,
+      "n": 24,
+      "reach_1000": 10
+    }
+  },
+  "tests": {
+    "persistent_vs_dqfd_pretrain": {
+      "reach": {
+        "b_first_only": 12,
+        "c_second_only": 0,
+        "p_exact": 0.00048828125,
+        "p_holm": 0.00048828125
+      },
+      "cost": {
+        "n_both_reached": 9,
+        "p": 0.30078125,
+        "first_cheaper": 6
+      }
+    },
+    "persistent_vs_bc_pretrain": {
+      "reach": {
+        "b_first_only": 14,
+        "c_second_only": 0,
+        "p_exact": 0.0001220703125,
+        "p_holm": 0.000244140625
+      },
+      "cost": {
+        "n_both_reached": 7,
+        "p": 0.578125,
+        "first_cheaper": 5
+      }
+    },
+    "persistent_vs_cold": {
+      "reach": {
+        "b_first_only": 13,
+        "c_second_only": 0,
+        "p_exact": 0.000244140625
+      },
+      "cost": {
+        "n_both_reached": 8,
+        "p": 0.0390625,
+        "first_cheaper": 6
+      }
+    },
+    "dqfd_pretrain_vs_cold": {
+      "reach": {
+        "b_first_only": 5,
+        "c_second_only": 4,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 4,
+        "p": null,
+        "first_cheaper": null
+      }
+    },
+    "bc_pretrain_vs_cold": {
+      "reach": {
+        "b_first_only": 3,
+        "c_second_only": 4,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 4,
+        "p": null,
+        "first_cheaper": null
+      }
+    }
+  },
+  "eval_state_consistent_cells": 24
+}

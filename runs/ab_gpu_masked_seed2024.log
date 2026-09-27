@@ -1,0 +1,57 @@
+========================================================================
+50x50 HEADLINE-IDENTICAL SWEEP
+========================================================================
+Grid:        {'grid_width': 50, 'grid_height': 50, 'extra_edges': 3, 'deactivate_prob': 0.22, 'node_deactivate_prob': 0.05}
+Train 1x:    n_iter=10, eps/iter=200, batch=64
+Oracles:     ['ClassicalAStar', 'QuantumInspiredStochasticOracle', 'FaithfulSimulatedQAOA']
+mask_visited: True   <-- MASKED ACTION SPACE
+Seeds:       [2024]  (5 scenarios each = 5 cells)
+S4 fix:      target_encoder.eval() in learn_from_batch (gnn_dqn.py)
+Output dir:  runs\sweep_50x50_masked_gpu\seed2024/
+
+Sampling scenarios ...
+  5 cells saved to runs\sweep_50x50_masked_gpu\seed2024\cells.json
+
+Buffer pre-check (seed=2024, q=('Node_2490', 'Node_197')) ...
+  Pre-seed buffer:  57 transitions (library: 48, goal-adj: 9)
+  Batch size:       64
+  Passes:           True
+  Note: pre-seed (57) < batch_size (64).
+        Buffer fills from online data ~episode 1 of iter 1.
+  Estimated grad steps in iter 1: ~796
+  Training WILL occur. Proceeding.
+
+========================================================================
+1x TIER -- 10 iters x 200 eps/iter x 64 batch
+========================================================================
+
+[ 1/5] seed=2024  Node_2490 -> Node_197  euclid=46.5  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=2772.3022136597374  dij=62.05520271612268  warm_grad=8000  wall=3232s
+
+[ 2/5] seed=2024  Node_453 -> Node_2285  euclid=48.2  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=912.0340536526684  dij=57.14338161528373  warm_grad=8000  wall=3248s
+
+[ 3/5] seed=2024  Node_696 -> Node_1803  euclid=48.8  n_iter=10
+  warm_strict=False  cold_strict=False  warm_cost=None  dij=None  warm_grad=8000  wall=3283s
+
+[ 4/5] seed=2024  Node_178 -> Node_1957  euclid=41.7  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=619.545795369505  dij=54.21308539664738  warm_grad=8000  wall=3242s
+
+[ 5/5] seed=2024  Node_505 -> Node_2491  euclid=53.1  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1772.4468135934453  dij=72.27586376552645  warm_grad=8000  wall=3113s
+
+1x complete: 5 cells in 4.48 h (3224 s/cell)
+
+4x projection: 17.9 h  deadline: 120 h (5 days)
+Skipping 4x: QWARM_SKIP_4X=1 set by the operator.
+Report written to runs\sweep_50x50_masked_gpu\seed2024\REPORT.md
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+  M1_win_ge_80pct: FAIL  value=0.6000
+  M2_mean_cost_ratio_le_5: FAIL  value=24.1466
+  M3_paired_p_lt_001: FAIL  value=N/A
+
+  Output: runs\sweep_50x50_masked_gpu\seed2024/
+========================================================================

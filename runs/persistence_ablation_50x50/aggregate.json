@@ -1,0 +1,90 @@
+{
+  "n_cells": 25,
+  "arms": {
+    "persistent": {
+      "reach": 22,
+      "n": 25,
+      "reach_1000": 22
+    },
+    "dqfd_pretrain": {
+      "reach": 10,
+      "n": 25,
+      "reach_1000": 12
+    },
+    "bc_pretrain": {
+      "reach": 8,
+      "n": 25,
+      "reach_1000": 11
+    },
+    "cold": {
+      "reach": 9,
+      "n": 25,
+      "reach_1000": 11
+    }
+  },
+  "tests": {
+    "persistent_vs_dqfd_pretrain": {
+      "reach": {
+        "b_first_only": 12,
+        "c_second_only": 0,
+        "p_exact": 0.00048828125,
+        "p_holm": 0.00048828125
+      },
+      "cost": {
+        "n_both_reached": 10,
+        "p": 0.16015625,
+        "first_cheaper": 7
+      }
+    },
+    "persistent_vs_bc_pretrain": {
+      "reach": {
+        "b_first_only": 14,
+        "c_second_only": 0,
+        "p_exact": 0.0001220703125,
+        "p_holm": 0.000244140625
+      },
+      "cost": {
+        "n_both_reached": 8,
+        "p": 0.3125,
+        "first_cheaper": 6
+      }
+    },
+    "persistent_vs_cold": {
+      "reach": {
+        "b_first_only": 13,
+        "c_second_only": 0,
+        "p_exact": 0.000244140625
+      },
+      "cost": {
+        "n_both_reached": 9,
+        "p": 0.01953125,
+        "first_cheaper": 7
+      }
+    },
+    "dqfd_pretrain_vs_cold": {
+      "reach": {
+        "b_first_only": 5,
+        "c_second_only": 4,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 5,
+        "p": null,
+        "first_cheaper": null
+      }
+    },
+    "bc_pretrain_vs_cold": {
+      "reach": {
+        "b_first_only": 3,
+        "c_second_only": 4,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 5,
+        "p": null,
+        "first_cheaper": null
+      }
+    }
+  },
+  "eval_state_consistent_cells": 25
+}

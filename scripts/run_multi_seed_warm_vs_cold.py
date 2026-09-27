@@ -60,6 +60,13 @@ TRAIN_CFG = {
     "pre_seed_n_states": 5,   # smoke default: n_iterations
     "pre_seed_k_paths": 10,   # smoke default
     "oracle_pool": "full",    # full | classical_only | quantum_only
+    # When True the TRAINING rollout excludes already-visited nodes from the
+    # action set, which is the MDP Chapter 3 specifies. Default False keeps
+    # the reactive rule every result in runs/ was produced under, where a
+    # visited neighbour stays selectable and costs -5 terminally. Note the
+    # EVALUATION rollout (path_evaluator.py) has always masked, so the legacy
+    # default carries a train/eval mismatch that this flag removes.
+    "mask_visited": False,
 }
 DEFAULT_SEEDS = [42, 1337, 2024, 7, 314159]
 DEFAULT_N_SCENARIOS = 5
@@ -126,6 +133,7 @@ def _run_cell(
             TRAIN_CFG["oracle_pool"], TRAIN_CFG["pre_seed_k_paths"]
         ),
         trace_dir=warm_trace,
+        env_kwargs={"mask_visited": TRAIN_CFG["mask_visited"]},
     )
     warm_train_s = time.perf_counter() - t_warm
     print(f"         [warm: done in {warm_train_s:.0f}s, evaluating...]", flush=True)
@@ -164,6 +172,7 @@ def _run_cell(
         re_seed_experts_each_iteration=False,
         seed=seed,
         trace_dir=cold_trace,
+        env_kwargs={"mask_visited": TRAIN_CFG["mask_visited"]},
     )
     cold_train_s = time.perf_counter() - t_cold
     print(f"         [cold: done in {cold_train_s:.0f}s]", flush=True)
@@ -415,6 +424,10 @@ def main() -> None:
                         help="Hard per-cell timeout in seconds; each cell runs in an "
                              "isolated subprocess and a hung/crashed cell is skipped "
                              "loudly. 0 disables the watchdog (legacy in-process mode).")
+    parser.add_argument("--mask-visited", action="store_true",
+                        help="Exclude visited nodes from the TRAINING "
+                             "action set (the MDP of Chapter 3). "
+                             "Off by default to preserve legacy runs.")
     parser.add_argument("--resume", action="store_true",
                         help="Load completed cells from --out (the checkpoint) and "
                              "skip them. Bit-compatible: every cell re-seeds itself.")
@@ -422,6 +435,9 @@ def main() -> None:
 
     if args.oracle_pool:
         TRAIN_CFG["oracle_pool"] = args.oracle_pool
+    if args.mask_visited:
+        TRAIN_CFG["mask_visited"] = True
+        print("  [MASKED] training action set excludes visited nodes")
 
     if args.config:
         _apply_config(args.config)

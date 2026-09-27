@@ -1,0 +1,27 @@
+{
+  "label": "50x50 reactive",
+  "recorded_at": "2026-08-12 10:20:38",
+  "torch_version": "2.11.0+cu128",
+  "torch_file": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_available": true,
+  "resolved_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "sys_executable": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe",
+  "sys_prefix": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv",
+  "sys_base_prefix": "C:\\Users\\amirh\\miniconda3\\envs\\qwarm_env",
+  "python": "3.11.15",
+  "git_rev": "1e9719c",
+  "env": {
+    "QWARM_MASK_VISITED": "0",
+    "QWARM_SEEDS": null,
+    "QWARM_OUT_DIR": null,
+    "QWARM_SKIP_4X": null,
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "CUDA_VISIBLE_DEVICES": null
+  }
+}

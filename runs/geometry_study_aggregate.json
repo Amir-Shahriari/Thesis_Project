@@ -1,0 +1,229 @@
+{
+  "scales": {
+    "25x25": {
+      "A_geometry": {
+        "n_checkpoints": 10,
+        "dim": 64,
+        "isoscore_mean": 0.04429420340259367,
+        "effective_rank_mean": 20.060404387674488,
+        "mean_pair_cosine": 0.7556698409956992,
+        "mean_pair_cosine_centred": 0.020589028203635434,
+        "mean_norm_ratio": 0.8679252905547195,
+        "locality_rho_encoder": 0.12410135752613778,
+        "locality_rho_input_features": 0.04069196050611694,
+        "warm_vs_cold": {
+          "isoscore": {
+            "warm": 0.0591029644133582,
+            "cold": 0.029485442391829146,
+            "diff": 0.029617522021529057,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 5,
+            "wilcoxon_p": 0.0625
+          },
+          "effective_rank": {
+            "warm": 23.658825707782643,
+            "cold": 16.461983067566333,
+            "diff": 7.19684264021631,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 5,
+            "wilcoxon_p": 0.0625
+          },
+          "mean_pair_cosine": {
+            "warm": 0.666272688852129,
+            "cold": 0.8450669931392696,
+            "diff": -0.1787943042871406,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 5,
+            "wilcoxon_p": 0.0625
+          }
+        }
+      },
+      "B_retrieval_gate": {
+        "n_checkpoints": 10,
+        "library_coverage_fraction": 0.05942275042444821,
+        "mean_best_hop": 1.9289999999999998,
+        "mean_random_hop": 3.743068346151067,
+        "treatments": {
+          "raw": {
+            "sim_max_mean": 0.9632927000522613,
+            "sim_max_std": 0.035567190824076535,
+            "saturation_frac_above_0.95": 0.785,
+            "mean_retrieved_hop": 3.53975,
+            "retrieval_quality": 0.10298651221107927,
+            "gate_auc": 0.5840450712747675
+          },
+          "centred": {
+            "sim_max_mean": 0.8246357440948486,
+            "sim_max_std": 0.11723783910274506,
+            "saturation_frac_above_0.95": 0.12250000000000001,
+            "mean_retrieved_hop": 3.5477499999999997,
+            "retrieval_quality": 0.10166974161168732,
+            "gate_auc": 0.576763485302888,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 0.921875
+          },
+          "whitened": {
+            "sim_max_mean": 0.4295165717601776,
+            "sim_max_std": 0.15295617729425431,
+            "saturation_frac_above_0.95": 0.0005,
+            "mean_retrieved_hop": 3.567,
+            "retrieval_quality": 0.08992490921187304,
+            "gate_auc": 0.5858078954768091,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 0.275390625
+          },
+          "raw+pctl": {
+            "sim_max_mean": 0.5,
+            "sim_max_std": 0.28939772680060927,
+            "saturation_frac_above_0.95": 0.05,
+            "mean_retrieved_hop": 3.53975,
+            "retrieval_quality": 0.10298651221107927,
+            "gate_auc": 0.5840450712747675,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 1.0
+          }
+        },
+        "raw_quality_vs_random": {
+          "mean": 0.10298651221107927,
+          "t": 9.569629546196895,
+          "p": 5.154131001252781e-06
+        },
+        "raw_auc_vs_chance": {
+          "mean": 0.5840450712747675,
+          "t": 6.955340773637777,
+          "p": 6.645113945006421e-05
+        }
+      },
+      "C_metric_probe": {
+        "n_checkpoints": 10,
+        "cosine": 0.13004822152612755,
+        "ridge": 0.22444273694528113,
+        "mlp": 0.16833012299358524,
+        "input_cosine": 0.03918402858836344,
+        "input_ridge": 0.09851675719595239,
+        "ridge_vs_cosine": {
+          "diff": 0.09439451541915359,
+          "ratio": 1.7258424168468087,
+          "wilcoxon_p": 0.001953125
+        },
+        "best_learned_rho": 0.28714549687302027
+      }
+    },
+    "50x50": {
+      "A_geometry": {
+        "n_checkpoints": 10,
+        "dim": 128,
+        "isoscore_mean": 0.033805835861551024,
+        "effective_rank_mean": 25.624198849328724,
+        "mean_pair_cosine": 0.6259538773103044,
+        "mean_pair_cosine_centred": 0.019001275085092882,
+        "mean_norm_ratio": 0.7918519110458393,
+        "locality_rho_encoder": 0.05722256234040078,
+        "locality_rho_input_features": 0.006608853083319453,
+        "warm_vs_cold": {
+          "isoscore": {
+            "warm": 0.032016100094479624,
+            "cold": 0.035595571628622424,
+            "diff": -0.0035794715341428,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 2,
+            "wilcoxon_p": 0.3125
+          },
+          "effective_rank": {
+            "warm": 25.165044826411652,
+            "cold": 26.083352872245797,
+            "diff": -0.918308045834145,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 3,
+            "wilcoxon_p": 1.0
+          },
+          "mean_pair_cosine": {
+            "warm": 0.5981428345628806,
+            "cold": 0.6537649200577282,
+            "diff": -0.055622085494847595,
+            "n_pairs": 5,
+            "n_pairs_favouring_warm": 3,
+            "wilcoxon_p": 0.3125
+          }
+        }
+      },
+      "B_retrieval_gate": {
+        "n_checkpoints": 10,
+        "library_coverage_fraction": 0.01859486748001683,
+        "mean_best_hop": 2.346,
+        "mean_random_hop": 4.146190236804911,
+        "treatments": {
+          "raw": {
+            "sim_max_mean": 0.9410721898078919,
+            "sim_max_std": 0.0511256031692028,
+            "saturation_frac_above_0.95": 0.5649999999999998,
+            "mean_retrieved_hop": 4.09925,
+            "retrieval_quality": 0.022532291341796636,
+            "gate_auc": 0.6361442942036548
+          },
+          "centred": {
+            "sim_max_mean": 0.8209232866764069,
+            "sim_max_std": 0.11123392656445504,
+            "saturation_frac_above_0.95": 0.09175,
+            "mean_retrieved_hop": 4.096500000000001,
+            "retrieval_quality": 0.02507128028361017,
+            "gate_auc": 0.6246935182217535,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 0.556640625
+          },
+          "whitened": {
+            "sim_max_mean": 0.5292617112398148,
+            "sim_max_std": 0.19058896899223327,
+            "saturation_frac_above_0.95": 0.00425,
+            "mean_retrieved_hop": 4.096,
+            "retrieval_quality": 0.0220868413844571,
+            "gate_auc": 0.6224098427707596,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 0.845703125
+          },
+          "raw+pctl": {
+            "sim_max_mean": 0.5,
+            "sim_max_std": 0.28939772680060927,
+            "saturation_frac_above_0.95": 0.05,
+            "mean_retrieved_hop": 4.09925,
+            "retrieval_quality": 0.022532291341796636,
+            "gate_auc": 0.6361442942036548,
+            "saturation_vs_raw_p": 0.001953125,
+            "quality_vs_raw_p": 1.0
+          }
+        },
+        "raw_quality_vs_random": {
+          "mean": 0.022532291341796636,
+          "t": 2.779445147476874,
+          "p": 0.02142018715816122
+        },
+        "raw_auc_vs_chance": {
+          "mean": 0.6361442942036548,
+          "t": 3.3459834811378313,
+          "p": 0.008578148892177518
+        }
+      },
+      "C_metric_probe": {
+        "n_checkpoints": 10,
+        "cosine": 0.05403452089442908,
+        "ridge": 0.15426506434136625,
+        "mlp": 0.07784068477397443,
+        "input_cosine": 0.018498558074734363,
+        "input_ridge": 0.005375728541994532,
+        "ridge_vs_cosine": {
+          "diff": 0.10023054344693719,
+          "ratio": 2.854935359615095,
+          "wilcoxon_p": 0.001953125
+        },
+        "best_learned_rho": 0.19530018408320143
+      }
+    }
+  },
+  "headline": {
+    "claim_1_geometry_collapsed": "IsoScore 0.044 (25x25) / 0.034 (50x50) on a 0-1 scale; effective rank 20/64 and 26/128.",
+    "claim_2_gate_saturates": "78% / 56% of query states score sim_max > 0.95.",
+    "claim_3_retrieval_near_random": "retrieval quality 0.103 / 0.023 where 1.0 = nearest stored state and 0.0 = a random stored state.",
+    "claim_4_posthoc_fixes_saturation_not_quality": "whitening drives saturation 78% -> 0% (25x25) but changes retrieval quality by -0.0131 (p=0.28).",
+    "claim_5_information_absent_not_misaligned": "a learned linear metric on frozen embeddings lifts locality rho 0.130->0.224 (25x25) and 0.054->0.154 (50x50): better than cosine, but far short of usable."
+  }
+}

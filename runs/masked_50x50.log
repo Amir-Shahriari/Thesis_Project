@@ -1,0 +1,117 @@
+========================================================================
+50x50 HEADLINE-IDENTICAL SWEEP
+========================================================================
+Grid:        {'grid_width': 50, 'grid_height': 50, 'extra_edges': 3, 'deactivate_prob': 0.22, 'node_deactivate_prob': 0.05}
+Train 1x:    n_iter=10, eps/iter=200, batch=64
+Oracles:     ['ClassicalAStar', 'QuantumInspiredStochasticOracle', 'FaithfulSimulatedQAOA']
+mask_visited: True   <-- MASKED ACTION SPACE
+Seeds:       [42, 1337, 2024, 7, 314159]  (5 scenarios each = 25 cells)
+S4 fix:      target_encoder.eval() in learn_from_batch (gnn_dqn.py)
+Output dir:  runs\sweep_50x50_masked/
+
+Sampling scenarios ...
+  25 cells saved to runs\sweep_50x50_masked\cells.json
+
+Buffer pre-check (seed=42, q=('Node_2147', 'Node_215')) ...
+  Pre-seed buffer:  25 transitions (library: 18, goal-adj: 7)
+  Batch size:       64
+  Passes:           True
+  Note: pre-seed (25) < batch_size (64).
+        Buffer fills from online data ~episode 1 of iter 1.
+  Estimated grad steps in iter 1: ~796
+  Training WILL occur. Proceeding.
+
+========================================================================
+1x TIER -- 10 iters x 200 eps/iter x 64 batch
+========================================================================
+
+[ 1/25] seed=42  Node_2147 -> Node_215  euclid=49.7  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=596.9927258303649  dij=66.72867919065835  warm_grad=8000  wall=3207s
+
+[ 2/25] seed=42  Node_1744 -> Node_504  euclid=46.6  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=87.21077842980199  dij=56.56343485779666  warm_grad=8000  wall=2390s
+
+[ 3/25] seed=42  Node_321 -> Node_2100  euclid=45.5  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=685.6407830290825  dij=54.79796485559005  warm_grad=8000  wall=1964s
+
+[ 4/25] seed=42  Node_160 -> Node_2146  euclid=53.1  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=463.1418220320155  dij=51.28783352584724  warm_grad=8000  wall=1942s
+
+[ 5/25] seed=42  Node_1896 -> Node_1752  euclid=44.0  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=728.460340384577  dij=55.043989824581104  warm_grad=8000  wall=2782s
+
+[ 6/25] seed=1337  Node_2435 -> Node_906  euclid=41.7  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1239.9270047554005  dij=53.57155443838012  warm_grad=8000  wall=1823s
+
+[ 7/25] seed=1337  Node_555 -> Node_1047  euclid=43.0  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=743.8146333008027  dij=52.311412115538104  warm_grad=8000  wall=1707s
+
+[ 8/25] seed=1337  Node_2254 -> Node_1149  euclid=50.5  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=492.8745585949508  dij=59.515751069394156  warm_grad=8000  wall=1173s
+
+[ 9/25] seed=1337  Node_231 -> Node_2061  euclid=42.1  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=374.4503166242272  dij=50.02233809178831  warm_grad=8000  wall=1125s
+
+[10/25] seed=1337  Node_2136 -> Node_557  euclid=42.4  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=277.0777460255652  dij=58.15779545182806  warm_grad=8000  wall=1148s
+
+[11/25] seed=2024  Node_2490 -> Node_197  euclid=46.5  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=2772.3022136597374  dij=62.05520271612268  warm_grad=8000  wall=1224s
+
+[12/25] seed=2024  Node_453 -> Node_2285  euclid=48.2  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=912.0340536526684  dij=57.14338161528373  warm_grad=8000  wall=1237s
+
+[13/25] seed=2024  Node_696 -> Node_1803  euclid=48.8  n_iter=10
+  warm_strict=False  cold_strict=False  warm_cost=None  dij=None  warm_grad=8000  wall=1269s
+
+[14/25] seed=2024  Node_178 -> Node_1957  euclid=41.7  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=619.545795369505  dij=54.21308539664738  warm_grad=8000  wall=1221s
+
+[15/25] seed=2024  Node_505 -> Node_2491  euclid=53.1  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1772.4468135934453  dij=72.27586376552645  warm_grad=8000  wall=1240s
+
+[16/25] seed=7  Node_14 -> Node_1250  euclid=43.3  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=555.272419916551  dij=48.74725801693423  warm_grad=8000  wall=1200s
+
+[17/25] seed=7  Node_2054 -> Node_329  euclid=43.0  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=46.39396092796406  dij=46.39396092796405  warm_grad=8000  wall=1163s
+
+[18/25] seed=7  Node_401 -> Node_2144  euclid=54.8  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=670.4251611052745  dij=51.32874587815299  warm_grad=8000  wall=1214s
+
+[19/25] seed=7  Node_10 -> Node_1544  euclid=45.3  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=870.523355778201  dij=66.55332921033745  warm_grad=8000  wall=1230s
+
+[20/25] seed=7  Node_1600 -> Node_106  euclid=52.7  n_iter=10
+  warm_strict=False  cold_strict=False  warm_cost=None  dij=None  warm_grad=8000  wall=1126s
+
+[21/25] seed=314159  Node_262 -> Node_1940  euclid=43.3  n_iter=10
+  warm_strict=False  cold_strict=False  warm_cost=None  dij=None  warm_grad=8000  wall=1255s
+
+[22/25] seed=314159  Node_1303 -> Node_2497  euclid=49.6  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=675.8905092857763  dij=59.591472983639484  warm_grad=8000  wall=1233s
+
+[23/25] seed=314159  Node_214 -> Node_2035  euclid=41.7  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1307.879335015798  dij=72.73387817018641  warm_grad=8000  wall=1253s
+
+[24/25] seed=314159  Node_906 -> Node_146  euclid=43.1  n_iter=10
+  warm_strict=True  cold_strict=False  warm_cost=1961.613234572103  dij=61.84341770092653  warm_grad=8000  wall=1167s
+
+[25/25] seed=314159  Node_239 -> Node_2159  euclid=49.2  n_iter=10
+  warm_strict=True  cold_strict=True  warm_cost=641.8740457392003  dij=59.6249900953452  warm_grad=8000  wall=1234s
+
+1x complete: 25 cells in 10.43 h (1501 s/cell)
+
+4x projection: 41.7 h  deadline: 120 h (5 days)
+Skipping 4x: QWARM_SKIP_4X=1 set by the operator.
+Report written to runs\sweep_50x50_masked\REPORT.md
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+  M1_win_ge_80pct: PASS  value=0.8000
+  M2_mean_cost_ratio_le_5: FAIL  value=14.0949
+  M3_paired_p_lt_001: FAIL  value=0.0142
+
+  Output: runs\sweep_50x50_masked/
+========================================================================

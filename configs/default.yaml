@@ -1,0 +1,18 @@
+grid_width: 100
+grid_height: 100
+extra_edges: 4
+deactivate_prob: 0.30
+n_iterations: 10
+episodes_per_iteration: 200
+hidden_dim: 128
+expert_ratio: 0.30
+# Pre-seeding: 3 perturbation states x 3 K-shortest paths keeps
+# Yen's algorithm tractable on a 10k-node graph (vs 10x10=100 calls).
+pre_seed_n_states: 3
+pre_seed_k_paths: 3
+
+library:
+  enabled: false             # default-off; sweep script sets to true via --use-library
+  lambda_retr: 0.5           # weight on retrieval Q-values
+  k_neighbors: 5             # how many expert entries to retrieve per query
+  similarity: "cosine"       # cosine | dot | euclidean

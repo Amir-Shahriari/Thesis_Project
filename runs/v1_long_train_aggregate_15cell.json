@@ -1,0 +1,164 @@
+{
+  "n_cells": 15,
+  "n_reached_4x": 10,
+  "n_failed_4x": 5,
+  "reach_rate_4x": 0.6666666666666666,
+  "binomial_ci_95_low": 0.3838037325411541,
+  "binomial_ci_95_high": 0.8817588966331302,
+  "mean_4x_cost_ratio_reached_only": 43.836821016903386,
+  "mean_train_time_min": 81.81736216899998,
+  "mcnemar_p": 0.001953125,
+  "interpretation": "4x training compute fixes a majority of failing cells (10/15, binomial CI [0.384, 0.882], McNemar p=0.001953). The training-compute hypothesis is supported but with measurable variance across cells, indicating other factors (per-cell graph topology, oracle path availability) also contribute.",
+  "cells": [
+    {
+      "seed": 42,
+      "scenario_id": "seed191664964_s1",
+      "reach_1x": false,
+      "reach_4x": false,
+      "cost_4x": Infinity,
+      "cost_ratio_4x": Infinity,
+      "train_s_4x": 2105.6803235000116,
+      "dijkstra_cost": 62.19025061210652
+    },
+    {
+      "seed": 1337,
+      "scenario_id": "seed1173222464_s0",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 3556.1016267069604,
+      "cost_ratio_4x": 60.061627720009525,
+      "train_s_4x": 2102.122908999969,
+      "dijkstra_cost": 59.207546676632035
+    },
+    {
+      "seed": 2024,
+      "scenario_id": "seed518677876_s1",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 4637.940978381618,
+      "cost_ratio_4x": 82.8810640543728,
+      "train_s_4x": 2106.336751999974,
+      "dijkstra_cost": 55.95899414779438
+    },
+    {
+      "seed": 7,
+      "scenario_id": "seed2029167941_s2",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 3200.025388430545,
+      "cost_ratio_4x": 59.24620914567759,
+      "train_s_4x": 2185.4519638000056,
+      "dijkstra_cost": 54.01232305955913
+    },
+    {
+      "seed": 314159,
+      "scenario_id": "seed1830621171_s0",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 4662.448146614238,
+      "cost_ratio_4x": 84.2581224138467,
+      "train_s_4x": 2099.4328741999925,
+      "dijkstra_cost": 55.33529602895621
+    },
+    {
+      "seed": 42,
+      "scenario_id": "seed191664964_s0",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 1034.694659442363,
+      "cost_ratio_4x": 15.728217608863645,
+      "train_s_4x": 8241.187949899992,
+      "dijkstra_cost": 65.78588147580437
+    },
+    {
+      "seed": 42,
+      "scenario_id": "seed191664964_s2",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 1220.550734594943,
+      "cost_ratio_4x": 23.289775589086045,
+      "train_s_4x": 3577.208392200002,
+      "dijkstra_cost": 52.40714879051528
+    },
+    {
+      "seed": 42,
+      "scenario_id": "seed191664964_s3",
+      "reach_1x": false,
+      "reach_4x": false,
+      "cost_4x": Infinity,
+      "cost_ratio_4x": Infinity,
+      "train_s_4x": 3535.805140500015,
+      "dijkstra_cost": 60.80754527283783
+    },
+    {
+      "seed": 1337,
+      "scenario_id": "seed1173222464_s1",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 3530.0648334212556,
+      "cost_ratio_4x": 59.83081844973874,
+      "train_s_4x": 3533.882350799977,
+      "dijkstra_cost": 59.00077794166745
+    },
+    {
+      "seed": 1337,
+      "scenario_id": "seed1173222464_s2",
+      "reach_1x": false,
+      "reach_4x": false,
+      "cost_4x": Infinity,
+      "cost_ratio_4x": Infinity,
+      "train_s_4x": 3533.117210299999,
+      "dijkstra_cost": 66.99982952416964
+    },
+    {
+      "seed": 2024,
+      "scenario_id": "seed518677876_s2",
+      "reach_1x": false,
+      "reach_4x": false,
+      "cost_4x": Infinity,
+      "cost_ratio_4x": Infinity,
+      "train_s_4x": 4891.529863300035,
+      "dijkstra_cost": 68.32167532976932
+    },
+    {
+      "seed": 2024,
+      "scenario_id": "seed518677876_s4",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 775.8971684763444,
+      "cost_ratio_4x": 15.224069217608147,
+      "train_s_4x": 10883.202941700001,
+      "dijkstra_cost": 50.965162952552944
+    },
+    {
+      "seed": 7,
+      "scenario_id": "seed2029167941_s3",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 579.2011531065497,
+      "cost_ratio_4x": 9.0849815199927,
+      "train_s_4x": 7449.174933800008,
+      "dijkstra_cost": 63.753696342908476
+    },
+    {
+      "seed": 7,
+      "scenario_id": "seed2029167941_s4",
+      "reach_1x": false,
+      "reach_4x": false,
+      "cost_4x": Infinity,
+      "cost_ratio_4x": Infinity,
+      "train_s_4x": 8658.146305100003,
+      "dijkstra_cost": 61.35194051859888
+    },
+    {
+      "seed": 314159,
+      "scenario_id": "seed1830621171_s2",
+      "reach_1x": false,
+      "reach_4x": true,
+      "cost_4x": 1933.0682934862784,
+      "cost_ratio_4x": 28.76332444983799,
+      "train_s_4x": 8733.34604199999,
+      "dijkstra_cost": 67.20601079536084
+    }
+  ]
+}

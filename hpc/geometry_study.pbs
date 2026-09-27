@@ -1,0 +1,77 @@
+#!/bin/bash
+#PBS -N qwarm-geometry
+#PBS -P $PROJECT
+#PBS -q normal
+#PBS -l ncpus=4
+#PBS -l mem=16GB
+#PBS -l jobfs=5GB
+#PBS -l walltime=02:00:00
+#PBS -l storage=scratch/$PROJECT
+#PBS -l wd
+#PBS -j oe
+#PBS -o logs/
+#
+# Experiments A/B/C -- the geometry study. Runs on already-trained checkpoints,
+# so it is cheap: forward passes plus linear algebra, no training.
+#
+# Run AFTER hpc/train_array.pbs completes:
+#   qsub -P <your_project> -l storage=scratch/<your_project> \
+#        -W depend=afterokarray:<train_job_id>[] hpc/geometry_study.pbs
+#
+# Or standalone against the released checkpoints:
+#   qsub -v MANIFEST=demo_agents/manifest.json ... hpc/geometry_study.pbs
+
+set -euo pipefail
+
+PROJECT_ROOT="${PBS_O_WORKDIR:-$PWD}"
+cd "${PROJECT_ROOT}"
+
+module purge
+module load "${PYTHON_MODULE:-python3/3.11.7}"
+source "${PROJECT_ROOT}/.venv-gadi/bin/activate"
+
+export OMP_NUM_THREADS="${PBS_NCPUS:-4}"
+export MKL_NUM_THREADS="${PBS_NCPUS:-4}"
+
+AGENTS_DIR="${AGENTS_DIR:-${PROJECT_ROOT}/runs/agents}"
+MANIFEST="${MANIFEST:-${AGENTS_DIR}/manifest.json}"
+TAG="${TAG:-multiseed}"
+
+# Merge the per-task manifest fragments the array wrote (no-op when running
+# against a manifest that already exists, e.g. demo_agents/manifest.json).
+if [ ! -f "${MANIFEST}" ]; then
+    python scripts/train_checkpoints.py \
+        --merge "${AGENTS_DIR}"/manifest_seed*.json \
+        --manifest "${MANIFEST}" \
+        --agents-dir "${AGENTS_DIR}"
+fi
+
+echo "=== manifest: ${MANIFEST} ==="
+python - "${MANIFEST}" <<'PY'
+import json, sys
+m = json.load(open(sys.argv[1]))
+n = sum(len(e.get("scenarios", [])) for e in m.values())
+print(f"{len(m)} manifest entries, {n} scenarios, ~{2*n} checkpoints")
+PY
+
+echo "=== A: geometry audit ==="
+python scripts/run_geometry_audit.py \
+    --manifest "${MANIFEST}" --agents-dir "${AGENTS_DIR}" \
+    --out "runs/geometry_audit_${TAG}.json"
+
+echo "=== B: retrieval gate + post-hoc repairs ==="
+python scripts/run_retrieval_gate_experiment.py \
+    --manifest "${MANIFEST}" --agents-dir "${AGENTS_DIR}" \
+    --out "runs/retrieval_gate_${TAG}.json"
+
+echo "=== C: learned-metric probe ==="
+python scripts/run_metric_probe_experiment.py \
+    --manifest "${MANIFEST}" --agents-dir "${AGENTS_DIR}" \
+    --out "runs/metric_probe_${TAG}.json"
+
+echo "=== aggregate ==="
+python scripts/aggregate_geometry_study.py || \
+    echo "NOTE: aggregate_geometry_study.py reads the default runs/*.json names; " \
+         "re-run it with the _${TAG} files renamed, or adapt its _load() paths."
+
+echo "=== finished $(date) ==="

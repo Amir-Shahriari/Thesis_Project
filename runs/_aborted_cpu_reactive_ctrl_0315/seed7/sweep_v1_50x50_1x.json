@@ -1,0 +1,31 @@
+[
+  {
+    "seed": 7,
+    "scenario_id": "seed2029167941_s0",
+    "grid_seed": 2029167941,
+    "source": "Node_14",
+    "destination": "Node_1250",
+    "euclidean_distance": 43.266615305567875,
+    "warm_strict": true,
+    "cold_strict": false,
+    "warm_cost": 487.9584470524624,
+    "cold_cost": null,
+    "warm_cost_ratio": 10.009967060771938,
+    "cold_cost_ratio": null,
+    "warm_strict_1000": true,
+    "cold_strict_1000": false,
+    "warm_cost_1000": 487.9584470524624,
+    "cold_cost_1000": null,
+    "warm_cost_ratio_1000": 10.009967060771938,
+    "cold_cost_ratio_1000": null,
+    "dijkstra_cost": 48.74725801693423,
+    "warm_infer_ms": 9.869100000059916,
+    "cold_infer_ms": 90.4077000000143,
+    "warm_train_s": 393.7152610999999,
+    "cold_train_s": 357.0619588999998,
+    "warm_grad_steps_total": 8000,
+    "cold_grad_steps_total": 7960,
+    "k_threshold": 3.0,
+    "wall_cell_s": 754.5362396999999
+  }
+]

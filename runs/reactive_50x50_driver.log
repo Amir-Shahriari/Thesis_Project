@@ -1,0 +1,11 @@
+======================================================
+  50x50 REACTIVE arm, 5 shards x 6 threads
+  mask_visited = FALSE (this is the reactive half)
+  started 2026-08-12 02:45:52
+======================================================
+[launch] seed 42 -> runs/sweep_50x50_reactive_ctrl/seed42
+[launch] seed 1337 -> runs/sweep_50x50_reactive_ctrl/seed1337
+[launch] seed 2024 -> runs/sweep_50x50_reactive_ctrl/seed2024
+[launch] seed 7 -> runs/sweep_50x50_reactive_ctrl/seed7
+[launch] seed 314159 -> runs/sweep_50x50_reactive_ctrl/seed314159
+waiting on: 1093 1095 1097 1102 1130

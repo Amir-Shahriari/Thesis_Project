@@ -1,4 +1,23 @@
-# QWarm-RL — Persistent Expert Replay for GNN-RL Routing
+# QWarm-RL: MRes thesis code and artefacts
+
+This repository accompanies the Master of Research thesis *A Synergy of Quantum-Inspired Pathfinding Algorithms, Reinforcement Learning, and Graph Neural Networks* (Amir Hossein Shahriari, Macquarie University, 2026). It extends the ICDM 2026 demo repository, [Amir-Shahriari/qwarm-gnn-rl](https://github.com/Amir-Shahriari/qwarm-gnn-rl), whose history it keeps in full. That repository stays as the paper's version; this one holds everything the thesis reports.
+
+Every artefact path cited in the thesis is relative to the root of this repository. The main additions beyond the demo:
+
+| Thesis experiment | Code | Artefacts |
+|---|---|---|
+| Pre-registered persistence ablation (50x50, masked) | `scripts/run_persistence_ablation.py` | `runs/persistence_ablation_50x50/` (includes `PREREGISTRATION.md`) |
+| 50x50 and 100x100 warm-vs-cold sweeps | `scripts/run_sweep_50x50.py`, `scripts/run_all_masked.sh` | `runs/sweep_50x50_masked_gpu/`, `runs/sweep_100x100_masked.json`, `runs/traces_100x100_masked/` |
+| Reactive (unmasked) action-space control | `scripts/run_50x50_reactive_parallel.sh` | `runs/sweep_50x50_reactive_ctrl/` |
+| Reward-shaping control | | `runs/shaping_control/`, `runs/reward_ablation/` |
+| Goal coverage, goal-relative head and HER | `scripts/analyse_50x50_goalcoverage.py`, `src/qwarm/training/her.py` | `runs/geometry_*.json`, `runs/retrieval_gate.json`, `runs/metric_probe.json` |
+| Out-of-distribution transfer | `scripts/sweep_ood_warm_vs_cold.py` | `runs/ood_warm_vs_cold.json` |
+
+The thesis experiments were run on an NVIDIA RTX 5080 with `torch` 2.11.0+cu128. Note that `uv sync` installs the CPU wheel, so reinstall the CUDA build to reproduce the GPU runs. Runs record their provenance in `provenance.json` where available. The rest of this README is the demo package's documentation.
+
+---
+
+## Demo: QWarm-RL — Persistent Expert Replay for GNN-RL Routing
 
 An interactive browser demo and reproducibility package for a GraphSAGE-DQN
 routing agent that learns to navigate a perturbing dynamic graph. A

@@ -1,0 +1,24 @@
+{
+  "cell": {
+    "seed": 42,
+    "scenario_id": "seed191664964_s0",
+    "source": "Node_639",
+    "destination": "Node_8583"
+  },
+  "grid_seed": 191664964,
+  "perturbation_steps": 5,
+  "dijkstra_ref": 59.49951125692733,
+  "current_codebase": {
+    "reached": true,
+    "cost": 3897.8673226993938,
+    "infer_ms": 82.49480000813492
+  },
+  "legacy_v1": {
+    "reached": true,
+    "cost": 3897.8673226993938,
+    "infer_ms": 61.75669998629019
+  },
+  "relative_delta": 0.0,
+  "sanity_passed": true,
+  "status": "SANITY OK: current codebase reproduces V1 within \u00b110% (delta=0.00%), the inference-rule comparison is methodologically sound."
+}
