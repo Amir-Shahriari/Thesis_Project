@@ -1,0 +1,10 @@
+Spearman rho between EUCLIDEAN COORDINATE distance and HOP distance
+(a sound probe must score high here -- coordinates ARE the grid)
+
+  25x25, extra_edges=2  AS USED                rho=+0.091  p=2.3e-10  [5 distinct hop values, sd=0.74]
+  50x50, extra_edges=4  AS USED                rho=+0.034  p=1.7e-02  [5 distinct hop values, sd=0.63]
+  100x100, extra_edges=4  AS USED              rho=-0.012  p=4.2e-01  [5 distinct hop values, sd=0.62]
+
+  25x25, extra_edges=0  pure grid control      rho=+0.978  p=0.0e+00  [45 distinct hop values, sd=8.30]
+  50x50, extra_edges=0  pure grid control      rho=+0.980  p=0.0e+00  [86 distinct hop values, sd=16.49]
+  100x100, extra_edges=0  pure grid control    rho=+0.978  p=0.0e+00  [173 distinct hop values, sd=32.75]

@@ -1,0 +1,20 @@
+
+========================================================================
+n_chords=0     degree 3.8, diam 47
+========================================================================
+  rule            eps=1.0      eps=0.4     eps=0.05
+  reactive           0.6%        12.5%        67.8%
+  mask              10.0%        82.8%        99.4%
+  fallback          49.8%       100.0%       100.0%
+  (eps=0.05 greedy action = Dijkstra next hop, an ORACLE upper bound
+   on the learned policy, not a measurement of it)
+
+========================================================================
+n_chords=1250  degree 7.8, diam 5
+========================================================================
+  rule            eps=1.0      eps=0.4     eps=0.05
+  reactive           1.5%        38.3%        89.2%
+  mask              51.2%        99.8%       100.0%
+  fallback          63.2%       100.0%       100.0%
+  (eps=0.05 greedy action = Dijkstra next hop, an ORACLE upper bound
+   on the learned policy, not a measurement of it)

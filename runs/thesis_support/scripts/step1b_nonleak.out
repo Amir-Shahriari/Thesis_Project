@@ -1,0 +1,39 @@
+
+=== 25x25 extra_edges=2  (AS USED) ===
+  mean per-step cost 7.9;  median hops 4
+  (a) raise terminal bonus, weights unchanged:
+        bonus   100: median return     50.3   beats -5 on 20/20
+        bonus   250: median return    176.6   beats -5 on 20/20
+        bonus   500: median return    390.9   beats -5 on 20/20
+        bonus  1000: median return    819.6   beats -5 on 20/20
+        bonus  2000: median return   1677.0   beats -5 on 20/20
+  (b) normalise step cost to O(1), bonus stays +100:
+        divide costs by 7.9: median return     81.0   beats -5 on 20/20
+  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch
+        optimal return     50.3 vs escape -50: beats it on 20/20
+
+=== 25x25 extra_edges=0  (PURE GRID) ===
+  mean per-step cost 9.3;  median hops 22
+  (a) raise terminal bonus, weights unchanged:
+        bonus   100: median return    -96.4   beats -5 on  2/20
+        bonus   250: median return    -57.6   beats -5 on  8/20
+        bonus   500: median return     23.7   beats -5 on 13/20
+        bonus  1000: median return    194.0   beats -5 on 19/20
+        bonus  2000: median return    535.0   beats -5 on 20/20
+  (b) normalise step cost to O(1), bonus stays +100:
+        divide costs by 9.3: median return     18.3   beats -5 on 20/20
+  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch
+        optimal return    -96.4 vs escape -50: beats it on  6/20
+
+=== 50x50 extra_edges=0  (PURE GRID) ===
+  mean per-step cost 9.4;  median hops 35
+  (a) raise terminal bonus, weights unchanged:
+        bonus   100: median return   -140.4   beats -5 on  1/20
+        bonus   250: median return   -121.5   beats -5 on  1/20
+        bonus   500: median return    -87.8   beats -5 on  4/20
+        bonus  1000: median return      2.6   beats -5 on 10/20
+        bonus  2000: median return    179.9   beats -5 on 15/20
+  (b) normalise step cost to O(1), bonus stays +100:
+        divide costs by 9.4: median return     -0.9   beats -5 on 12/20
+  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch
+        optimal return   -140.4 vs escape -50: beats it on  1/20

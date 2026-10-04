@@ -1,0 +1,45 @@
+##############################################################################
+# STEP 1c -- non-leaking reward fix: normalise cost, lengthen horizon
+##############################################################################
+
+  config                            g=0.95        g=0.99       g=0.995
+  25x25 as-used                 81.0 20/20    92.1 20/20    93.9 20/20
+  25x25 pure grid               18.3 20/20    58.0 20/20    66.1 20/20
+  50x50 pure grid               -0.9 12/20    38.7 20/20    49.1 20/20
+
+  (normalised step cost, +100 terminal, no shaping, no leak)
+
+##############################################################################
+# STEP 2 -- density calibration (n_chords = TOTAL long-range edges)
+##############################################################################
+
+  25x25 (625 nodes), grid edges 1200. Legacy extra_edges=2 => ~1236 chords.
+
+   n_chords   edges  degree  diam  meanhop  hopIQR
+          0    1200    3.84    47    16.91    13.0
+         60    1260    4.03    15     7.62     3.0
+        125    1325    4.24    13     6.44     3.0
+        250    1450    4.64    10     5.36     1.0
+        400    1600    5.12     8     4.71     1.0
+        625    1822    5.83     7     4.18     1.0
+       1250    2445    7.82     5     3.51     1.0
+
+##############################################################################
+# STEP 3 -- solvability under perturbation, by density
+##############################################################################
+
+  fraction of 60 random s-t pairs still solvable after 5 perturbation rounds
+
+   n_chords  diam |     p=0.05     p=0.1    p=0.15     p=0.3
+          0    47 |       100%      100%       99%       91%
+        125    13 |       100%      100%       98%       94%
+        400     8 |       100%      100%       99%       97%
+       1250     5 |       100%      100%       99%      100%
+
+##############################################################################
+# T_max sizing (95th percentile optimal hop count, unperturbed)
+##############################################################################
+  n_chords     0: median    22  p95    37  max   39   -> suggest T_max >= 148
+  n_chords   125: median     8  p95    11  max   16   -> suggest T_max >= 44
+  n_chords   400: median     6  p95     9  max   12   -> suggest T_max >= 36
+  n_chords  1250: median     5  p95     7  max    8   -> suggest T_max >= 28
