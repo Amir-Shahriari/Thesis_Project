@@ -1,0 +1,63 @@
+{
+ "item": "a_preset",
+ "purpose": "Exploration statistics re-measured on the experiments' actual 25x25 preset graph (legacy extra_edges=2, seed 191664964) instead of the density-matched n_chords=1250 surrogate used in item_a.",
+ "commands": [
+  "python runs/thesis_support/scripts/blockers_preset.py",
+  "python runs/thesis_support/scripts/revisit_rules_preset.py"
+ ],
+ "change_from_item_a": "Only the 25x25 dense graph construction: DynamicGraph(extra_edges=2, n_chords=None) for the nc==1250 case; all else identical.",
+ "git_revision": "ddfb9b74f3afbbe0fa0e01dd8715dcaf6ec489ee",
+ "python": "3.11.15",
+ "torch": "2.11.0+cu128",
+ "device": "cpu",
+ "timestamp": "2026-10-04T15:51:56",
+ "graphs": {
+  "preset_extra_edges_2": {
+   "edges": 2436,
+   "mean_degree": 7.8,
+   "min_degree": 5,
+   "exact_diameter": 5,
+   "median_hop": 4
+  },
+  "surrogate_n_chords_1250": {
+   "edges": 2445,
+   "mean_degree": 7.82,
+   "min_degree": 3,
+   "exact_diameter": 6,
+   "median_hop": 4
+  }
+ },
+ "results_preset": {
+  "uniform_rollouts_reactive": {
+   "goal_pct": 0.8,
+   "revisit_death_pct": 99.2,
+   "median_steps": 5
+  },
+  "uniform_rollouts_masked": {
+   "goal_pct": 56.0,
+   "dead_end_pct": 34.0,
+   "median_steps": 281
+  },
+  "revisit_rules_goal_pct": {
+   "reactive": {
+    "eps1.0": 1.0,
+    "eps0.4": 36.8,
+    "eps0.05_oracle": 89.2
+   },
+   "mask": {
+    "eps1.0": 54.5,
+    "eps0.4": 100.0,
+    "eps0.05_oracle": 100.0
+   }
+  },
+  "bonus_to_optimal_cost_ratio_at_preset_density": 22.5
+ },
+ "results_surrogate_item_a_for_comparison": {
+  "revisit_death_pct": 98.2,
+  "median_steps": 5,
+  "goal_reactive_eps1": 1.5,
+  "goal_mask_eps1": 51.2,
+  "eps0.05_oracle": 89.2,
+  "bonus_ratio": 21.9
+ }
+}

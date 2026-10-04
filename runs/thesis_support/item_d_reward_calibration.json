@@ -1,0 +1,1046 @@
+{
+  "item": "d",
+  "description": "Optimal discounted returns and reward calibration (desk calibration 2026-08-09).",
+  "thesis_locations": [
+    "ch4-experiments.tex:126",
+    "ch5-conclusion.tex:50"
+  ],
+  "audit_findings": [
+    "N5-01",
+    "N5-06",
+    "N9-10",
+    "N10-15",
+    "N10-17"
+  ],
+  "provenance": {
+    "git_repo": "C:\\Users\\amirh\\Desktop\\Thesis_Project",
+    "git_revision": "ddfb9b74f3afbbe0fa0e01dd8715dcaf6ec489ee",
+    "git_worktree_clean": false,
+    "timestamp_utc": "2026-10-03T10:20:00.237349+00:00",
+    "original_scripts": [
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\scripts\\analysis\\step1_returns.py",
+        "sha256": "ef5f42fd6b58369d7f85ff7ba93cc7ae47ba4a91bd42da322c40510c9c4abe74",
+        "git_tracked_revision_blob": "8cd7d7399741a3096e824cd580105a28e4dff87d"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\scripts\\analysis\\step1b_nonleak.py",
+        "sha256": "9b6aa6a8c3f2cceb387ca89f03e86c039b59b069a35e94b2b0ed94156de92b0e",
+        "git_tracked_revision_blob": "eb12e56e3a6924cd0f571de15ac99074525abab9"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\scripts\\analysis\\step23_calibrate.py",
+        "sha256": "824ab486c9bfa1f77a4e8630da30cd24a47b95d53774b4757d92f2c7ed15781b",
+        "git_tracked_revision_blob": "33bd86ad4d88736132656df255e25ff04f249c3e"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\scripts\\analysis\\blockers.py",
+        "sha256": "b5a89dec50703dcebc288ecb004c58df7a9b25e8c5549646e4adbb0916ab1427",
+        "git_tracked_revision_blob": "286058c353795c9b001193a21a8630d28a7a4614"
+      }
+    ],
+    "commands": [
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step1_returns.py",
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step1b_nonleak.py",
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step23_calibrate.py",
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\blockers.py",
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\analyze_invalid_action_returns.py"
+    ],
+    "environment": {
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe",
+      "platform": "Windows-10-10.0.26300-SP0",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "torch": "2.11.0+cu128",
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5080",
+      "qwarm_import_resolves_to": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\\qwarm\\env\\dynamic_graph.py",
+      "device_used": "cpu",
+      "device_note": "Deterministic graph analysis (numpy/scipy/pure Python). No checkpoint or torch model is loaded, so the GPU is not used.",
+      "interpreter_note": "Thesis_Project has no .venv (C:/Users/amirh/Desktop/Thesis_Project/.venv/Scripts/python.exe does not exist). The analysis scripts hard-code sys.path to C:/Users/amirh/Desktop/qwarm-gnn-rl/src, so the interpreter of that tree's venv was used ONLY as a Python runtime (numpy/scipy). All qwarm imports resolve to Thesis_Project/src: the scripts were run from verbatim scratch copies whose only change is that sys.path line. src/qwarm/env is byte-identical between the two trees (diff -r, excluding __pycache__)."
+    },
+    "scratch_copies": [
+      {
+        "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step1_returns.py",
+        "sha256": "43b7317f059359fff10200ee252120ea166400efb44590b107a34721f7574f10"
+      },
+      {
+        "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step1b_nonleak.py",
+        "sha256": "b280c64766cb27ab2f151fbe7d312c32301de7ab1f15ee18e00f568313667de5"
+      },
+      {
+        "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\step23_calibrate.py",
+        "sha256": "87371a8aeddbee79ff669e0664399dfad4081ddf4b0fdfe54aabe60c4105429a"
+      },
+      {
+        "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\blockers.py",
+        "sha256": "08155543a226522352bba584c3a2c548654448b118ce42801f49a5a32dde938a"
+      },
+      {
+        "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\analyze_invalid_action_returns.py",
+        "sha256": "e1c064f2acf6d92b4eaa24302ce9bfd9771180a0c82d2120413895caa503aea0"
+      }
+    ],
+    "scratch_copy_modification": "Only change: sys.path.insert(0, r\"C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\src\") -> sys.path.insert(0, r\"C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\")",
+    "demo_script": {
+      "path": "C:\\Users\\amirh\\Desktop\\Demo\\scripts\\analyze_invalid_action_returns.py",
+      "demo_git_revision": "a899a140e012bdd46490569e73994b793db88cef",
+      "scratch_copy_modification": "inserted 'import sys; sys.path.insert(0, r\"C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\")' after 'import heapq'; scenario_sampler.py is identical in Demo and Thesis_Project"
+    }
+  },
+  "parameters": {
+    "graph_seed": 191664964,
+    "step1_returns.py": {
+      "configs": [
+        "25x25 e=2",
+        "25x25 e=0",
+        "50x50 e=0"
+      ],
+      "pair_rng": "default_rng(7)",
+      "n_pairs": 20,
+      "gammas": [
+        0.95,
+        0.99
+      ],
+      "lambda_shape": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "goal_bonus": 100
+    },
+    "step1b_nonleak.py": {
+      "gamma": 0.95,
+      "n_pairs": 20,
+      "pair_rng": "default_rng(7)"
+    },
+    "step23_calibrate.py": {
+      "step1c_gammas": [
+        0.95,
+        0.99,
+        0.995
+      ],
+      "density_n_chords": [
+        0,
+        60,
+        125,
+        250,
+        400,
+        625,
+        1250
+      ],
+      "diam_n_src": 50,
+      "diam_rng": "default_rng(0)",
+      "solvability": {
+        "n_chords": [
+          0,
+          125,
+          400,
+          1250
+        ],
+        "p_deact": [
+          0.05,
+          0.1,
+          0.15,
+          0.3
+        ],
+        "graph_seeds": [
+          1,
+          2,
+          3
+        ],
+        "perturbation_rounds": 5,
+        "pairs": 60,
+        "pair_rng": "default_rng(11)"
+      }
+    },
+    "blockers.py BLOCKER 2": {
+      "n_chords": [
+        0,
+        60,
+        125,
+        400,
+        1250
+      ],
+      "pair_rng": "default_rng(7)",
+      "n_paths": 25,
+      "beta": 5.0,
+      "gamma": 0.99
+    },
+    "analyze_invalid_action_returns.py": {
+      "outer_seed": 42,
+      "n_scenarios": 5,
+      "gammas": [
+        0.95,
+        0.99,
+        0.997
+      ],
+      "scale_cfgs": {
+        "25x25": "e=2, p=0.10",
+        "50x50": "e=3, p=0.22",
+        "100x100": "e=4, p=0.30"
+      },
+      "states": [
+        "fresh",
+        "perturbed (one update_graph)"
+      ]
+    }
+  },
+  "results": {
+    "step1_returns": {
+      "25x25, extra_edges=2": {
+        "n_pairs": 20,
+        "median_hops": 4,
+        "max_hops": 8,
+        "median_composite_cost": 37,
+        "by_lambda_shape": {
+          "0.0": {
+            "gamma=0.95": {
+              "median_return": 50.3,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 60.5,
+              "beats_minus5": "20/20"
+            }
+          },
+          "0.5": {
+            "gamma=0.95": {
+              "median_return": 66.9,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 78.8,
+              "beats_minus5": "20/20"
+            }
+          },
+          "1.0": {
+            "gamma=0.95": {
+              "median_return": 85.7,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 97.0,
+              "beats_minus5": "20/20"
+            }
+          },
+          "2.0": {
+            "gamma=0.95": {
+              "median_return": 117.3,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 132.8,
+              "beats_minus5": "20/20"
+            }
+          },
+          "4.0": {
+            "gamma=0.95": {
+              "median_return": 187.9,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 206.2,
+              "beats_minus5": "20/20"
+            }
+          },
+          "8.0": {
+            "gamma=0.95": {
+              "median_return": 319.5,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 352.9,
+              "beats_minus5": "20/20"
+            }
+          }
+        }
+      },
+      "25x25, extra_edges=0": {
+        "n_pairs": 20,
+        "median_hops": 22,
+        "max_hops": 39,
+        "median_composite_cost": 230,
+        "by_lambda_shape": {
+          "0.0": {
+            "gamma=0.95": {
+              "median_return": -96.4,
+              "beats_minus5": "2/20"
+            },
+            "gamma=0.99": {
+              "median_return": -126.1,
+              "beats_minus5": "2/20"
+            }
+          },
+          "0.5": {
+            "gamma=0.95": {
+              "median_return": -36.9,
+              "beats_minus5": "6/20"
+            },
+            "gamma=0.99": {
+              "median_return": -23.0,
+              "beats_minus5": "8/20"
+            }
+          },
+          "1.0": {
+            "gamma=0.95": {
+              "median_return": 34.1,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 81.0,
+              "beats_minus5": "20/20"
+            }
+          },
+          "2.0": {
+            "gamma=0.95": {
+              "median_return": 161.6,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 279.3,
+              "beats_minus5": "20/20"
+            }
+          },
+          "4.0": {
+            "gamma=0.95": {
+              "median_return": 403.2,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 691.1,
+              "beats_minus5": "20/20"
+            }
+          },
+          "8.0": {
+            "gamma=0.95": {
+              "median_return": 898.7,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 1514.0,
+              "beats_minus5": "20/20"
+            }
+          }
+        }
+      },
+      "50x50, extra_edges=0": {
+        "n_pairs": 20,
+        "median_hops": 35,
+        "max_hops": 70,
+        "median_composite_cost": 362,
+        "by_lambda_shape": {
+          "0.0": {
+            "gamma=0.95": {
+              "median_return": -140.4,
+              "beats_minus5": "1/20"
+            },
+            "gamma=0.99": {
+              "median_return": -237.1,
+              "beats_minus5": "1/20"
+            }
+          },
+          "0.5": {
+            "gamma=0.95": {
+              "median_return": -63.1,
+              "beats_minus5": "1/20"
+            },
+            "gamma=0.99": {
+              "median_return": -82.8,
+              "beats_minus5": "2/20"
+            }
+          },
+          "1.0": {
+            "gamma=0.95": {
+              "median_return": 17.5,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 71.1,
+              "beats_minus5": "20/20"
+            }
+          },
+          "2.0": {
+            "gamma=0.95": {
+              "median_return": 178.4,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 374.4,
+              "beats_minus5": "20/20"
+            }
+          },
+          "4.0": {
+            "gamma=0.95": {
+              "median_return": 495.5,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 991.9,
+              "beats_minus5": "20/20"
+            }
+          },
+          "8.0": {
+            "gamma=0.95": {
+              "median_return": 1136.9,
+              "beats_minus5": "20/20"
+            },
+            "gamma=0.99": {
+              "median_return": 2226.9,
+              "beats_minus5": "20/20"
+            }
+          }
+        }
+      }
+    },
+    "step23_step1c_normalised": {
+      "25x25 as-used": {
+        "gamma=0.95": {
+          "median_return": 81.0,
+          "beats_minus5": "20/20"
+        },
+        "gamma=0.99": {
+          "median_return": 92.1,
+          "beats_minus5": "20/20"
+        },
+        "gamma=0.995": {
+          "median_return": 93.9,
+          "beats_minus5": "20/20"
+        }
+      },
+      "25x25 pure grid": {
+        "gamma=0.95": {
+          "median_return": 18.3,
+          "beats_minus5": "20/20"
+        },
+        "gamma=0.99": {
+          "median_return": 58.0,
+          "beats_minus5": "20/20"
+        },
+        "gamma=0.995": {
+          "median_return": 66.1,
+          "beats_minus5": "20/20"
+        }
+      },
+      "50x50 pure grid": {
+        "gamma=0.95": {
+          "median_return": -0.9,
+          "beats_minus5": "12/20"
+        },
+        "gamma=0.99": {
+          "median_return": 38.7,
+          "beats_minus5": "20/20"
+        },
+        "gamma=0.995": {
+          "median_return": 49.1,
+          "beats_minus5": "20/20"
+        }
+      }
+    },
+    "step23_density_table": [
+      {
+        "n_chords": 0,
+        "edges": 1200,
+        "mean_degree": 3.84,
+        "diam_sampled_50_sources": 47,
+        "mean_hops": 16.91,
+        "hop_iqr": 13.0
+      },
+      {
+        "n_chords": 60,
+        "edges": 1260,
+        "mean_degree": 4.03,
+        "diam_sampled_50_sources": 15,
+        "mean_hops": 7.62,
+        "hop_iqr": 3.0
+      },
+      {
+        "n_chords": 125,
+        "edges": 1325,
+        "mean_degree": 4.24,
+        "diam_sampled_50_sources": 13,
+        "mean_hops": 6.44,
+        "hop_iqr": 3.0
+      },
+      {
+        "n_chords": 250,
+        "edges": 1450,
+        "mean_degree": 4.64,
+        "diam_sampled_50_sources": 10,
+        "mean_hops": 5.36,
+        "hop_iqr": 1.0
+      },
+      {
+        "n_chords": 400,
+        "edges": 1600,
+        "mean_degree": 5.12,
+        "diam_sampled_50_sources": 8,
+        "mean_hops": 4.71,
+        "hop_iqr": 1.0
+      },
+      {
+        "n_chords": 625,
+        "edges": 1822,
+        "mean_degree": 5.83,
+        "diam_sampled_50_sources": 7,
+        "mean_hops": 4.18,
+        "hop_iqr": 1.0
+      },
+      {
+        "n_chords": 1250,
+        "edges": 2445,
+        "mean_degree": 7.82,
+        "diam_sampled_50_sources": 5,
+        "mean_hops": 3.51,
+        "hop_iqr": 1.0
+      }
+    ],
+    "step23_solvability_pct": {
+      "0": {
+        "diam": 47,
+        "p=0.05": 100,
+        "p=0.10": 100,
+        "p=0.15": 99,
+        "p=0.30": 91
+      },
+      "125": {
+        "diam": 13,
+        "p=0.05": 100,
+        "p=0.10": 100,
+        "p=0.15": 98,
+        "p=0.30": 94
+      },
+      "400": {
+        "diam": 8,
+        "p=0.05": 100,
+        "p=0.10": 100,
+        "p=0.15": 99,
+        "p=0.30": 97
+      },
+      "1250": {
+        "diam": 5,
+        "p=0.05": 100,
+        "p=0.10": 100,
+        "p=0.15": 99,
+        "p=0.30": 100
+      }
+    },
+    "blockers_blocker2": [
+      {
+        "n_chords": 0,
+        "mean_opt_cost_normalised": 21.1,
+        "fixed_bonus100_to_opt_cost_ratio": 4.7,
+        "beta5_bonus": 106,
+        "median_return_beta5": 63.7,
+        "beats_minus5": "25/25"
+      },
+      {
+        "n_chords": 60,
+        "mean_opt_cost_normalised": 9.8,
+        "fixed_bonus100_to_opt_cost_ratio": 10.2,
+        "beta5_bonus": 49,
+        "median_return_beta5": 34.5,
+        "beats_minus5": "25/25"
+      },
+      {
+        "n_chords": 125,
+        "mean_opt_cost_normalised": 8.5,
+        "fixed_bonus100_to_opt_cost_ratio": 11.8,
+        "beta5_bonus": 42,
+        "median_return_beta5": 31.7,
+        "beats_minus5": "25/25"
+      },
+      {
+        "n_chords": 400,
+        "mean_opt_cost_normalised": 6.2,
+        "fixed_bonus100_to_opt_cost_ratio": 16.2,
+        "beta5_bonus": 31,
+        "median_return_beta5": 22.8,
+        "beats_minus5": "25/25"
+      },
+      {
+        "n_chords": 1250,
+        "mean_opt_cost_normalised": 4.6,
+        "fixed_bonus100_to_opt_cost_ratio": 21.9,
+        "beta5_bonus": 23,
+        "median_return_beta5": 17.4,
+        "beats_minus5": "25/25"
+      }
+    ],
+    "analyze_invalid_action_returns": {
+      "per_scenario": [
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "scenario": "seed191664964_s0",
+          "T": 5,
+          "opt_cost": 45.5,
+          "G_0.95": 41.21,
+          "G_0.99": 51.69,
+          "G_0.997": 53.67
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "scenario": "seed191664964_s0",
+          "T": 5,
+          "opt_cost": 67.1,
+          "G_0.95": 20.97,
+          "G_0.99": 30.32,
+          "G_0.997": 32.09
+        },
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "scenario": "seed191664964_s1",
+          "T": 6,
+          "opt_cost": 37.3,
+          "G_0.95": 46.18,
+          "G_0.99": 59.14,
+          "G_0.997": 61.65
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "scenario": "seed191664964_s1",
+          "T": 5,
+          "opt_cost": 55.8,
+          "G_0.95": 32.38,
+          "G_0.99": 41.66,
+          "G_0.997": 43.42
+        },
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "scenario": "seed191664964_s2",
+          "T": 7,
+          "opt_cost": 40.4,
+          "G_0.95": 39.53,
+          "G_0.99": 55.11,
+          "G_0.997": 58.21
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "scenario": "seed191664964_s2",
+          "T": 4,
+          "opt_cost": 69.5,
+          "G_0.95": 19.85,
+          "G_0.99": 28.23,
+          "G_0.997": 29.78
+        },
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "scenario": "seed191664964_s3",
+          "T": 4,
+          "opt_cost": 10.4,
+          "G_0.95": 76.09,
+          "G_0.99": 86.79,
+          "G_0.997": 88.76
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "scenario": "seed191664964_s3",
+          "T": 2,
+          "opt_cost": 16.2,
+          "G_0.95": 79.12,
+          "G_0.99": 82.88,
+          "G_0.997": 83.54
+        },
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "scenario": "seed191664964_s4",
+          "T": 7,
+          "opt_cost": 42.1,
+          "G_0.95": 37.14,
+          "G_0.99": 53.29,
+          "G_0.997": 56.5
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "scenario": "seed191664964_s4",
+          "T": 8,
+          "opt_cost": 72.4,
+          "G_0.95": 9.42,
+          "G_0.99": 23.44,
+          "G_0.997": 26.35
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "scenario": "seed191664964_s0",
+          "T": 5,
+          "opt_cost": 35.0,
+          "G_0.95": 49.82,
+          "G_0.99": 61.72,
+          "G_0.997": 63.97
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "scenario": "seed191664964_s0",
+          "T": 4,
+          "opt_cost": 47.9,
+          "G_0.95": 40.65,
+          "G_0.99": 49.67,
+          "G_0.997": 51.34
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "scenario": "seed191664964_s1",
+          "T": 9,
+          "opt_cost": 34.8,
+          "G_0.95": 37.75,
+          "G_0.99": 58.83,
+          "G_0.997": 63.23
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "scenario": "seed191664964_s1",
+          "T": 6,
+          "opt_cost": 50.7,
+          "G_0.95": 33.59,
+          "G_0.99": 45.87,
+          "G_0.997": 48.27
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "scenario": "seed191664964_s2",
+          "T": 5,
+          "opt_cost": 28.9,
+          "G_0.95": 54.98,
+          "G_0.99": 67.71,
+          "G_0.997": 70.11
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "scenario": "seed191664964_s2",
+          "T": 5,
+          "opt_cost": 40.8,
+          "G_0.95": 44.44,
+          "G_0.99": 56.06,
+          "G_0.997": 58.25
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "scenario": "seed191664964_s3",
+          "T": 6,
+          "opt_cost": 42.2,
+          "G_0.95": 39.65,
+          "G_0.99": 53.82,
+          "G_0.997": 56.57
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "scenario": "seed191664964_s3",
+          "T": 5,
+          "opt_cost": 54.2,
+          "G_0.95": 33.07,
+          "G_0.99": 43.11,
+          "G_0.997": 45.01
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "scenario": "seed191664964_s4",
+          "T": 10,
+          "opt_cost": 42.9,
+          "G_0.95": 29.94,
+          "G_0.99": 50.63,
+          "G_0.997": 55.09
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "scenario": "seed191664964_s4",
+          "T": 7,
+          "opt_cost": 62.3,
+          "G_0.95": 20.15,
+          "G_0.99": 33.77,
+          "G_0.997": 36.51
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "scenario": "seed191664964_s0",
+          "T": 7,
+          "opt_cost": 44.4,
+          "G_0.95": 35.13,
+          "G_0.99": 51.01,
+          "G_0.997": 54.19
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "scenario": "seed191664964_s0",
+          "T": 7,
+          "opt_cost": 65.0,
+          "G_0.95": 18.73,
+          "G_0.99": 31.37,
+          "G_0.997": 33.89
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "scenario": "seed191664964_s1",
+          "T": 9,
+          "opt_cost": 39.9,
+          "G_0.95": 32.07,
+          "G_0.99": 53.64,
+          "G_0.997": 58.14
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "scenario": "seed191664964_s1",
+          "T": 8,
+          "opt_cost": 68.7,
+          "G_0.95": 9.66,
+          "G_0.99": 26.39,
+          "G_0.997": 29.83
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "scenario": "seed191664964_s2",
+          "T": 9,
+          "opt_cost": 36.6,
+          "G_0.95": 36.58,
+          "G_0.99": 57.18,
+          "G_0.997": 61.5
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "scenario": "seed191664964_s2",
+          "T": 9,
+          "opt_cost": 45.7,
+          "G_0.95": 29.29,
+          "G_0.99": 48.47,
+          "G_0.997": 52.51
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "scenario": "seed191664964_s3",
+          "T": 7,
+          "opt_cost": 44.9,
+          "G_0.95": 35.95,
+          "G_0.99": 50.8,
+          "G_0.997": 53.77
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "scenario": "seed191664964_s3",
+          "T": 7,
+          "opt_cost": 85.1,
+          "G_0.95": -1.24,
+          "G_0.99": 11.29,
+          "G_0.997": 13.82
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "scenario": "seed191664964_s4",
+          "T": 5,
+          "opt_cost": 37.0,
+          "G_0.95": 47.16,
+          "G_0.99": 59.63,
+          "G_0.997": 61.99
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "scenario": "seed191664964_s4",
+          "T": 8,
+          "opt_cost": 70.8,
+          "G_0.95": 10.52,
+          "G_0.99": 24.86,
+          "G_0.997": 27.84
+        }
+      ],
+      "means": [
+        {
+          "scale": "25x25",
+          "state": "fresh",
+          "n": 5,
+          "mean_T": 5.8,
+          "mean_opt_cost": 35.1,
+          "mean_G_0.95": 48.03,
+          "mean_G_0.99": 61.21,
+          "mean_G_0.997": 63.76
+        },
+        {
+          "scale": "25x25",
+          "state": "perturbed",
+          "n": 5,
+          "mean_T": 4.8,
+          "mean_opt_cost": 56.2,
+          "mean_G_0.95": 32.35,
+          "mean_G_0.99": 41.31,
+          "mean_G_0.997": 43.04
+        },
+        {
+          "scale": "50x50",
+          "state": "fresh",
+          "n": 5,
+          "mean_T": 7.0,
+          "mean_opt_cost": 36.8,
+          "mean_G_0.95": 42.43,
+          "mean_G_0.99": 58.54,
+          "mean_G_0.997": 61.79
+        },
+        {
+          "scale": "50x50",
+          "state": "perturbed",
+          "n": 5,
+          "mean_T": 5.4,
+          "mean_opt_cost": 51.2,
+          "mean_G_0.95": 34.38,
+          "mean_G_0.99": 45.7,
+          "mean_G_0.997": 47.88
+        },
+        {
+          "scale": "100x100",
+          "state": "fresh",
+          "n": 5,
+          "mean_T": 7.4,
+          "mean_opt_cost": 40.6,
+          "mean_G_0.95": 37.38,
+          "mean_G_0.99": 54.45,
+          "mean_G_0.997": 57.92
+        },
+        {
+          "scale": "100x100",
+          "state": "perturbed",
+          "n": 5,
+          "mean_T": 7.8,
+          "mean_opt_cost": 67.0,
+          "mean_G_0.95": 13.39,
+          "mean_G_0.99": 28.48,
+          "mean_G_0.997": 31.58
+        }
+      ]
+    },
+    "regenerated_thesis_quantities": {
+      "optimal_return_as_used_25x25_gamma0.95_median": {
+        "median_return": 50.3,
+        "beats_minus5": "20/20"
+      },
+      "optimal_return_pure_grid_25x25_gamma0.95_median": {
+        "median_return": -96.4,
+        "beats_minus5": "2/20"
+      },
+      "normalised_cost_gamma0.99_beats_minus5": {
+        "25x25 as-used": "20/20",
+        "25x25 pure grid": "20/20",
+        "50x50 pure grid": "20/20"
+      },
+      "normalised_cost_gamma0.95_50x50_pure": "12/20",
+      "bonus_to_opt_cost_ratio_range": [
+        4.7,
+        21.9
+      ],
+      "solvable_pct_p0.15_by_n_chords": {
+        "0": 99,
+        "125": 98,
+        "400": 99,
+        "1250": 99
+      },
+      "solvable_pct_p0.30_by_n_chords": {
+        "0": 91,
+        "125": 94,
+        "400": 97,
+        "1250": 100
+      },
+      "demo_script_scale_means_gamma0.95_range": [
+        13.39,
+        48.03
+      ],
+      "demo_script_scale_means_gamma0.99_range": [
+        28.48,
+        61.21
+      ],
+      "demo_script_scale_means_all_gammas_range": [
+        13.39,
+        63.76
+      ],
+      "demo_script_100x100_means_all_gammas_range": [
+        13.39,
+        57.92
+      ],
+      "demo_script_min_individual_return_any_gamma": -1.24
+    },
+    "sub_item_status": {
+      "+50.3 (Ch5)": [
+        "REPRODUCED",
+        "step1_returns.py: median over 20 sampled pairs, 25x25 extra_edges=2, unperturbed graph, lambda_shape=0, gamma=0.95 -> 50.3 (20/20 beat -5)"
+      ],
+      "-96.4 at E_extra=0 (Ch4, Ch5)": [
+        "REPRODUCED",
+        "step1_returns.py: 25x25 extra_edges=0, gamma=0.95 median -96.4, 2/20 beat -5"
+      ],
+      "20/20 sampled queries at every density (Ch5)": [
+        "REPRODUCED",
+        "step23_calibrate.py STEP 1c: normalised cost, gamma=0.99 -> 20/20 for 25x25 as-used, 25x25 pure grid, 50x50 pure grid (gamma=0.95 gives 12/20 at 50x50, as RUN_LOG says). 'Every density' = these three configurations, not the n_chords axis."
+      ],
+      "4.7x to 21.9x (Ch5)": [
+        "REPRODUCED",
+        "blockers.py BLOCKER 2 ('fixed bonus 100' column = 100 / mean normalised optimal cost), n_chords 0 -> 1250 at 25x25: 4.7x, 10.2x, 11.8x, 16.2x, 21.9x"
+      ],
+      "98-99% at p_deact=0.15; 91% vs 100% at p_deact=0.30 (Ch5)": [
+        "REPRODUCED",
+        "step23_calibrate.py STEP 3: p=0.15 -> 99/98/99/99% (n_chords 0/125/400/1250); p=0.30 -> 91% at n_chords=0 vs 100% at 1250"
+      ],
+      "+13 to +48 at every scale and every gamma (Ch4)": [
+        "DIFFERENT",
+        "Demo/scripts/analyze_invalid_action_returns.py (5 scenarios per scale, outer seed 42, grid seed 191664964, fresh and perturbed states): the per-scale/state MEAN optimal returns span +13.39 to +48.03 at gamma=0.95 ONLY. At gamma=0.99 they span +28.48 to +61.21, and over all three gammas +13.39 to +63.76. At 100x100 alone (reward_variants.md's wording) they span +13.39 to +57.92 (+13.39 to +37.38 at gamma=0.95). The qualitative claim holds: every individual optimal return exceeds -5 at every scale and gamma (minimum -1.24, 100x100 perturbed s3, gamma=0.95). The numeric range is the gamma=0.95 range over all three scales, not 'every gamma' and not '100x100'."
+      ]
+    }
+  },
+  "thesis_values": {
+    "optimal_return_as_used": 50.3,
+    "optimal_return_pure_grid": -96.4,
+    "optimal_return_range_every_scale_every_gamma": [
+      13,
+      48
+    ],
+    "bonus_ratio_range": [
+      4.7,
+      21.9
+    ],
+    "solvable_p0.15_pct": [
+      98,
+      99
+    ],
+    "solvable_p0.30_sparse_vs_dense_pct": [
+      91,
+      100
+    ],
+    "queries_beating_minus5": "20/20"
+  },
+  "status": "DIFFERENT",
+  "status_note": "All sub-items reproduce exactly except '+13 to +48 at every scale and every gamma', which holds only for gamma=0.95 (see sub_item_status).",
+  "raw_stdout": {
+    "step1_returns.py": "\n==========================================================================\n25x25, extra_edges=2   (AS USED -- small world, diameter 5)   (20 solvable pairs)\n==========================================================================\n  optimal path: median 4 hops (max 8), median composite cost 37\n\n  lambda_shape | gamma=0.95  ret / beats -5 | gamma=0.99  ret / beats -5\n           0.0 |       50.3 / 20/20 |       60.5 / 20/20\n           0.5 |       66.9 / 20/20 |       78.8 / 20/20\n           1.0 |       85.7 / 20/20 |       97.0 / 20/20\n           2.0 |      117.3 / 20/20 |      132.8 / 20/20\n           4.0 |      187.9 / 20/20 |      206.2 / 20/20\n           8.0 |      319.5 / 20/20 |      352.9 / 20/20\n\n==========================================================================\n25x25, extra_edges=0   (PURE GRID -- diameter 47)   (20 solvable pairs)\n==========================================================================\n  optimal path: median 22 hops (max 39), median composite cost 230\n\n  lambda_shape | gamma=0.95  ret / beats -5 | gamma=0.99  ret / beats -5\n           0.0 |      -96.4 /  2/20 |     -126.1 /  2/20\n           0.5 |      -36.9 /  6/20 |      -23.0 /  8/20\n           1.0 |       34.1 / 20/20 |       81.0 / 20/20\n           2.0 |      161.6 / 20/20 |      279.3 / 20/20\n           4.0 |      403.2 / 20/20 |      691.1 / 20/20\n           8.0 |      898.7 / 20/20 |     1514.0 / 20/20\n\n==========================================================================\n50x50, extra_edges=0   (PURE GRID -- diameter 96)   (20 solvable pairs)\n==========================================================================\n  optimal path: median 35 hops (max 70), median composite cost 362\n\n  lambda_shape | gamma=0.95  ret / beats -5 | gamma=0.99  ret / beats -5\n           0.0 |     -140.4 /  1/20 |     -237.1 /  1/20\n           0.5 |      -63.1 /  1/20 |      -82.8 /  2/20\n           1.0 |       17.5 / 20/20 |       71.1 / 20/20\n           2.0 |      178.4 / 20/20 |      374.4 / 20/20\n           4.0 |      495.5 / 20/20 |      991.9 / 20/20\n           8.0 |     1136.9 / 20/20 |     2226.9 / 20/20\n",
+    "step1b_nonleak.py": "\n=== 25x25 extra_edges=2  (AS USED) ===\n  mean per-step cost 7.9;  median hops 4\n  (a) raise terminal bonus, weights unchanged:\n        bonus   100: median return     50.3   beats -5 on 20/20\n        bonus   250: median return    176.6   beats -5 on 20/20\n        bonus   500: median return    390.9   beats -5 on 20/20\n        bonus  1000: median return    819.6   beats -5 on 20/20\n        bonus  2000: median return   1677.0   beats -5 on 20/20\n  (b) normalise step cost to O(1), bonus stays +100:\n        divide costs by 7.9: median return     81.0   beats -5 on 20/20\n  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch\n        optimal return     50.3 vs escape -50: beats it on 20/20\n\n=== 25x25 extra_edges=0  (PURE GRID) ===\n  mean per-step cost 9.3;  median hops 22\n  (a) raise terminal bonus, weights unchanged:\n        bonus   100: median return    -96.4   beats -5 on  2/20\n        bonus   250: median return    -57.6   beats -5 on  8/20\n        bonus   500: median return     23.7   beats -5 on 13/20\n        bonus  1000: median return    194.0   beats -5 on 19/20\n        bonus  2000: median return    535.0   beats -5 on 20/20\n  (b) normalise step cost to O(1), bonus stays +100:\n        divide costs by 9.3: median return     18.3   beats -5 on 20/20\n  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch\n        optimal return    -96.4 vs escape -50: beats it on  6/20\n\n=== 50x50 extra_edges=0  (PURE GRID) ===\n  mean per-step cost 9.4;  median hops 35\n  (a) raise terminal bonus, weights unchanged:\n        bonus   100: median return   -140.4   beats -5 on  1/20\n        bonus   250: median return   -121.5   beats -5 on  1/20\n        bonus   500: median return    -87.8   beats -5 on  4/20\n        bonus  1000: median return      2.6   beats -5 on 10/20\n        bonus  2000: median return    179.9   beats -5 on 15/20\n  (b) normalise step cost to O(1), bonus stays +100:\n        divide costs by 9.4: median return     -0.9   beats -5 on 12/20\n  (c) invalid_penalty_mode='scaled' (floor -50): the escape hatch\n        optimal return   -140.4 vs escape -50: beats it on  1/20\n",
+    "step23_calibrate.py": "##############################################################################\n# STEP 1c -- non-leaking reward fix: normalise cost, lengthen horizon\n##############################################################################\n\n  config                            g=0.95        g=0.99       g=0.995\n  25x25 as-used                 81.0 20/20    92.1 20/20    93.9 20/20\n  25x25 pure grid               18.3 20/20    58.0 20/20    66.1 20/20\n  50x50 pure grid               -0.9 12/20    38.7 20/20    49.1 20/20\n\n  (normalised step cost, +100 terminal, no shaping, no leak)\n\n##############################################################################\n# STEP 2 -- density calibration (n_chords = TOTAL long-range edges)\n##############################################################################\n\n  25x25 (625 nodes), grid edges 1200. Legacy extra_edges=2 => ~1236 chords.\n\n   n_chords   edges  degree  diam  meanhop  hopIQR\n          0    1200    3.84    47    16.91    13.0\n         60    1260    4.03    15     7.62     3.0\n        125    1325    4.24    13     6.44     3.0\n        250    1450    4.64    10     5.36     1.0\n        400    1600    5.12     8     4.71     1.0\n        625    1822    5.83     7     4.18     1.0\n       1250    2445    7.82     5     3.51     1.0\n\n##############################################################################\n# STEP 3 -- solvability under perturbation, by density\n##############################################################################\n\n  fraction of 60 random s-t pairs still solvable after 5 perturbation rounds\n\n   n_chords  diam |     p=0.05     p=0.1    p=0.15     p=0.3\n          0    47 |       100%      100%       99%       91%\n        125    13 |       100%      100%       98%       94%\n        400     8 |       100%      100%       99%       97%\n       1250     5 |       100%      100%       99%      100%\n\n##############################################################################\n# T_max sizing (95th percentile optimal hop count, unperturbed)\n##############################################################################\n  n_chords     0: median    22  p95    37  max   39   -> suggest T_max >= 148\n  n_chords   125: median     8  p95    11  max   16   -> suggest T_max >= 44\n  n_chords   400: median     6  p95     9  max   12   -> suggest T_max >= 36\n  n_chords  1250: median     5  p95     7  max    8   -> suggest T_max >= 28\n",
+    "blockers.py": "############################################################################\n# BLOCKER 1 -- random-rollout outcome, reactive revisit vs masked\n############################################################################\n  n_chords=1250  degree 7.8, diam 5 | REACTIVE  goal   1.9%  revisit-death  98.2%  dead-end   0.0%  median steps 5\n  n_chords=1250  degree 7.8, diam 5 | MASKED    goal  49.8%  revisit-death   0.0%  dead-end  45.9%  median steps 255\n\n  n_chords=  60  degree 4.0, diam 15 | REACTIVE  goal   0.5%  revisit-death  99.5%  dead-end   0.0%  median steps 3\n  n_chords=  60  degree 4.0, diam 15 | MASKED    goal  14.6%  revisit-death   0.0%  dead-end  85.4%  median steps 65\n\n  n_chords=   0  degree 3.8, diam 47 | REACTIVE  goal   0.5%  revisit-death  99.5%  dead-end   0.0%  median steps 3\n  n_chords=   0  degree 3.8, diam 47 | MASKED    goal   8.9%  revisit-death   0.0%  dead-end  91.0%  median steps 40\n\n############################################################################\n# BLOCKER 2 -- bonus/cost balance across the density axis\n############################################################################\n\n   n_chords  E[C*] (norm)   fixed bonus 100   beta=5 bonus   ret b=5    >-5\n          0          21.1              4.7x            106      63.7   25/25\n         60           9.8             10.2x             49      34.5   25/25\n        125           8.5             11.8x             42      31.7   25/25\n        400           6.2             16.2x             31      22.8   25/25\n       1250           4.6             21.9x             23      17.4   25/25\n\n  'fixed bonus 100' column = bonus-to-optimal-cost ratio; it must be\n  constant across the axis or the reward is a confound.\n",
+    "analyze_invalid_action_returns.py": "scale    state     scenario                  T  opt_cost   undisc   G(g=0.95)   G(g=0.99)  G(g=0.997)  invalid\n--------------------------------------------------------------------------------------------------------------\n25x25    fresh     seed191664964_s0          5      45.5     54.5       41.21       51.69       53.67     -5.0\n25x25    perturbed seed191664964_s0          5      67.1     32.9       20.97       30.32       32.09     -5.0\n25x25    fresh     seed191664964_s1          6      37.3     62.7       46.18       59.14       61.65     -5.0\n25x25    perturbed seed191664964_s1          5      55.8     44.2       32.38       41.66       43.42     -5.0\n25x25    fresh     seed191664964_s2          7      40.4     59.6       39.53       55.11       58.21     -5.0\n25x25    perturbed seed191664964_s2          4      69.5     30.5       19.85       28.23       29.78     -5.0\n25x25    fresh     seed191664964_s3          4      10.4     89.6       76.09       86.79       88.76     -5.0\n25x25    perturbed seed191664964_s3          2      16.2     83.8       79.12       82.88       83.54     -5.0\n25x25    fresh     seed191664964_s4          7      42.1     57.9       37.14       53.29       56.50     -5.0\n25x25    perturbed seed191664964_s4          8      72.4     27.6        9.42       23.44       26.35     -5.0\n50x50    fresh     seed191664964_s0          5      35.0     65.0       49.82       61.72       63.97     -5.0\n50x50    perturbed seed191664964_s0          4      47.9     52.1       40.65       49.67       51.34     -5.0\n50x50    fresh     seed191664964_s1          9      34.8     65.2       37.75       58.83       63.23     -5.0\n50x50    perturbed seed191664964_s1          6      50.7     49.3       33.59       45.87       48.27     -5.0\n50x50    fresh     seed191664964_s2          5      28.9     71.1       54.98       67.71       70.11     -5.0\n50x50    perturbed seed191664964_s2          5      40.8     59.2       44.44       56.06       58.25     -5.0\n50x50    fresh     seed191664964_s3          6      42.2     57.8       39.65       53.82       56.57     -5.0\n50x50    perturbed seed191664964_s3          5      54.2     45.8       33.07       43.11       45.01     -5.0\n50x50    fresh     seed191664964_s4         10      42.9     57.1       29.94       50.63       55.09     -5.0\n50x50    perturbed seed191664964_s4          7      62.3     37.7       20.15       33.77       36.51     -5.0\n100x100  fresh     seed191664964_s0          7      44.4     55.6       35.13       51.01       54.19     -5.0\n100x100  perturbed seed191664964_s0          7      65.0     35.0       18.73       31.37       33.89     -5.0\n100x100  fresh     seed191664964_s1          9      39.9     60.1       32.07       53.64       58.14     -5.0\n100x100  perturbed seed191664964_s1          8      68.7     31.3        9.66       26.39       29.83     -5.0\n100x100  fresh     seed191664964_s2          9      36.6     63.4       36.58       57.18       61.50     -5.0\n100x100  perturbed seed191664964_s2          9      45.7     54.3       29.29       48.47       52.51     -5.0\n100x100  fresh     seed191664964_s3          7      44.9     55.1       35.95       50.80       53.77     -5.0\n100x100  perturbed seed191664964_s3          7      85.1     14.9       -1.24       11.29       13.82     -5.0\n100x100  fresh     seed191664964_s4          5      37.0     63.0       47.16       59.63       61.99     -5.0\n100x100  perturbed seed191664964_s4          8      70.8     29.2       10.52       24.86       27.84     -5.0\n\nMEANS over reachable scenarios (G > -5 means reaching the goal beats an immediate invalid action):\nscale    state       n      T  opt_cost   G(g=0.95)   G(g=0.99)  G(g=0.997)  beats -5?\n--------------------------------------------------------------------------------------\n25x25    fresh       5    5.8      35.1       48.03       61.21       63.76  g=0.95:YES g=0.99:YES g=0.997:YES\n25x25    perturbed   5    4.8      56.2       32.35       41.31       43.04  g=0.95:YES g=0.99:YES g=0.997:YES\n50x50    fresh       5    7.0      36.8       42.43       58.54       61.79  g=0.95:YES g=0.99:YES g=0.997:YES\n50x50    perturbed   5    5.4      51.2       34.38       45.70       47.88  g=0.95:YES g=0.99:YES g=0.997:YES\n100x100  fresh       5    7.4      40.6       37.38       54.45       57.92  g=0.95:YES g=0.99:YES g=0.997:YES\n100x100  perturbed   5    7.8      67.0       13.39       28.48       31.58  g=0.95:YES g=0.99:YES g=0.997:YES\n"
+  }
+}

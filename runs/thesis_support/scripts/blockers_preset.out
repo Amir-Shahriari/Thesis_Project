@@ -1,0 +1,25 @@
+############################################################################
+# BLOCKER 1 -- random-rollout outcome, reactive revisit vs masked
+############################################################################
+  n_chords=1250  degree 7.8, diam 5 | REACTIVE  goal   0.8%  revisit-death  99.2%  dead-end   0.0%  median steps 5
+  n_chords=1250  degree 7.8, diam 5 | MASKED    goal  56.0%  revisit-death   0.0%  dead-end  34.0%  median steps 281
+
+  n_chords=  60  degree 4.0, diam 15 | REACTIVE  goal   0.5%  revisit-death  99.5%  dead-end   0.0%  median steps 3
+  n_chords=  60  degree 4.0, diam 15 | MASKED    goal  14.6%  revisit-death   0.0%  dead-end  85.4%  median steps 65
+
+  n_chords=   0  degree 3.8, diam 47 | REACTIVE  goal   0.5%  revisit-death  99.5%  dead-end   0.0%  median steps 3
+  n_chords=   0  degree 3.8, diam 47 | MASKED    goal   8.9%  revisit-death   0.0%  dead-end  91.0%  median steps 40
+
+############################################################################
+# BLOCKER 2 -- bonus/cost balance across the density axis
+############################################################################
+
+   n_chords  E[C*] (norm)   fixed bonus 100   beta=5 bonus   ret b=5    >-5
+          0          21.1              4.7x            106      63.7   25/25
+         60           9.8             10.2x             49      34.5   25/25
+        125           8.5             11.8x             42      31.7   25/25
+        400           6.2             16.2x             31      22.8   25/25
+       1250           4.4             22.5x             22      17.0   25/25
+
+  'fixed bonus 100' column = bonus-to-optimal-cost ratio; it must be
+  constant across the axis or the reward is a confound.

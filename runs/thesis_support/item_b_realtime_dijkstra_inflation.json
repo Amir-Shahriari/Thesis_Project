@@ -1,0 +1,196 @@
+{
+  "item": "b",
+  "description": "Within-trajectory perturbation study (V3 realtime, six 25x25 cells): inflation of the Dijkstra reference cost by the path-length and node-degree penalties of ClassicalDijkstra/_cost.calculate_cost, which the agent's env cost does not include.",
+  "thesis_locations": [
+    "appendix-a.tex:345 (sec:app-transfer-realtime)"
+  ],
+  "audit_findings": [
+    "N8-01"
+  ],
+  "provenance": {
+    "git_repo": "C:\\Users\\amirh\\Desktop\\Thesis_Project",
+    "git_revision": "ddfb9b74f3afbbe0fa0e01dd8715dcaf6ec489ee",
+    "git_worktree_clean": false,
+    "timestamp_utc": "2026-10-03T10:08:27.946235+00:00",
+    "original_scripts": [
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\\qwarm\\oracles\\classical_dijkstra.py",
+        "sha256": "c3a6b978b5ec4e44ff502d458685ee3e700cbe3f35a15a792c10e85d96bcaafe",
+        "git_tracked_revision_blob": "59ea5cd6e82940893f8b024466b4ca9b90b1938c"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\\qwarm\\oracles\\_cost.py",
+        "sha256": "9158601180b83f861f34bf3fa237ce45994645ea8f14a58609c5c0703a3b1ff5",
+        "git_tracked_revision_blob": "b8d4b32cfeabc37111232ce43824c7e607bb749b"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\\qwarm\\env\\dynamic_graph.py",
+        "sha256": "8dd03c21317dc672d7f2765fe0fb1e2af3d57aafeb5b0e12c7e7937930a4bdf0",
+        "git_tracked_revision_blob": "eec24d41123f1da5cc109470bce830a4450682fe"
+      }
+    ],
+    "commands": [
+      "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\item_b.py"
+    ],
+    "environment": {
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\amirh\\Desktop\\qwarm-gnn-rl\\.venv\\Scripts\\python.exe",
+      "platform": "Windows-10-10.0.26300-SP0",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "torch": "2.11.0+cu128",
+      "cuda_available": true,
+      "cuda_device_name": "NVIDIA GeForce RTX 5080",
+      "qwarm_import_resolves_to": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\src\\qwarm\\env\\dynamic_graph.py",
+      "device_used": "cpu",
+      "device_note": "Deterministic graph analysis (numpy/scipy/pure Python). No checkpoint or torch model is loaded, so the GPU is not used.",
+      "interpreter_note": "Thesis_Project has no .venv (C:/Users/amirh/Desktop/Thesis_Project/.venv/Scripts/python.exe does not exist). The analysis scripts hard-code sys.path to C:/Users/amirh/Desktop/qwarm-gnn-rl/src, so the interpreter of that tree's venv was used ONLY as a Python runtime (numpy/scipy). All qwarm imports resolve to Thesis_Project/src: the scripts were run from verbatim scratch copies whose only change is that sys.path line. src/qwarm/env is byte-identical between the two trees (diff -r, excluding __pycache__)."
+    },
+    "this_script": {
+      "path": "C:\\WINDOWS\\TEMP\\claude\\C--Users-amirh-Desktop-thesis\\0b484bf9-5d2a-46f7-a70f-c79329fdcd82\\scratchpad\\regen\\item_b.py",
+      "sha256": "c3847ca2dcbfcc66ca074a129f5a7d4f1ea82d987bb7ed61e2a124403cac842d"
+    },
+    "study_script_read_only": {
+      "path": "C:\\Users\\amirh\\Desktop\\Demo\\scripts\\run_v3_realtime_eval.py",
+      "sha256": "6c4b67919e1b8756f62b36fef8778614b4f94140d8421fbc139873aaa15a1147",
+      "demo_git_revision": "a899a140e012bdd46490569e73994b793db88cef"
+    },
+    "inputs_read_only": [
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Demo\\runs\\v1_realtime_test_grid_v2.json",
+        "sha256": "940b11b5233c657706be10be9084e7457c928ab044a3330bb870ce2975cf4b83"
+      },
+      {
+        "path": "C:\\Users\\amirh\\Desktop\\Demo\\runs\\v3_realtime_25x25.json",
+        "sha256": "f0bf353c0d485d086797fd4a801912c26a5703120d2052f22e9bb766afe6026b"
+      }
+    ],
+    "note": "No existing script reports this inflation, so a new deterministic analysis was written (this file). It rebuilds each cell's fresh graph exactly as run_v3_realtime_eval._build_fresh_graph does and computes the denominator with the same ClassicalDijkstra. The Demo and Thesis_Project copies of classical_dijkstra.py are identical, and the legacy extra_edges path of dynamic_graph.py is unchanged."
+  },
+  "parameters": {
+    "cells": "Demo/runs/v1_realtime_test_grid_v2.json (6 cells)",
+    "grid": "25x25, extra_edges=2, deactivate_prob=0.10, fresh (iteration-0) graph",
+    "grid_seeds": [
+      191664964,
+      1830621171,
+      2029167941
+    ],
+    "env_step_cost": "distance + 0.1*time + node_penalty[v]",
+    "reference_cost": "env step cost + 0.05*len(path_so_far) + 0.1*degree(v)"
+  },
+  "results": {
+    "per_cell": [
+      {
+        "cell_idx": 0,
+        "outer_seed": 42,
+        "grid_seed": 191664964,
+        "scenario_id": "seed191664964_s0",
+        "source": "Node_537",
+        "destination": "Node_54",
+        "dijkstra_ref_cost_recomputed": 50.3202,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 50.3202,
+        "ref_path_hops": 5,
+        "env_optimal_cost": 45.4702,
+        "env_cost_of_ref_path": 45.4702,
+        "inflation_vs_env_optimum_pct": 10.67,
+        "inflation_vs_env_cost_of_same_path_pct": 10.67
+      },
+      {
+        "cell_idx": 1,
+        "outer_seed": 42,
+        "grid_seed": 191664964,
+        "scenario_id": "seed191664964_s1",
+        "source": "Node_476",
+        "destination": "Node_449",
+        "dijkstra_ref_cost_recomputed": 42.7092,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 42.7092,
+        "ref_path_hops": 6,
+        "env_optimal_cost": 37.2592,
+        "env_cost_of_ref_path": 37.2592,
+        "inflation_vs_env_optimum_pct": 14.63,
+        "inflation_vs_env_cost_of_same_path_pct": 14.63
+      },
+      {
+        "cell_idx": 2,
+        "outer_seed": 7,
+        "grid_seed": 2029167941,
+        "scenario_id": "seed2029167941_s2",
+        "source": "Node_121",
+        "destination": "Node_606",
+        "dijkstra_ref_cost_recomputed": 39.6958,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 39.6958,
+        "ref_path_hops": 5,
+        "env_optimal_cost": 34.3346,
+        "env_cost_of_ref_path": 34.9458,
+        "inflation_vs_env_optimum_pct": 15.61,
+        "inflation_vs_env_cost_of_same_path_pct": 13.59
+      },
+      {
+        "cell_idx": 3,
+        "outer_seed": 314159,
+        "grid_seed": 1830621171,
+        "scenario_id": "seed1830621171_s4",
+        "source": "Node_551",
+        "destination": "Node_623",
+        "dijkstra_ref_cost_recomputed": 51.8789,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 51.8789,
+        "ref_path_hops": 5,
+        "env_optimal_cost": 46.9289,
+        "env_cost_of_ref_path": 46.9289,
+        "inflation_vs_env_optimum_pct": 10.55,
+        "inflation_vs_env_cost_of_same_path_pct": 10.55
+      },
+      {
+        "cell_idx": 4,
+        "outer_seed": 7,
+        "grid_seed": 2029167941,
+        "scenario_id": "seed2029167941_s0",
+        "source": "Node_160",
+        "destination": "Node_620",
+        "dijkstra_ref_cost_recomputed": 39.9784,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 39.9784,
+        "ref_path_hops": 8,
+        "env_optimal_cost": 31.7784,
+        "env_cost_of_ref_path": 31.7784,
+        "inflation_vs_env_optimum_pct": 25.8,
+        "inflation_vs_env_cost_of_same_path_pct": 25.8
+      },
+      {
+        "cell_idx": 5,
+        "outer_seed": 314159,
+        "grid_seed": 1830621171,
+        "scenario_id": "seed1830621171_s0",
+        "source": "Node_77",
+        "destination": "Node_494",
+        "dijkstra_ref_cost_recomputed": 43.2087,
+        "dijkstra_ref_cost_stored_in_v3_realtime_25x25": 43.2087,
+        "ref_path_hops": 4,
+        "env_optimal_cost": 39.3087,
+        "env_cost_of_ref_path": 39.3087,
+        "inflation_vs_env_optimum_pct": 9.92,
+        "inflation_vs_env_cost_of_same_path_pct": 9.92
+      }
+    ],
+    "summary": {
+      "vs_env_optimum": {
+        "min_pct": 9.92,
+        "max_pct": 25.8,
+        "mean_pct": 14.53
+      },
+      "vs_env_cost_of_same_path": {
+        "min_pct": 9.92,
+        "max_pct": 25.8,
+        "mean_pct": 14.19
+      },
+      "stored_denominators_match": true
+    }
+  },
+  "thesis_values": {
+    "inflation_range_pct": [
+      10,
+      26
+    ],
+    "mean_pct_approx": 15
+  },
+  "status": "REPRODUCED"
+}
