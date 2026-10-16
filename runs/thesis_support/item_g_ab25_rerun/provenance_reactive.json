@@ -1,0 +1,27 @@
+{
+  "label": "25x25 A/B reactive re-run (numbers ledger)",
+  "recorded_at": "2026-10-10 17:16:23",
+  "torch_version": "2.11.0+cu128",
+  "torch_file": "C:\\Users\\amirh\\Desktop\\thesis\\numbers-ledger\\rerun_env\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_available": true,
+  "resolved_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "sys_executable": "C:\\Users\\amirh\\Desktop\\thesis\\numbers-ledger\\rerun_env\\Scripts\\python.exe",
+  "sys_prefix": "C:\\Users\\amirh\\Desktop\\thesis\\numbers-ledger\\rerun_env",
+  "sys_base_prefix": "C:\\Users\\amirh\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none",
+  "python": "3.11.15",
+  "git_rev": "de2d2e5",
+  "env": {
+    "QWARM_MASK_VISITED": null,
+    "QWARM_SEEDS": null,
+    "QWARM_OUT_DIR": null,
+    "QWARM_SKIP_4X": null,
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "CUDA_VISIBLE_DEVICES": null
+  }
+}

@@ -1,0 +1,76 @@
+{
+ "masked": {
+  "original": {
+   "n": 25,
+   "warm": 24,
+   "cold": 24,
+   "b": 0,
+   "c": 0,
+   "mcnemar_p": 1.0,
+   "both": 24,
+   "warm_med_ratio": 2.76,
+   "cold_med_ratio": 8.22,
+   "warm_cheaper": 15
+  },
+  "rerun": {
+   "n": 25,
+   "warm": 24,
+   "cold": 23,
+   "b": 1,
+   "c": 0,
+   "mcnemar_p": 1.0,
+   "both": 23,
+   "warm_med_ratio": 2.79,
+   "cold_med_ratio": 7.07,
+   "warm_cheaper": 15
+  },
+  "cells_matched": 25,
+  "dijkstra_identical": 25,
+  "warm_reach_agree": 25,
+  "cold_reach_agree": 24
+ },
+ "reactive": {
+  "original": {
+   "n": 25,
+   "warm": 24,
+   "cold": 12,
+   "b": 12,
+   "c": 0,
+   "mcnemar_p": 0.00048828125,
+   "both": 12,
+   "warm_med_ratio": 2.04,
+   "cold_med_ratio": 25.0,
+   "warm_cheaper": 9
+  },
+  "rerun": {
+   "n": 25,
+   "warm": 24,
+   "cold": 12,
+   "b": 12,
+   "c": 0,
+   "mcnemar_p": 0.00048828125,
+   "both": 12,
+   "warm_med_ratio": 2.04,
+   "cold_med_ratio": 25.0,
+   "warm_cheaper": 9
+  },
+  "cells_matched": 25,
+  "dijkstra_identical": 25,
+  "warm_reach_agree": 25,
+  "cold_reach_agree": 25
+ },
+ "stack": {
+  "masked": {
+   "torch_version": "2.11.0+cu128",
+   "resolved_device": "cuda:0",
+   "gpu_name": "NVIDIA GeForce RTX 5080",
+   "git_rev": "de2d2e5"
+  },
+  "reactive": {
+   "torch_version": "2.11.0+cu128",
+   "resolved_device": "cuda:0",
+   "gpu_name": "NVIDIA GeForce RTX 5080",
+   "git_rev": "de2d2e5"
+  }
+ }
+}

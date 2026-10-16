@@ -1,0 +1,31 @@
+{
+ "torch": "2.11.0+cu128",
+ "cuda": true,
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "python": "3.11.15",
+ "platform": "Windows-10-10.0.26300-SP0",
+ "results": {
+  "cuda": {
+   "n": 300,
+   "checkpoint_loaded": false,
+   "nodes": 625,
+   "edges": 3996,
+   "convert_ms_median": 2.084,
+   "total_ms_median": 3.238,
+   "total_ms_p10": 2.715,
+   "total_ms_p90": 4.27,
+   "total_ms_mean": 4.238
+  },
+  "cpu": {
+   "n": 300,
+   "checkpoint_loaded": false,
+   "nodes": 625,
+   "edges": 3996,
+   "convert_ms_median": 1.96,
+   "total_ms_median": 2.481,
+   "total_ms_p10": 2.288,
+   "total_ms_p90": 2.884,
+   "total_ms_mean": 3.367
+  }
+ }
+}

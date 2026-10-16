@@ -1,0 +1,23 @@
+{
+  "item": "h",
+  "description": "Trainable parameter counts of the agent (encoder + Q-head), by hidden size.",
+  "timestamp_utc": "2026-10-15T10:58:31.500571+00:00",
+  "torch": "2.11.0+cu128",
+  "node_in_dim": 4,
+  "results": {
+    "64": {
+      "scale": "25x25",
+      "encoder": 9088,
+      "q_head": 12417,
+      "total": 21505,
+      "q_head_goal_relative": 20609
+    },
+    "128": {
+      "scale": "50x50 and 100x100",
+      "encoder": 34560,
+      "q_head": 49409,
+      "total": 83969,
+      "q_head_goal_relative": 82177
+    }
+  }
+}

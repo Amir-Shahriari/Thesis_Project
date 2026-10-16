@@ -1,0 +1,203 @@
+  [MASKED] training action set excludes visited nodes
+
+Phase 3 — Multi-seed x Multi-scenario Sweep
+Seeds: [42, 1337, 2024, 7, 314159]  Scenarios/seed: 5
+Total cells: 25  k_threshold=3.0
+
+  [ 1/25] seed=42 Node_537->Node_54 (dist=20.6)
+         [warm: pre-seeding...]
+         [warm: done in 253s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=295  cold=167  COLD<warm  (409s)
+  [ 2/25] seed=42 Node_476->Node_449 (dist=23.1)
+         [warm: pre-seeding...]
+         [warm: done in 237s, evaluating...]
+         [cold: training...]
+         [cold: done in 159s]
+         warm=173  cold=1159  warm<cold  (403s)
+  [ 3/25] seed=42 Node_81->Node_525 (dist=25.5)
+         [warm: pre-seeding...]
+  [MASKED] training action set excludes visited nodes
+
+Phase 3 — Multi-seed x Multi-scenario Sweep
+Seeds: [42, 1337, 2024, 7, 314159]  Scenarios/seed: 5
+Total cells: 25  k_threshold=3.0
+
+  Resuming: 2 cells loaded from C:\Users\amirh\Desktop\thesis\numbers-ledger\rerun\ab25_masked\sweep_phase3_masked_rerun.json
+  [ 1/25] seed=42 seed191664964_s0 — already in checkpoint, skipped
+  [ 2/25] seed=42 seed191664964_s1 — already in checkpoint, skipped
+  [ 3/25] seed=42 Node_81->Node_525 (dist=25.5)
+         [warm: pre-seeding...]
+         [warm: done in 234s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=184  cold=346  warm<cold  (389s)
+  [ 4/25] seed=42 Node_274->Node_101 (dist=23.8)
+         [warm: pre-seeding...]
+  [MASKED] training action set excludes visited nodes
+
+Phase 3 — Multi-seed x Multi-scenario Sweep
+Seeds: [42, 1337, 2024, 7, 314159]  Scenarios/seed: 5
+Total cells: 25  k_threshold=3.0
+
+  Resuming: 3 cells loaded from C:\Users\amirh\Desktop\thesis\numbers-ledger\rerun\ab25_masked\sweep_phase3_masked_rerun.json
+  [ 1/25] seed=42 seed191664964_s0 — already in checkpoint, skipped
+  [ 2/25] seed=42 seed191664964_s1 — already in checkpoint, skipped
+  [ 3/25] seed=42 seed191664964_s2 — already in checkpoint, skipped
+  [ 4/25] seed=42 Node_274->Node_101 (dist=23.8)
+         [warm: pre-seeding...]
+         [warm: done in 224s, evaluating...]
+         [cold: training...]
+         [cold: done in 146s]
+         warm=23  cold=1109  warm<cold  (376s)
+  [ 5/25] seed=42 Node_427->Node_398 (dist=21.1)
+         [warm: pre-seeding...]
+         [warm: done in 220s, evaluating...]
+         [cold: training...]
+         [cold: done in 142s]
+         warm=1491  cold=495  COLD<warm  (368s)
+  [ 6/25] seed=1337 Node_576->Node_245 (dist=23.6)
+         [warm: pre-seeding...]
+         [warm: done in 220s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=913  cold=771  COLD<warm  (376s)
+  [ 7/25] seed=1337 Node_562->Node_150 (dist=21.4)
+         [warm: pre-seeding...]
+         [warm: done in 226s, evaluating...]
+         [cold: training...]
+         [cold: done in 141s]
+         warm=44  cold=280  warm<cold  (372s)
+  [ 8/25] seed=1337 Node_41->Node_451 (dist=22.7)
+         [warm: pre-seeding...]
+         [warm: done in 228s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=195  cold=inf  warm<cold  (383s)
+  [ 9/25] seed=1337 Node_482->Node_250 (dist=20.6)
+         [warm: pre-seeding...]
+         [warm: done in 223s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=435  cold=1132  warm<cold  (378s)
+  [10/25] seed=1337 Node_177->Node_599 (dist=27.2)
+         [warm: pre-seeding...]
+         [warm: done in 215s, evaluating...]
+         [cold: training...]
+         [cold: done in 146s]
+         warm=71  cold=1693  warm<cold  (367s)
+  [11/25] seed=2024 Node_423->Node_58 (dist=20.5)
+         [warm: pre-seeding...]
+         [warm: done in 218s, evaluating...]
+         [cold: training...]
+         [cold: done in 149s]
+         warm=54  cold=225  warm<cold  (372s)
+  [12/25] seed=2024 Node_623->Node_50 (dist=23.1)
+         [warm: pre-seeding...]
+         [warm: done in 221s, evaluating...]
+         [cold: training...]
+         [cold: done in 148s]
+         warm=inf  cold=inf  COLD<warm  (375s)
+  [13/25] seed=2024 Node_50->Node_104 (dist=21.2)
+         [warm: pre-seeding...]
+         [warm: done in 216s, evaluating...]
+         [cold: training...]
+         [cold: done in 153s]
+         warm=685  cold=3633  warm<cold  (375s)
+  [14/25] seed=2024 Node_174->Node_451 (dist=25.9)
+         [warm: pre-seeding...]
+         [warm: done in 217s, evaluating...]
+         [cold: training...]
+         [cold: done in 146s]
+         warm=27  cold=27  COLD<warm  (369s)
+  [15/25] seed=2024 Node_562->Node_123 (dist=21.1)
+         [warm: pre-seeding...]
+         [warm: done in 215s, evaluating...]
+         [cold: training...]
+         [cold: done in 142s]
+         warm=86  cold=86  COLD<warm  (363s)
+  [16/25] seed=7 Node_160->Node_620 (dist=20.6)
+         [warm: pre-seeding...]
+         [warm: done in 220s, evaluating...]
+         [cold: training...]
+         [cold: done in 142s]
+         warm=140  cold=319  warm<cold  (368s)
+  [17/25] seed=7 Node_155->Node_621 (dist=24.1)
+         [warm: pre-seeding...]
+         [warm: done in 218s, evaluating...]
+         [cold: training...]
+         [cold: done in 142s]
+         warm=114  cold=305  warm<cold  (366s)
+  [18/25] seed=7 Node_121->Node_606 (dist=25.0)
+         [warm: pre-seeding...]
+         [warm: done in 214s, evaluating...]
+         [cold: training...]
+         [cold: done in 141s]
+         warm=112  cold=247  warm<cold  (361s)
+  [19/25] seed=7 Node_168->Node_604 (dist=22.8)
+         [warm: pre-seeding...]
+         [warm: done in 215s, evaluating...]
+         [cold: training...]
+         [cold: done in 144s]
+         warm=57  cold=57  COLD<warm  (365s)
+  [20/25] seed=7 Node_551->Node_117 (dist=24.1)
+         [warm: pre-seeding...]
+         [warm: done in 217s, evaluating...]
+         [cold: training...]
+         [cold: done in 152s]
+         warm=771  cold=1740  warm<cold  (375s)
+  [21/25] seed=314159 Node_77->Node_494 (dist=23.3)
+         [warm: pre-seeding...]
+         [warm: done in 221s, evaluating...]
+         [cold: training...]
+         [cold: done in 144s]
+         warm=120  cold=304  warm<cold  (371s)
+  [22/25] seed=314159 Node_326->Node_625 (dist=26.4)
+         [warm: pre-seeding...]
+         [warm: done in 225s, evaluating...]
+         [cold: training...]
+         [cold: done in 143s]
+         warm=1598  cold=1240  COLD<warm  (374s)
+  [23/25] seed=314159 Node_205->Node_549 (dist=23.0)
+         [warm: pre-seeding...]
+         [warm: done in 220s, evaluating...]
+         [cold: training...]
+         [cold: done in 144s]
+         warm=232  cold=1128  warm<cold  (370s)
+  [24/25] seed=314159 Node_399->Node_401 (dist=23.0)
+         [warm: pre-seeding...]
+         [warm: done in 223s, evaluating...]
+         [cold: training...]
+         [cold: done in 128s]
+         warm=274  cold=270  COLD<warm  (357s)
+  [25/25] seed=314159 Node_551->Node_623 (dist=22.1)
+         [warm: pre-seeding...]
+         [warm: done in 145s, evaluating...]
+         [cold: training...]
+         [cold: done in 103s]
+         warm=317  cold=966  warm<cold  (255s)
+
+Sweep complete in 133.9 min
+
+=================================================================
+  MULTI-SEED x MULTI-SCENARIO SWEEP — AGGREGATE RESULTS
+=================================================================
+  Cells: 25  (5 seeds x 5 scenarios)
+  Training config: 25x25 grid, 5 iters x 100 eps, expert_ratio=0.4
+-----------------------------------------------------------------
+  Metric                                         Warm       Cold  p-val
+  ---------------------------------------- ---------- ----------  ------
+  Composite cost (mean+/-std)                   350+-438       770+-815  0.2165
+  Reasonable-reach rate (k=3)                  52.00%      16.00%
+  Inference latency ms (mean+/-std)            7.7+-9.8     11.0+-11.5  0.2682
+  Win rate (warm < cold)                       64.00%
+-----------------------------------------------------------------
+
+  Gates:
+    M1  win_rate >= 0.80:             64.00%  FAIL
+    M2  mean warm/dijkstra <= 5.0:    6.16  FAIL
+    M3  paired t-test p < 0.01:       0.2165  FAIL
+=================================================================
+
+  Results saved to C:\Users\amirh\Desktop\thesis\numbers-ledger\rerun\ab25_masked\sweep_phase3_masked_rerun.json
