@@ -58,6 +58,7 @@ def train_gnn_dqn(
     her_strategy: str = "future",
     deactivate_mult_range: "tuple[float, float] | None" = None,
     density_block_size: int = 1,
+    goal_adjacent_seeding: bool = True,
 ) -> dict:
     """Train a GNNDQN agent with mixed expert+online batches.
 
@@ -106,6 +107,11 @@ def train_gnn_dqn(
             drawn density fixed across a block of consecutive iterations
             gives the policy sustained exposure per density before the next
             switch. Ignored when deactivate_mult_range is None.
+        goal_adjacent_seeding: add the warm-only goal-adjacent terminal
+            transitions after the library pre-seed (default True, the original
+            behaviour). False removes only that block, for the goal-adjacent
+            seeding ablation (scripts/run_goaladj_ablation.py). It draws no
+            random numbers, so either setting leaves the RNG stream unchanged.
     """
     set_global_seed(seed)
 
@@ -158,7 +164,7 @@ def train_gnn_dqn(
         # `oracles`), so they are part of what the warm/cold contrast varies, not
         # a shared component. Disclosed as such in the paper (Framework Overview:
         # "a small set of goal-adjacent terminal transitions").
-        for src, dst in queries:
+        for src, dst in (queries if goal_adjacent_seeding else []):
             for node_id, neighbors in dyn_graph.graph.items():
                 if dst not in neighbors:
                     continue
