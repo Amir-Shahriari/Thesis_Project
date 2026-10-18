@@ -1,0 +1,35 @@
+{
+  "label": "50x50 goal-adjacent seeding ablation",
+  "recorded_at": "2026-10-17 23:34:42",
+  "torch_version": "2.11.0+cu128",
+  "cuda_available": true,
+  "resolved_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "sys_executable": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\.venv\\Scripts\\python.exe",
+  "python": "3.11.15",
+  "numpy_version": "2.4.4",
+  "git_rev": "7ba1e7b",
+  "git_dirty_files": [],
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "arms": [
+    "warm_no_goaladj",
+    "cold_goaladj",
+    "persistent",
+    "cold"
+  ],
+  "n_iterations": 10,
+  "episodes_per_iteration": 200,
+  "smoke": false,
+  "env": {
+    "QWARM_MASK_VISITED": "1",
+    "QWARM_SEEDS": "42",
+    "QWARM_GA_ARMS": null,
+    "QWARM_OUT_DIR": "runs/goaladj_ablation_50x50",
+    "QWARM_SMOKE": null,
+    "CUDA_VISIBLE_DEVICES": null
+  }
+}

@@ -1,0 +1,257 @@
+[
+  {
+    "seed": 2024,
+    "scenario_id": "seed518677876_s0",
+    "grid_seed": 518677876,
+    "source": "Node_2490",
+    "destination": "Node_197",
+    "arms": {
+      "warm_no_goaladj": {
+        "arm": "warm_no_goaladj",
+        "train_s": 2366.8159353999945,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 62.05520271612268,
+        "strict": false,
+        "cost": null,
+        "strict_1000": true,
+        "cost_1000": 7024.483324511268
+      },
+      "cold_goaladj": {
+        "arm": "cold_goaladj",
+        "train_s": 2147.5671877999994,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 62.05520271612268,
+        "goal_adjacent_transitions": 11,
+        "expert_pool_at_end": 11,
+        "strict": true,
+        "cost": 182.41448562649734,
+        "strict_1000": true,
+        "cost_1000": 182.41448562649734
+      },
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 16999.992544899986,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 62.05520271612268,
+        "strict": true,
+        "cost": 2772.3022136597374,
+        "strict_1000": true,
+        "cost_1000": 2772.3022136597374
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1972.2556931000145,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 62.05520271612268,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  },
+  {
+    "seed": 2024,
+    "scenario_id": "seed518677876_s1",
+    "grid_seed": 518677876,
+    "source": "Node_453",
+    "destination": "Node_2285",
+    "arms": {
+      "warm_no_goaladj": {
+        "arm": "warm_no_goaladj",
+        "train_s": 2481.529592100007,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 57.14338161528373,
+        "strict": true,
+        "cost": 161.1328815471619,
+        "strict_1000": true,
+        "cost_1000": 161.1328815471619
+      },
+      "cold_goaladj": {
+        "arm": "cold_goaladj",
+        "train_s": 2154.87221880001,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 57.14338161528373,
+        "goal_adjacent_transitions": 10,
+        "expert_pool_at_end": 10,
+        "strict": true,
+        "cost": 1851.2184532491112,
+        "strict_1000": true,
+        "cost_1000": 1851.2184532491112
+      },
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 2462.2971475000086,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 57.14338161528373,
+        "strict": true,
+        "cost": 912.0340536526684,
+        "strict_1000": true,
+        "cost_1000": 912.0340536526684
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1971.4982639999944,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 57.14338161528373,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  },
+  {
+    "seed": 2024,
+    "scenario_id": "seed518677876_s2",
+    "grid_seed": 518677876,
+    "source": "Node_696",
+    "destination": "Node_1803",
+    "arms": {
+      "warm_no_goaladj": {
+        "arm": "warm_no_goaladj",
+        "train_s": 2522.118321100017,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "cold_goaladj": {
+        "arm": "cold_goaladj",
+        "train_s": 2148.9036183000135,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "goal_adjacent_transitions": 10,
+        "expert_pool_at_end": 10,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 2505.505551500013,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1976.2318128999905,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": null,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  },
+  {
+    "seed": 2024,
+    "scenario_id": "seed518677876_s3",
+    "grid_seed": 518677876,
+    "source": "Node_178",
+    "destination": "Node_1957",
+    "arms": {
+      "warm_no_goaladj": {
+        "arm": "warm_no_goaladj",
+        "train_s": 2529.971278400015,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.21308539664738,
+        "strict": true,
+        "cost": 624.00168142705,
+        "strict_1000": true,
+        "cost_1000": 624.00168142705
+      },
+      "cold_goaladj": {
+        "arm": "cold_goaladj",
+        "train_s": 2123.2724524000078,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.21308539664738,
+        "goal_adjacent_transitions": 9,
+        "expert_pool_at_end": 9,
+        "strict": true,
+        "cost": 527.3553017301962,
+        "strict_1000": true,
+        "cost_1000": 527.3553017301962
+      },
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 2538.711689399992,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.21308539664738,
+        "strict": true,
+        "cost": 619.545795369505,
+        "strict_1000": true,
+        "cost_1000": 619.545795369505
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1898.151348000014,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.21308539664738,
+        "strict": true,
+        "cost": 567.5693835702798,
+        "strict_1000": true,
+        "cost_1000": 567.5693835702798
+      }
+    }
+  },
+  {
+    "seed": 2024,
+    "scenario_id": "seed518677876_s4",
+    "grid_seed": 518677876,
+    "source": "Node_505",
+    "destination": "Node_2491",
+    "arms": {
+      "warm_no_goaladj": {
+        "arm": "warm_no_goaladj",
+        "train_s": 2553.090864799975,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 72.27586376552645,
+        "strict": false,
+        "cost": null,
+        "strict_1000": true,
+        "cost_1000": 7755.81170971504
+      },
+      "cold_goaladj": {
+        "arm": "cold_goaladj",
+        "train_s": 2039.183114399988,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 72.27586376552645,
+        "goal_adjacent_transitions": 7,
+        "expert_pool_at_end": 7,
+        "strict": true,
+        "cost": 583.0241591167251,
+        "strict_1000": true,
+        "cost_1000": 583.0241591167251
+      },
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 2512.166063300014,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 72.27586376552645,
+        "strict": true,
+        "cost": 1772.4468135934453,
+        "strict_1000": true,
+        "cost_1000": 1772.4468135934453
+      },
+      "cold": {
+        "arm": "cold",
+        "train_s": 1467.3693035999895,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 72.27586376552645,
+        "strict": false,
+        "cost": null,
+        "strict_1000": false,
+        "cost_1000": null
+      }
+    }
+  }
+]

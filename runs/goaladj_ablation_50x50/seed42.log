@@ -1,0 +1,153 @@
+arms=['warm_no_goaladj', 'cold_goaladj', 'persistent', 'cold']  iters=10  eps=200  torch=2.11.0+cu128  device=cuda:0  smoke=False
+  seed=42 seed191664964_s0 warm_no_goaladj  reach=True cost=93.52974852771125 steps=8000 t=2177s
+  seed=42 seed191664964_s0 cold_goaladj     reach=True cost=1791.1539683878118 steps=8000 t=2267s
+  seed=42 seed191664964_s0 persistent       reach=True cost=596.9927258303649 steps=8000 t=16969s
+  seed=42 seed191664964_s0 cold             reach=False cost=None steps=8000 t=1989s
+  seed=42 seed191664964_s1 warm_no_goaladj  reach=True cost=87.21077842980199 steps=8000 t=2415s
+  seed=42 seed191664964_s1 cold_goaladj     reach=True cost=87.21077842980199 steps=8000 t=1990s
+  seed=42 seed191664964_s1 persistent       reach=True cost=87.21077842980199 steps=8000 t=2421s
+  seed=42 seed191664964_s1 cold             reach=True cost=1742.6561544502379 steps=8000 t=1919s
+  seed=42 seed191664964_s2 warm_no_goaladj  reach=True cost=54.8125142759359 steps=8000 t=2499s
+  seed=42 seed191664964_s2 cold_goaladj     reach=True cost=2097.3089373361427 steps=8000 t=2206s
+  seed=42 seed191664964_s2 persistent       reach=True cost=685.6407830290825 steps=8000 t=2481s
+  seed=42 seed191664964_s2 cold             reach=False cost=None steps=8000 t=1930s
+  seed=42 seed191664964_s3 warm_no_goaladj  reach=True cost=1752.0411433204383 steps=8000 t=2455s
+  seed=42 seed191664964_s3 cold_goaladj     reach=True cost=1026.9110547353503 steps=8000 t=2096s
+  seed=42 seed191664964_s3 persistent       reach=True cost=463.1418220320155 steps=8000 t=2443s
+  seed=42 seed191664964_s3 cold             reach=True cost=1440.0738448356774 steps=8000 t=1798s
+  seed=42 seed191664964_s4 warm_no_goaladj  reach=True cost=238.70708666337336 steps=8000 t=2469s
+  seed=42 seed191664964_s4 cold_goaladj     reach=True cost=1310.7054353271824 steps=8000 t=2092s
+  seed=42 seed191664964_s4 persistent       reach=True cost=728.460340384577 steps=8000 t=2455s
+  seed=42 seed191664964_s4 cold             reach=False cost=None steps=8000 t=1929s
+{
+  "n_cells": 22,
+  "arms": {
+    "warm_no_goaladj": {
+      "reach": 19,
+      "n": 22,
+      "reach_1000": 20
+    },
+    "cold_goaladj": {
+      "reach": 20,
+      "n": 22,
+      "reach_1000": 20
+    },
+    "persistent": {
+      "reach": 20,
+      "n": 22,
+      "reach_1000": 20
+    },
+    "cold": {
+      "reach": 8,
+      "n": 22,
+      "reach_1000": 10
+    }
+  },
+  "tests": {
+    "warm_no_goaladj_vs_cold": {
+      "reach": {
+        "b_first_only": 11,
+        "c_second_only": 0,
+        "p_exact": 0.0009765625,
+        "p_holm": 0.0009765625
+      },
+      "reach_1000": {
+        "b_first_only": 10,
+        "c_second_only": 0,
+        "p_exact": 0.001953125
+      },
+      "cost": {
+        "n_both_reached": 8,
+        "p": 0.0390625,
+        "first_cheaper": 6
+      }
+    },
+    "cold_goaladj_vs_cold": {
+      "reach": {
+        "b_first_only": 12,
+        "c_second_only": 0,
+        "p_exact": 0.00048828125,
+        "p_holm": 0.0009765625
+      },
+      "reach_1000": {
+        "b_first_only": 10,
+        "c_second_only": 0,
+        "p_exact": 0.001953125
+      },
+      "cost": {
+        "n_both_reached": 8,
+        "p": 0.0078125,
+        "first_cheaper": 8
+      }
+    },
+    "persistent_vs_warm_no_goaladj": {
+      "reach": {
+        "b_first_only": 1,
+        "c_second_only": 0,
+        "p_exact": 1.0
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 19,
+        "p": 0.0395355224609375,
+        "first_cheaper": 6
+      }
+    },
+    "persistent_vs_cold_goaladj": {
+      "reach": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 20,
+        "p": 0.18186569213867188,
+        "first_cheaper": 10
+      }
+    },
+    "persistent_vs_cold": {
+      "reach": {
+        "b_first_only": 12,
+        "c_second_only": 0,
+        "p_exact": 0.00048828125
+      },
+      "reach_1000": {
+        "b_first_only": 10,
+        "c_second_only": 0,
+        "p_exact": 0.001953125
+      },
+      "cost": {
+        "n_both_reached": 8,
+        "p": 0.0390625,
+        "first_cheaper": 6
+      }
+    },
+    "warm_no_goaladj_vs_cold_goaladj": {
+      "reach": {
+        "b_first_only": 0,
+        "c_second_only": 1,
+        "p_exact": 1.0
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 19,
+        "p": 0.010406494140625,
+        "first_cheaper": 13
+      }
+    }
+  },
+  "eval_state_consistent_cells": 22
+}

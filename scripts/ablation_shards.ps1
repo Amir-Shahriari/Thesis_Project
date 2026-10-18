@@ -1,4 +1,5 @@
-# Pause or resume the persistence-ablation shard processes (Windows).
+# Pause or resume the ablation shard processes (Windows): the persistence and
+# goal-adjacent seeding ablations.
 # Suspending freezes a process in place: it keeps its GPU memory and state and
 # continues exactly where it stopped on resume, so results are unaffected
 # (runs are seeded and deterministic). Only the recorded train_s wall-clock of
@@ -17,7 +18,7 @@ Add-Type -Name NtProc -Namespace Win32 -MemberDefinition @'
 
 # Worker = the conda python child that actually holds the GPU context.
 $workers = Get-CimInstance Win32_Process -Filter "Name='python.exe'" |
-    Where-Object { $_.CommandLine -like '*run_persistence_ablation*' -and $_.ExecutablePath -notlike '*\.venv\*' }
+    Where-Object { ($_.CommandLine -like '*run_persistence_ablation*' -or $_.CommandLine -like '*run_goaladj_ablation*') -and $_.ExecutablePath -notlike '*\.venv\*' }
 
 function Is-Suspended($id) {
     $p = Get-Process -Id $id -ErrorAction SilentlyContinue

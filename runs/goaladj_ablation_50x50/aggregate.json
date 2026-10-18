@@ -1,0 +1,132 @@
+{
+  "n_cells": 25,
+  "arms": {
+    "warm_no_goaladj": {
+      "reach": 20,
+      "n": 25,
+      "reach_1000": 22
+    },
+    "cold_goaladj": {
+      "reach": 22,
+      "n": 25,
+      "reach_1000": 22
+    },
+    "persistent": {
+      "reach": 22,
+      "n": 25,
+      "reach_1000": 22
+    },
+    "cold": {
+      "reach": 9,
+      "n": 25,
+      "reach_1000": 11
+    }
+  },
+  "tests": {
+    "warm_no_goaladj_vs_cold": {
+      "reach": {
+        "b_first_only": 11,
+        "c_second_only": 0,
+        "p_exact": 0.0009765625,
+        "p_holm": 0.0009765625
+      },
+      "reach_1000": {
+        "b_first_only": 11,
+        "c_second_only": 0,
+        "p_exact": 0.0009765625
+      },
+      "cost": {
+        "n_both_reached": 9,
+        "p": 0.01953125,
+        "first_cheaper": 7
+      }
+    },
+    "cold_goaladj_vs_cold": {
+      "reach": {
+        "b_first_only": 13,
+        "c_second_only": 0,
+        "p_exact": 0.000244140625,
+        "p_holm": 0.00048828125
+      },
+      "reach_1000": {
+        "b_first_only": 11,
+        "c_second_only": 0,
+        "p_exact": 0.0009765625
+      },
+      "cost": {
+        "n_both_reached": 9,
+        "p": 0.00390625,
+        "first_cheaper": 9
+      }
+    },
+    "persistent_vs_warm_no_goaladj": {
+      "reach": {
+        "b_first_only": 2,
+        "c_second_only": 0,
+        "p_exact": 0.5
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 20,
+        "p": 0.14151763916015625,
+        "first_cheaper": 7
+      }
+    },
+    "persistent_vs_cold_goaladj": {
+      "reach": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 22,
+        "p": 0.2428417205810547,
+        "first_cheaper": 11
+      }
+    },
+    "persistent_vs_cold": {
+      "reach": {
+        "b_first_only": 13,
+        "c_second_only": 0,
+        "p_exact": 0.000244140625
+      },
+      "reach_1000": {
+        "b_first_only": 11,
+        "c_second_only": 0,
+        "p_exact": 0.0009765625
+      },
+      "cost": {
+        "n_both_reached": 9,
+        "p": 0.01953125,
+        "first_cheaper": 7
+      }
+    },
+    "warm_no_goaladj_vs_cold_goaladj": {
+      "reach": {
+        "b_first_only": 0,
+        "c_second_only": 2,
+        "p_exact": 0.5
+      },
+      "reach_1000": {
+        "b_first_only": 0,
+        "c_second_only": 0,
+        "p_exact": null
+      },
+      "cost": {
+        "n_both_reached": 20,
+        "p": 0.02298736572265625,
+        "first_cheaper": 13
+      }
+    }
+  },
+  "eval_state_consistent_cells": 25
+}
