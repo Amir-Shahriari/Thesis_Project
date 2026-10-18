@@ -331,9 +331,11 @@ def train_gnn_dqn(
                 if len(buffer) >= batch_size:
                     for _ in range(grad_steps_per_episode):
                         batch = buffer.sample(batch_size)
-                        goal = batch[0].goal_node if batch and batch[0].goal_node else dst
+                        # goal_node=None: learn_from_batch scores every
+                        # transition against its OWN t.goal_node. (Passing
+                        # batch[0].goal_node used one goal for the whole batch.)
                         loss = agent.learn_from_batch(
-                            batch, data, goal_node=goal,
+                            batch, data, goal_node=None,
                             trace_iteration=iteration,
                             trace_expert_buf_size=len(buffer.expert_pool),
                             trace_online_buf_size=len(buffer.online_pool),
