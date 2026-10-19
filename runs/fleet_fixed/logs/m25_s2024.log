@@ -1,0 +1,39 @@
+=== fleet-mode 25x25 seed=2024 grid_seed=518677876 ===
+    train queries: 20   held-out: 20
+    oracle pool  : classical_only
+    iterations   : 8 x 25 episodes x 20 queries
+    HER          : k=0 (future)  [OFF]
+    goal-relative: False
+    snapshots    : every 1 iter -> runs\fleet_fixed\agents\snapshots
+
+--- warm ---
+    trained in 32.5 min
+    train  queries: reach 19/20 (95%)  median ratio 4.481904534764228
+    HELD-OUT      : reach 20/20 (100%)  median ratio 7.4861173515604875
+
+--- cold ---
+    trained in 23.1 min
+    train  queries: reach 8/20 (40%)  median ratio 20.18269286959284
+    HELD-OUT      : reach 5/20 (25%)  median ratio 4.152118288793488
+
+Wrote runs\fleet_fixed\fleet_results_seed2024_25x25_masked.json
+Wrote runs\fleet_fixed\agents\manifest_fleet_25x25_seed2024_masked.json
+
+HELD-OUT warm vs cold: 20/20 vs 5/20  (100% vs 25%)
+=== re-eval fleet_25x25_seed2024_masked ===
+    ablation : {'her_k': 0, 'her_strategy': 'future', 'goal_relative': False, 'iterations': 8, 'episodes_per_iteration': 25}
+    train queries 20   held-out 150 (was 20)
+
+  --- TRAIN QUERIES ---
+  queries 20  solvable 19  (unsolvable at eval state: 1)
+  reach   warm  19/19  cold   8/19   both   8  warm-only  11  cold-only   0
+  reach McNemar (exact): warm-only 11 vs cold-only 0  p=0.0010
+  PAIRED cost on 8 commonly-reached: warm median    3.81  cold median   20.18  warm better 7/8  wilcoxon p=0.0156
+
+  --- HELD-OUT ---
+  queries 150  solvable 141  (unsolvable at eval state: 9)
+  reach   warm 134/141  cold  51/141   both  48  warm-only  86  cold-only   3
+  reach McNemar (exact): warm-only 86 vs cold-only 3  p=0.0000
+  PAIRED cost on 48 commonly-reached: warm median    6.30  cold median   30.51  warm better 40/48  wilcoxon p=0.0000
+
+Wrote C:\Users\amirh\Desktop\Thesis_Project\runs\fleet_fixed\reeval_seed2024_25x25_masked.json

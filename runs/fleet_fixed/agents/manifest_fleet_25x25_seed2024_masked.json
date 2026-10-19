@@ -1,0 +1,37 @@
+{
+  "25x25@fleet_seed2024": {
+    "grid": {
+      "grid_width": 25,
+      "grid_height": 25,
+      "extra_edges": 2,
+      "deactivate_prob": 0.15,
+      "node_deactivate_prob": 0.05
+    },
+    "train": {
+      "n_iterations": 8,
+      "episodes_per_iteration": 25,
+      "grad_steps_per_episode": 4,
+      "batch_size": 64,
+      "hidden_dim": 64,
+      "expert_ratio": 0.4,
+      "pre_seed_n_states": 3,
+      "pre_seed_k_paths": 5
+    },
+    "hidden_dim": 64,
+    "node_in_dim": 4,
+    "grid_seed": 518677876,
+    "sweep_seed": 2024,
+    "oracle_pool": "classical_only",
+    "mode": "fleet",
+    "scenarios": [
+      {
+        "scenario_id": "fleet_25x25_seed2024_masked",
+        "source": "Node_423",
+        "destination": "Node_58",
+        "grid_seed": 518677876,
+        "warm": "fleet_25x25_seed2024_masked_warm.pt",
+        "cold": "fleet_25x25_seed2024_masked_cold.pt"
+      }
+    ]
+  }
+}

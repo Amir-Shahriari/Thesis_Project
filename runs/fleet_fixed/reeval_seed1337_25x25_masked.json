@@ -1,0 +1,3459 @@
+{
+  "summary": {
+    "tag": "fleet_25x25_seed1337_masked",
+    "ablation": {
+      "her_k": 0,
+      "her_strategy": "future",
+      "goal_relative": false,
+      "iterations": 8,
+      "episodes_per_iteration": 25
+    },
+    "grid_seed": 1173222464,
+    "n_train_queries": 20,
+    "n_eval_queries": 150,
+    "train": {
+      "n_queries": 20,
+      "n_solvable": 19,
+      "warm_reach": 17,
+      "cold_reach": 5,
+      "n_both": 4,
+      "warm_only": 13,
+      "cold_only": 1,
+      "reach_mcnemar_p": 0.0018310546875,
+      "paired_n": 4,
+      "warm_median_ratio": 6.274843840230745,
+      "cold_median_ratio": 23.687704135874085,
+      "warm_better": 3,
+      "paired_wilcoxon_p": 0.25
+    },
+    "held_out": {
+      "n_queries": 150,
+      "n_solvable": 139,
+      "warm_reach": 134,
+      "cold_reach": 55,
+      "n_both": 55,
+      "warm_only": 79,
+      "cold_only": 0,
+      "reach_mcnemar_p": 3.308722450212111e-24,
+      "paired_n": 55,
+      "warm_median_ratio": 6.424302932848027,
+      "cold_median_ratio": 32.35475794002535,
+      "warm_better": 48,
+      "paired_wilcoxon_p": 2.9924449827806432e-09
+    }
+  },
+  "rows": {
+    "warm": {
+      "train": [
+        {
+          "source": "Node_576",
+          "destination": "Node_245",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 50.06292071917688,
+          "solvable": true
+        },
+        {
+          "source": "Node_562",
+          "destination": "Node_150",
+          "reached": true,
+          "reasonable": false,
+          "cost": 913.3845570927245,
+          "cost_ratio": 23.5839524447557,
+          "dijkstra_cost": 38.7290705081044,
+          "solvable": true
+        },
+        {
+          "source": "Node_41",
+          "destination": "Node_451",
+          "reached": true,
+          "reasonable": true,
+          "cost": 77.96060089111978,
+          "cost_ratio": 1.8842070177017338,
+          "dijkstra_cost": 41.375814949576196,
+          "solvable": true
+        },
+        {
+          "source": "Node_482",
+          "destination": "Node_250",
+          "reached": true,
+          "reasonable": false,
+          "cost": 762.6142850314066,
+          "cost_ratio": 11.54968768046149,
+          "dijkstra_cost": 66.02899629238587,
+          "solvable": true
+        },
+        {
+          "source": "Node_177",
+          "destination": "Node_599",
+          "reached": true,
+          "reasonable": false,
+          "cost": 319.85036749926905,
+          "cost_ratio": 6.435581621359964,
+          "dijkstra_cost": 49.700304699372055,
+          "solvable": true
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_590",
+          "reached": true,
+          "reasonable": false,
+          "cost": 258.32398387893295,
+          "cost_ratio": 4.293417268669536,
+          "dijkstra_cost": 60.1674535023668,
+          "solvable": true
+        },
+        {
+          "source": "Node_53",
+          "destination": "Node_468",
+          "reached": true,
+          "reasonable": false,
+          "cost": 863.604862160784,
+          "cost_ratio": 15.299654360146455,
+          "dijkstra_cost": 56.446037396136134,
+          "solvable": true
+        },
+        {
+          "source": "Node_49",
+          "destination": "Node_178",
+          "reached": true,
+          "reasonable": false,
+          "cost": 159.08410360980773,
+          "cost_ratio": 3.465345135286513,
+          "dijkstra_cost": 45.907145579787894,
+          "solvable": true
+        },
+        {
+          "source": "Node_446",
+          "destination": "Node_76",
+          "reached": true,
+          "reasonable": true,
+          "cost": 53.395734350035035,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 53.395734350035035,
+          "solvable": true
+        },
+        {
+          "source": "Node_249",
+          "destination": "Node_354",
+          "reached": true,
+          "reasonable": false,
+          "cost": 588.406434755843,
+          "cost_ratio": 9.446332454755082,
+          "dijkstra_cost": 62.289405711065335,
+          "solvable": true
+        },
+        {
+          "source": "Node_607",
+          "destination": "Node_14",
+          "reached": true,
+          "reasonable": false,
+          "cost": 780.2595955199421,
+          "cost_ratio": 19.040144868001587,
+          "dijkstra_cost": 40.979708974338095,
+          "solvable": true
+        },
+        {
+          "source": "Node_569",
+          "destination": "Node_30",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_87",
+          "destination": "Node_602",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 72.6355423625247,
+          "solvable": true
+        },
+        {
+          "source": "Node_174",
+          "destination": "Node_101",
+          "reached": true,
+          "reasonable": false,
+          "cost": 273.18733935050926,
+          "cost_ratio": 4.342018065271359,
+          "dijkstra_cost": 62.91713559082949,
+          "solvable": true
+        },
+        {
+          "source": "Node_120",
+          "destination": "Node_581",
+          "reached": true,
+          "reasonable": false,
+          "cost": 893.4667662735617,
+          "cost_ratio": 14.164810686167549,
+          "dijkstra_cost": 63.07650600272861,
+          "solvable": true
+        },
+        {
+          "source": "Node_614",
+          "destination": "Node_147",
+          "reached": true,
+          "reasonable": true,
+          "cost": 54.290320995027706,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 54.290320995027706,
+          "solvable": true
+        },
+        {
+          "source": "Node_221",
+          "destination": "Node_301",
+          "reached": true,
+          "reasonable": false,
+          "cost": 161.5238230053647,
+          "cost_ratio": 3.6939518305909718,
+          "dijkstra_cost": 43.7265645068045,
+          "solvable": true
+        },
+        {
+          "source": "Node_530",
+          "destination": "Node_15",
+          "reached": true,
+          "reasonable": true,
+          "cost": 4.275543943280711,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 4.275543943280711,
+          "solvable": true
+        },
+        {
+          "source": "Node_600",
+          "destination": "Node_10",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1138.7985046475053,
+          "cost_ratio": 24.358749077187742,
+          "dijkstra_cost": 46.751107827372124,
+          "solvable": true
+        },
+        {
+          "source": "Node_52",
+          "destination": "Node_543",
+          "reached": true,
+          "reasonable": false,
+          "cost": 427.8319399178063,
+          "cost_ratio": 8.31251068548928,
+          "dijkstra_cost": 51.468437889006324,
+          "solvable": true
+        }
+      ],
+      "held_out": [
+        {
+          "source": "Node_110",
+          "destination": "Node_550",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1713.0645088980345,
+          "cost_ratio": 21.715167017439693,
+          "dijkstra_cost": 78.88792692785891,
+          "solvable": true
+        },
+        {
+          "source": "Node_615",
+          "destination": "Node_49",
+          "reached": true,
+          "reasonable": true,
+          "cost": 122.82201226102083,
+          "cost_ratio": 2.52424205199637,
+          "dijkstra_cost": 48.656986822592344,
+          "solvable": true
+        },
+        {
+          "source": "Node_24",
+          "destination": "Node_384",
+          "reached": true,
+          "reasonable": false,
+          "cost": 899.57975131584,
+          "cost_ratio": 15.585742457303025,
+          "dijkstra_cost": 57.71811986372988,
+          "solvable": true
+        },
+        {
+          "source": "Node_275",
+          "destination": "Node_456",
+          "reached": true,
+          "reasonable": true,
+          "cost": 103.00134750919833,
+          "cost_ratio": 1.816303153057657,
+          "dijkstra_cost": 56.70933694950682,
+          "solvable": true
+        },
+        {
+          "source": "Node_13",
+          "destination": "Node_539",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2188.8440428367458,
+          "cost_ratio": 35.70035170490412,
+          "dijkstra_cost": 61.31155404096667,
+          "solvable": true
+        },
+        {
+          "source": "Node_68",
+          "destination": "Node_609",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2035.8021515741716,
+          "cost_ratio": 30.23061008439568,
+          "dijkstra_cost": 67.34241042078752,
+          "solvable": true
+        },
+        {
+          "source": "Node_228",
+          "destination": "Node_148",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_558",
+          "destination": "Node_24",
+          "reached": true,
+          "reasonable": true,
+          "cost": 108.76561400225182,
+          "cost_ratio": 2.679814596538702,
+          "dijkstra_cost": 40.58699215338834,
+          "solvable": true
+        },
+        {
+          "source": "Node_253",
+          "destination": "Node_498",
+          "reached": true,
+          "reasonable": false,
+          "cost": 270.1946227416024,
+          "cost_ratio": 5.577425030895045,
+          "dijkstra_cost": 48.44433071621988,
+          "solvable": true
+        },
+        {
+          "source": "Node_547",
+          "destination": "Node_42",
+          "reached": true,
+          "reasonable": false,
+          "cost": 191.95892907352464,
+          "cost_ratio": 3.7279171466679837,
+          "dijkstra_cost": 51.49227343882836,
+          "solvable": true
+        },
+        {
+          "source": "Node_594",
+          "destination": "Node_51",
+          "reached": true,
+          "reasonable": true,
+          "cost": 149.68360844633162,
+          "cost_ratio": 2.1410820661627077,
+          "dijkstra_cost": 69.91026211087636,
+          "solvable": true
+        },
+        {
+          "source": "Node_528",
+          "destination": "Node_42",
+          "reached": true,
+          "reasonable": true,
+          "cost": 75.42577627057665,
+          "cost_ratio": 1.6111598454292808,
+          "dijkstra_cost": 46.814582975458926,
+          "solvable": true
+        },
+        {
+          "source": "Node_180",
+          "destination": "Node_75",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1066.2943586827892,
+          "cost_ratio": 21.294426756346315,
+          "dijkstra_cost": 50.073870073304725,
+          "solvable": true
+        },
+        {
+          "source": "Node_150",
+          "destination": "Node_5",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 26.14984732586698,
+          "solvable": true
+        },
+        {
+          "source": "Node_47",
+          "destination": "Node_509",
+          "reached": true,
+          "reasonable": false,
+          "cost": 361.22860432990325,
+          "cost_ratio": 6.835849095678179,
+          "dijkstra_cost": 52.843267789261525,
+          "solvable": true
+        },
+        {
+          "source": "Node_623",
+          "destination": "Node_28",
+          "reached": true,
+          "reasonable": true,
+          "cost": 127.47971000571478,
+          "cost_ratio": 1.8286539553725862,
+          "dijkstra_cost": 69.71232016379005,
+          "solvable": true
+        },
+        {
+          "source": "Node_17",
+          "destination": "Node_588",
+          "reached": true,
+          "reasonable": false,
+          "cost": 382.0214624560777,
+          "cost_ratio": 9.505557927799128,
+          "dijkstra_cost": 40.18927298721214,
+          "solvable": true
+        },
+        {
+          "source": "Node_277",
+          "destination": "Node_545",
+          "reached": true,
+          "reasonable": false,
+          "cost": 234.5467322365905,
+          "cost_ratio": 3.412560918006105,
+          "dijkstra_cost": 68.73041621001501,
+          "solvable": true
+        },
+        {
+          "source": "Node_542",
+          "destination": "Node_21",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1699.264235235966,
+          "cost_ratio": 24.07296395966769,
+          "dijkstra_cost": 70.58807706782373,
+          "solvable": true
+        },
+        {
+          "source": "Node_25",
+          "destination": "Node_152",
+          "reached": true,
+          "reasonable": false,
+          "cost": 340.52963608413046,
+          "cost_ratio": 6.0750899552891555,
+          "dijkstra_cost": 56.053431075148964,
+          "solvable": true
+        },
+        {
+          "source": "Node_499",
+          "destination": "Node_11",
+          "reached": true,
+          "reasonable": false,
+          "cost": 649.3012003668148,
+          "cost_ratio": 9.747112175726684,
+          "dijkstra_cost": 66.6147253320604,
+          "solvable": true
+        },
+        {
+          "source": "Node_230",
+          "destination": "Node_600",
+          "reached": true,
+          "reasonable": false,
+          "cost": 672.6839898454348,
+          "cost_ratio": 11.398863807918124,
+          "dijkstra_cost": 59.0132491431436,
+          "solvable": true
+        },
+        {
+          "source": "Node_575",
+          "destination": "Node_32",
+          "reached": true,
+          "reasonable": false,
+          "cost": 683.1859566387824,
+          "cost_ratio": 11.850879088738138,
+          "dijkstra_cost": 57.64854670469234,
+          "solvable": true
+        },
+        {
+          "source": "Node_497",
+          "destination": "Node_202",
+          "reached": true,
+          "reasonable": true,
+          "cost": 107.39398217339051,
+          "cost_ratio": 1.9802985206801307,
+          "dijkstra_cost": 54.23120860409783,
+          "solvable": true
+        },
+        {
+          "source": "Node_476",
+          "destination": "Node_43",
+          "reached": true,
+          "reasonable": false,
+          "cost": 339.53460110338585,
+          "cost_ratio": 6.424302932848027,
+          "dijkstra_cost": 52.85158633589887,
+          "solvable": true
+        },
+        {
+          "source": "Node_277",
+          "destination": "Node_574",
+          "reached": true,
+          "reasonable": true,
+          "cost": 130.9205629730395,
+          "cost_ratio": 1.765551211958965,
+          "dijkstra_cost": 74.15279833643385,
+          "solvable": true
+        },
+        {
+          "source": "Node_589",
+          "destination": "Node_65",
+          "reached": true,
+          "reasonable": false,
+          "cost": 457.1751447374294,
+          "cost_ratio": 7.693706233931679,
+          "dijkstra_cost": 59.421965283928095,
+          "solvable": true
+        },
+        {
+          "source": "Node_275",
+          "destination": "Node_429",
+          "reached": true,
+          "reasonable": false,
+          "cost": 696.8116838830466,
+          "cost_ratio": 38.482672612230786,
+          "dijkstra_cost": 18.1071541185417,
+          "solvable": true
+        },
+        {
+          "source": "Node_50",
+          "destination": "Node_77",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.44803731448118,
+          "solvable": true
+        },
+        {
+          "source": "Node_582",
+          "destination": "Node_87",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_601",
+          "destination": "Node_224",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1194.1349300058573,
+          "cost_ratio": 30.012440565642596,
+          "dijkstra_cost": 39.78799816009864,
+          "solvable": true
+        },
+        {
+          "source": "Node_500",
+          "destination": "Node_352",
+          "reached": true,
+          "reasonable": false,
+          "cost": 529.4572755549802,
+          "cost_ratio": 9.79431182904994,
+          "dijkstra_cost": 54.05762903980751,
+          "solvable": true
+        },
+        {
+          "source": "Node_424",
+          "destination": "Node_32",
+          "reached": true,
+          "reasonable": true,
+          "cost": 74.46030345829021,
+          "cost_ratio": 1.1428254771261592,
+          "dijkstra_cost": 65.15457079722626,
+          "solvable": true
+        },
+        {
+          "source": "Node_565",
+          "destination": "Node_56",
+          "reached": true,
+          "reasonable": false,
+          "cost": 228.09383462435127,
+          "cost_ratio": 3.8699214682882324,
+          "dijkstra_cost": 58.94017139454852,
+          "solvable": true
+        },
+        {
+          "source": "Node_158",
+          "destination": "Node_573",
+          "reached": true,
+          "reasonable": false,
+          "cost": 731.0761448784859,
+          "cost_ratio": 14.168930971040341,
+          "dijkstra_cost": 51.59712799594558,
+          "solvable": true
+        },
+        {
+          "source": "Node_527",
+          "destination": "Node_48",
+          "reached": true,
+          "reasonable": false,
+          "cost": 172.8451838198914,
+          "cost_ratio": 4.142072472401534,
+          "dijkstra_cost": 41.729154902902366,
+          "solvable": true
+        },
+        {
+          "source": "Node_31",
+          "destination": "Node_535",
+          "reached": true,
+          "reasonable": true,
+          "cost": 86.95049264349645,
+          "cost_ratio": 1.6788239002495249,
+          "dijkstra_cost": 51.79250344873749,
+          "solvable": true
+        },
+        {
+          "source": "Node_146",
+          "destination": "Node_604",
+          "reached": true,
+          "reasonable": false,
+          "cost": 654.5535393486655,
+          "cost_ratio": 7.837756634262518,
+          "dijkstra_cost": 83.51286852762235,
+          "solvable": true
+        },
+        {
+          "source": "Node_604",
+          "destination": "Node_244",
+          "reached": true,
+          "reasonable": false,
+          "cost": 804.1790719817747,
+          "cost_ratio": 8.575643398687511,
+          "dijkstra_cost": 93.7747798730592,
+          "solvable": true
+        },
+        {
+          "source": "Node_526",
+          "destination": "Node_171",
+          "reached": true,
+          "reasonable": false,
+          "cost": 435.78657944823277,
+          "cost_ratio": 8.654290167003596,
+          "dijkstra_cost": 50.35497666923232,
+          "solvable": true
+        },
+        {
+          "source": "Node_27",
+          "destination": "Node_545",
+          "reached": true,
+          "reasonable": false,
+          "cost": 390.67804665485704,
+          "cost_ratio": 5.269811074692104,
+          "dijkstra_cost": 74.13511435562857,
+          "solvable": true
+        },
+        {
+          "source": "Node_83",
+          "destination": "Node_525",
+          "reached": true,
+          "reasonable": false,
+          "cost": 393.61706621328153,
+          "cost_ratio": 10.064337391447122,
+          "dijkstra_cost": 39.11008255225876,
+          "solvable": true
+        },
+        {
+          "source": "Node_552",
+          "destination": "Node_71",
+          "reached": true,
+          "reasonable": false,
+          "cost": 505.0190374869026,
+          "cost_ratio": 7.679094962520051,
+          "dijkstra_cost": 65.76543719693373,
+          "solvable": true
+        },
+        {
+          "source": "Node_16",
+          "destination": "Node_605",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_176",
+          "destination": "Node_173",
+          "reached": true,
+          "reasonable": false,
+          "cost": 498.1227741280882,
+          "cost_ratio": 9.104069772102902,
+          "dijkstra_cost": 54.71429663846145,
+          "solvable": true
+        },
+        {
+          "source": "Node_54",
+          "destination": "Node_596",
+          "reached": true,
+          "reasonable": false,
+          "cost": 447.1973384305244,
+          "cost_ratio": 6.798063730438123,
+          "dijkstra_cost": 65.78304590294026,
+          "solvable": true
+        },
+        {
+          "source": "Node_128",
+          "destination": "Node_622",
+          "reached": true,
+          "reasonable": true,
+          "cost": 110.01071454375796,
+          "cost_ratio": 1.5590156723976436,
+          "dijkstra_cost": 70.56421336327564,
+          "solvable": true
+        },
+        {
+          "source": "Node_100",
+          "destination": "Node_617",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_614",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2942.875596761327,
+          "cost_ratio": 46.06168823105978,
+          "dijkstra_cost": 63.88987702749725,
+          "solvable": true
+        },
+        {
+          "source": "Node_425",
+          "destination": "Node_33",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2351.817716345118,
+          "cost_ratio": 37.5414416517648,
+          "dijkstra_cost": 62.64590843795047,
+          "solvable": true
+        },
+        {
+          "source": "Node_172",
+          "destination": "Node_378",
+          "reached": true,
+          "reasonable": false,
+          "cost": 404.4601899059211,
+          "cost_ratio": 4.287622203012936,
+          "dijkstra_cost": 94.33204950326656,
+          "solvable": true
+        },
+        {
+          "source": "Node_354",
+          "destination": "Node_97",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1491.1424903360669,
+          "cost_ratio": 32.384519791116,
+          "dijkstra_cost": 46.04491590284844,
+          "solvable": true
+        },
+        {
+          "source": "Node_175",
+          "destination": "Node_177",
+          "reached": true,
+          "reasonable": false,
+          "cost": 247.94636809556997,
+          "cost_ratio": 3.439969972095143,
+          "dijkstra_cost": 72.07806175835776,
+          "solvable": true
+        },
+        {
+          "source": "Node_248",
+          "destination": "Node_581",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1317.9303105403321,
+          "cost_ratio": 20.623045705615134,
+          "dijkstra_cost": 63.90570672020055,
+          "solvable": true
+        },
+        {
+          "source": "Node_590",
+          "destination": "Node_98",
+          "reached": true,
+          "reasonable": false,
+          "cost": 729.7246354558632,
+          "cost_ratio": 13.01778053218596,
+          "dijkstra_cost": 56.05599461841035,
+          "solvable": true
+        },
+        {
+          "source": "Node_18",
+          "destination": "Node_571",
+          "reached": true,
+          "reasonable": false,
+          "cost": 858.2400251445456,
+          "cost_ratio": 13.68893388779018,
+          "dijkstra_cost": 62.69589963540194,
+          "solvable": true
+        },
+        {
+          "source": "Node_99",
+          "destination": "Node_3",
+          "reached": true,
+          "reasonable": false,
+          "cost": 586.0063654032266,
+          "cost_ratio": 8.40363401832904,
+          "dijkstra_cost": 69.73249479036056,
+          "solvable": true
+        },
+        {
+          "source": "Node_616",
+          "destination": "Node_156",
+          "reached": true,
+          "reasonable": false,
+          "cost": 505.23877134319673,
+          "cost_ratio": 9.101531030783567,
+          "dijkstra_cost": 55.51140457955455,
+          "solvable": true
+        },
+        {
+          "source": "Node_230",
+          "destination": "Node_375",
+          "reached": true,
+          "reasonable": true,
+          "cost": 41.08251970576648,
+          "cost_ratio": 1.2123593528212377,
+          "dijkstra_cost": 33.88642122499804,
+          "solvable": true
+        },
+        {
+          "source": "Node_478",
+          "destination": "Node_20",
+          "reached": true,
+          "reasonable": false,
+          "cost": 636.6880748730816,
+          "cost_ratio": 7.351475436104464,
+          "dijkstra_cost": 86.60684245045395,
+          "solvable": true
+        },
+        {
+          "source": "Node_41",
+          "destination": "Node_593",
+          "reached": true,
+          "reasonable": false,
+          "cost": 211.24415831208796,
+          "cost_ratio": 4.919281126570461,
+          "dijkstra_cost": 42.94207890886682,
+          "solvable": true
+        },
+        {
+          "source": "Node_7",
+          "destination": "Node_597",
+          "reached": true,
+          "reasonable": true,
+          "cost": 74.32518061536157,
+          "cost_ratio": 1.310775263638161,
+          "dijkstra_cost": 56.7032218849371,
+          "solvable": true
+        },
+        {
+          "source": "Node_376",
+          "destination": "Node_197",
+          "reached": true,
+          "reasonable": false,
+          "cost": 145.67943642866965,
+          "cost_ratio": 3.7089201122304987,
+          "dijkstra_cost": 39.2781273309928,
+          "solvable": true
+        },
+        {
+          "source": "Node_577",
+          "destination": "Node_198",
+          "reached": true,
+          "reasonable": false,
+          "cost": 199.5759142170199,
+          "cost_ratio": 3.1139767009656474,
+          "dijkstra_cost": 64.09036848449483,
+          "solvable": true
+        },
+        {
+          "source": "Node_22",
+          "destination": "Node_434",
+          "reached": true,
+          "reasonable": false,
+          "cost": 283.5449074974923,
+          "cost_ratio": 4.2303736506084375,
+          "dijkstra_cost": 67.02597238821001,
+          "solvable": true
+        },
+        {
+          "source": "Node_570",
+          "destination": "Node_49",
+          "reached": true,
+          "reasonable": true,
+          "cost": 116.73921275892687,
+          "cost_ratio": 2.9513253945736864,
+          "dijkstra_cost": 39.55484304562413,
+          "solvable": true
+        },
+        {
+          "source": "Node_75",
+          "destination": "Node_276",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2871.6903262493724,
+          "cost_ratio": 39.65936736262546,
+          "dijkstra_cost": 72.40887884045324,
+          "solvable": true
+        },
+        {
+          "source": "Node_599",
+          "destination": "Node_133",
+          "reached": true,
+          "reasonable": false,
+          "cost": 172.80668510275262,
+          "cost_ratio": 3.68101644512719,
+          "dijkstra_cost": 46.94537165991434,
+          "solvable": true
+        },
+        {
+          "source": "Node_534",
+          "destination": "Node_16",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2453.461555256861,
+          "cost_ratio": 48.08510484870459,
+          "dijkstra_cost": 51.0233171577031,
+          "solvable": true
+        },
+        {
+          "source": "Node_588",
+          "destination": "Node_43",
+          "reached": true,
+          "reasonable": false,
+          "cost": 292.6637197239513,
+          "cost_ratio": 5.164221777141037,
+          "dijkstra_cost": 56.67140807534659,
+          "solvable": true
+        },
+        {
+          "source": "Node_235",
+          "destination": "Node_625",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1054.4315377896312,
+          "cost_ratio": 16.86984101769783,
+          "dijkstra_cost": 62.50394041552894,
+          "solvable": true
+        },
+        {
+          "source": "Node_7",
+          "destination": "Node_444",
+          "reached": true,
+          "reasonable": false,
+          "cost": 350.4305653225965,
+          "cost_ratio": 6.0616120072508215,
+          "dijkstra_cost": 57.811447664980214,
+          "solvable": true
+        },
+        {
+          "source": "Node_625",
+          "destination": "Node_157",
+          "reached": true,
+          "reasonable": false,
+          "cost": 282.6062262091029,
+          "cost_ratio": 4.675826819526259,
+          "dijkstra_cost": 60.43984029283097,
+          "solvable": true
+        },
+        {
+          "source": "Node_599",
+          "destination": "Node_478",
+          "reached": true,
+          "reasonable": false,
+          "cost": 274.7164908262086,
+          "cost_ratio": 5.009521130800528,
+          "dijkstra_cost": 54.83887254954218,
+          "solvable": true
+        },
+        {
+          "source": "Node_90",
+          "destination": "Node_625",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2438.716472768763,
+          "cost_ratio": 33.54433000775722,
+          "dijkstra_cost": 72.70130219339016,
+          "solvable": true
+        },
+        {
+          "source": "Node_453",
+          "destination": "Node_99",
+          "reached": true,
+          "reasonable": false,
+          "cost": 305.3674445784601,
+          "cost_ratio": 4.211908404947636,
+          "dijkstra_cost": 72.50096992131921,
+          "solvable": true
+        },
+        {
+          "source": "Node_180",
+          "destination": "Node_624",
+          "reached": true,
+          "reasonable": false,
+          "cost": 462.00357936821854,
+          "cost_ratio": 7.961663055272298,
+          "dijkstra_cost": 58.02852697493583,
+          "solvable": true
+        },
+        {
+          "source": "Node_428",
+          "destination": "Node_100",
+          "reached": true,
+          "reasonable": true,
+          "cost": 43.77912307041328,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 43.77912307041328,
+          "solvable": true
+        },
+        {
+          "source": "Node_498",
+          "destination": "Node_7",
+          "reached": true,
+          "reasonable": false,
+          "cost": 470.82857322602945,
+          "cost_ratio": 8.332647247954785,
+          "dijkstra_cost": 56.504080781961875,
+          "solvable": true
+        },
+        {
+          "source": "Node_52",
+          "destination": "Node_197",
+          "reached": true,
+          "reasonable": false,
+          "cost": 166.28685363503496,
+          "cost_ratio": 4.113812800648731,
+          "dijkstra_cost": 40.42158982266093,
+          "solvable": true
+        },
+        {
+          "source": "Node_127",
+          "destination": "Node_424",
+          "reached": true,
+          "reasonable": true,
+          "cost": 48.71702367086865,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 48.71702367086865,
+          "solvable": true
+        },
+        {
+          "source": "Node_608",
+          "destination": "Node_67",
+          "reached": true,
+          "reasonable": false,
+          "cost": 546.7359110793855,
+          "cost_ratio": 9.901607253992784,
+          "dijkstra_cost": 55.21688520405779,
+          "solvable": true
+        },
+        {
+          "source": "Node_507",
+          "destination": "Node_122",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_522",
+          "destination": "Node_277",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_501",
+          "destination": "Node_68",
+          "reached": true,
+          "reasonable": false,
+          "cost": 514.7621982012015,
+          "cost_ratio": 10.671611215913277,
+          "dijkstra_cost": 48.23659593535409,
+          "solvable": true
+        },
+        {
+          "source": "Node_24",
+          "destination": "Node_515",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_58",
+          "destination": "Node_615",
+          "reached": true,
+          "reasonable": false,
+          "cost": 161.60541681954456,
+          "cost_ratio": 3.0676765489041156,
+          "dijkstra_cost": 52.680070484378746,
+          "solvable": true
+        },
+        {
+          "source": "Node_77",
+          "destination": "Node_420",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1959.26910801405,
+          "cost_ratio": 43.7099526877723,
+          "dijkstra_cost": 44.82432461113481,
+          "solvable": true
+        },
+        {
+          "source": "Node_611",
+          "destination": "Node_45",
+          "reached": true,
+          "reasonable": false,
+          "cost": 336.1043485748761,
+          "cost_ratio": 4.446452942013586,
+          "dijkstra_cost": 75.58931871269743,
+          "solvable": true
+        },
+        {
+          "source": "Node_604",
+          "destination": "Node_600",
+          "reached": true,
+          "reasonable": false,
+          "cost": 508.3917616302736,
+          "cost_ratio": 7.283526711976411,
+          "dijkstra_cost": 69.8002192803546,
+          "solvable": true
+        },
+        {
+          "source": "Node_569",
+          "destination": "Node_9",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.719040278355045,
+          "solvable": true
+        },
+        {
+          "source": "Node_276",
+          "destination": "Node_450",
+          "reached": true,
+          "reasonable": false,
+          "cost": 706.4581808321133,
+          "cost_ratio": 8.759433651578052,
+          "dijkstra_cost": 80.65112528192296,
+          "solvable": true
+        },
+        {
+          "source": "Node_373",
+          "destination": "Node_554",
+          "reached": true,
+          "reasonable": false,
+          "cost": 640.5741655698062,
+          "cost_ratio": 11.677687270818929,
+          "dijkstra_cost": 54.85454017684823,
+          "solvable": true
+        },
+        {
+          "source": "Node_20",
+          "destination": "Node_602",
+          "reached": true,
+          "reasonable": false,
+          "cost": 733.7905329296211,
+          "cost_ratio": 9.910966805913763,
+          "dijkstra_cost": 74.03823938667382,
+          "solvable": true
+        },
+        {
+          "source": "Node_81",
+          "destination": "Node_518",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 67.7656265480897,
+          "solvable": true
+        },
+        {
+          "source": "Node_527",
+          "destination": "Node_63",
+          "reached": true,
+          "reasonable": true,
+          "cost": 60.602360321820065,
+          "cost_ratio": 1.3572792265102205,
+          "dijkstra_cost": 44.649884222893704,
+          "solvable": true
+        },
+        {
+          "source": "Node_227",
+          "destination": "Node_625",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1780.7662668691687,
+          "cost_ratio": 35.35946697628413,
+          "dijkstra_cost": 50.36179612276233,
+          "solvable": true
+        },
+        {
+          "source": "Node_456",
+          "destination": "Node_73",
+          "reached": true,
+          "reasonable": true,
+          "cost": 109.37173097965393,
+          "cost_ratio": 1.7929889134027308,
+          "dijkstra_cost": 60.99966941350935,
+          "solvable": true
+        },
+        {
+          "source": "Node_353",
+          "destination": "Node_623",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1618.6210014939234,
+          "cost_ratio": 44.48519577308419,
+          "dijkstra_cost": 36.385610389361744,
+          "solvable": true
+        },
+        {
+          "source": "Node_570",
+          "destination": "Node_74",
+          "reached": true,
+          "reasonable": false,
+          "cost": 252.35038541013233,
+          "cost_ratio": 4.375389636142022,
+          "dijkstra_cost": 57.674951580458796,
+          "solvable": true
+        },
+        {
+          "source": "Node_478",
+          "destination": "Node_124",
+          "reached": true,
+          "reasonable": true,
+          "cost": 62.23069698841067,
+          "cost_ratio": 1.941911001302941,
+          "dijkstra_cost": 32.046111766531254,
+          "solvable": true
+        },
+        {
+          "source": "Node_619",
+          "destination": "Node_178",
+          "reached": true,
+          "reasonable": false,
+          "cost": 601.1207312650466,
+          "cost_ratio": 13.70481146920698,
+          "dijkstra_cost": 43.862021204428146,
+          "solvable": true
+        },
+        {
+          "source": "Node_497",
+          "destination": "Node_82",
+          "reached": true,
+          "reasonable": false,
+          "cost": 474.99466228371136,
+          "cost_ratio": 10.68584574046945,
+          "dijkstra_cost": 44.450825308549135,
+          "solvable": true
+        },
+        {
+          "source": "Node_117",
+          "destination": "Node_624",
+          "reached": true,
+          "reasonable": false,
+          "cost": 371.90450359554575,
+          "cost_ratio": 7.684306020786558,
+          "dijkstra_cost": 48.39792983120654,
+          "solvable": true
+        },
+        {
+          "source": "Node_603",
+          "destination": "Node_148",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_54",
+          "destination": "Node_548",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1043.045025202733,
+          "cost_ratio": 22.509976277347295,
+          "dijkstra_cost": 46.33701130340114,
+          "solvable": true
+        },
+        {
+          "source": "Node_126",
+          "destination": "Node_468",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1202.1275732850042,
+          "cost_ratio": 22.877047678738812,
+          "dijkstra_cost": 52.54732123508326,
+          "solvable": true
+        },
+        {
+          "source": "Node_1",
+          "destination": "Node_221",
+          "reached": true,
+          "reasonable": false,
+          "cost": 623.9288884971753,
+          "cost_ratio": 8.470568518721775,
+          "dijkstra_cost": 73.65844300983558,
+          "solvable": true
+        },
+        {
+          "source": "Node_126",
+          "destination": "Node_300",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1769.2886264789176,
+          "cost_ratio": 29.10032028817891,
+          "dijkstra_cost": 60.79962725350605,
+          "solvable": true
+        },
+        {
+          "source": "Node_622",
+          "destination": "Node_6",
+          "reached": true,
+          "reasonable": false,
+          "cost": 174.8561779784922,
+          "cost_ratio": 3.869395731390074,
+          "dijkstra_cost": 45.1895309027168,
+          "solvable": true
+        },
+        {
+          "source": "Node_593",
+          "destination": "Node_109",
+          "reached": true,
+          "reasonable": false,
+          "cost": 753.1856685247394,
+          "cost_ratio": 11.760569911977175,
+          "dijkstra_cost": 64.04329672473455,
+          "solvable": true
+        },
+        {
+          "source": "Node_20",
+          "destination": "Node_252",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1008.2754057676377,
+          "cost_ratio": 18.45724904756749,
+          "dijkstra_cost": 54.6276101692695,
+          "solvable": true
+        },
+        {
+          "source": "Node_573",
+          "destination": "Node_202",
+          "reached": true,
+          "reasonable": false,
+          "cost": 586.4731733110518,
+          "cost_ratio": 9.475480334346907,
+          "dijkstra_cost": 61.89376713549733,
+          "solvable": true
+        },
+        {
+          "source": "Node_148",
+          "destination": "Node_555",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1262.2968196966872,
+          "cost_ratio": 24.729430969164788,
+          "dijkstra_cost": 51.04431320197579,
+          "solvable": true
+        },
+        {
+          "source": "Node_87",
+          "destination": "Node_549",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3164.5693339256914,
+          "cost_ratio": 52.552521033511475,
+          "dijkstra_cost": 60.217269727321394,
+          "solvable": true
+        },
+        {
+          "source": "Node_8",
+          "destination": "Node_601",
+          "reached": true,
+          "reasonable": false,
+          "cost": 344.7572156917646,
+          "cost_ratio": 8.08934878827358,
+          "dijkstra_cost": 42.61866124397169,
+          "solvable": true
+        },
+        {
+          "source": "Node_298",
+          "destination": "Node_578",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1868.4800661540457,
+          "cost_ratio": 25.79915280042882,
+          "dijkstra_cost": 72.42408619414002,
+          "solvable": true
+        },
+        {
+          "source": "Node_505",
+          "destination": "Node_67",
+          "reached": true,
+          "reasonable": false,
+          "cost": 966.5318760913988,
+          "cost_ratio": 14.603792869242401,
+          "dijkstra_cost": 66.18361988186288,
+          "solvable": true
+        },
+        {
+          "source": "Node_541",
+          "destination": "Node_10",
+          "reached": true,
+          "reasonable": false,
+          "cost": 702.9108208260935,
+          "cost_ratio": 10.285109684333698,
+          "dijkstra_cost": 68.3425692481208,
+          "solvable": true
+        },
+        {
+          "source": "Node_167",
+          "destination": "Node_579",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_249",
+          "destination": "Node_581",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1730.273151692938,
+          "cost_ratio": 26.90234111083378,
+          "dijkstra_cost": 64.3168244936179,
+          "solvable": true
+        },
+        {
+          "source": "Node_98",
+          "destination": "Node_591",
+          "reached": true,
+          "reasonable": false,
+          "cost": 250.99684952169403,
+          "cost_ratio": 5.668250430457868,
+          "dijkstra_cost": 44.28118563233966,
+          "solvable": true
+        },
+        {
+          "source": "Node_375",
+          "destination": "Node_379",
+          "reached": true,
+          "reasonable": false,
+          "cost": 697.2418390414679,
+          "cost_ratio": 16.523419516447245,
+          "dijkstra_cost": 42.19718795782195,
+          "solvable": true
+        },
+        {
+          "source": "Node_350",
+          "destination": "Node_205",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_428",
+          "destination": "Node_197",
+          "reached": true,
+          "reasonable": true,
+          "cost": 115.65349171950797,
+          "cost_ratio": 1.6911592232012362,
+          "dijkstra_cost": 68.3871099378713,
+          "solvable": true
+        },
+        {
+          "source": "Node_17",
+          "destination": "Node_600",
+          "reached": true,
+          "reasonable": false,
+          "cost": 829.9369691741779,
+          "cost_ratio": 11.983346314977128,
+          "dijkstra_cost": 69.25753018895055,
+          "solvable": true
+        },
+        {
+          "source": "Node_589",
+          "destination": "Node_34",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3065.3274544346477,
+          "cost_ratio": 52.80162826735832,
+          "dijkstra_cost": 58.0536539311538,
+          "solvable": true
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_430",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1459.1159918692001,
+          "cost_ratio": 23.13905127082878,
+          "dijkstra_cost": 63.05859193581961,
+          "solvable": true
+        },
+        {
+          "source": "Node_69",
+          "destination": "Node_482",
+          "reached": true,
+          "reasonable": false,
+          "cost": 355.6185527368465,
+          "cost_ratio": 6.218603178004631,
+          "dijkstra_cost": 57.18624304484952,
+          "solvable": true
+        },
+        {
+          "source": "Node_494",
+          "destination": "Node_81",
+          "reached": true,
+          "reasonable": true,
+          "cost": 103.45615306401263,
+          "cost_ratio": 2.412892885978212,
+          "dijkstra_cost": 42.87639690315984,
+          "solvable": true
+        },
+        {
+          "source": "Node_596",
+          "destination": "Node_255",
+          "reached": true,
+          "reasonable": false,
+          "cost": 239.87486341564224,
+          "cost_ratio": 3.334471461730374,
+          "dijkstra_cost": 71.93789665579047,
+          "solvable": true
+        },
+        {
+          "source": "Node_557",
+          "destination": "Node_120",
+          "reached": true,
+          "reasonable": false,
+          "cost": 250.5721780685999,
+          "cost_ratio": 5.161106440153181,
+          "dijkstra_cost": 48.550089205515974,
+          "solvable": true
+        },
+        {
+          "source": "Node_70",
+          "destination": "Node_608",
+          "reached": true,
+          "reasonable": false,
+          "cost": 649.6281950339629,
+          "cost_ratio": 9.534651473192053,
+          "dijkstra_cost": 68.13339710009112,
+          "solvable": true
+        },
+        {
+          "source": "Node_297",
+          "destination": "Node_376",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1275.4665440774857,
+          "cost_ratio": 20.455734404880722,
+          "dijkstra_cost": 62.35251782371403,
+          "solvable": true
+        },
+        {
+          "source": "Node_540",
+          "destination": "Node_52",
+          "reached": true,
+          "reasonable": false,
+          "cost": 289.04192652667655,
+          "cost_ratio": 5.236634863360629,
+          "dijkstra_cost": 55.196120040567976,
+          "solvable": true
+        },
+        {
+          "source": "Node_48",
+          "destination": "Node_558",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_84",
+          "destination": "Node_523",
+          "reached": true,
+          "reasonable": false,
+          "cost": 389.7308124666748,
+          "cost_ratio": 6.399664616777061,
+          "dijkstra_cost": 60.898630757145426,
+          "solvable": true
+        },
+        {
+          "source": "Node_606",
+          "destination": "Node_76",
+          "reached": true,
+          "reasonable": false,
+          "cost": 243.83349207073684,
+          "cost_ratio": 3.6797087624067206,
+          "dijkstra_cost": 66.26434530956115,
+          "solvable": true
+        },
+        {
+          "source": "Node_75",
+          "destination": "Node_564",
+          "reached": true,
+          "reasonable": false,
+          "cost": 936.6467982356374,
+          "cost_ratio": 15.418637803510014,
+          "dijkstra_cost": 60.74770094297254,
+          "solvable": true
+        },
+        {
+          "source": "Node_274",
+          "destination": "Node_526",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 24.612963306289636,
+          "solvable": true
+        },
+        {
+          "source": "Node_459",
+          "destination": "Node_50",
+          "reached": true,
+          "reasonable": true,
+          "cost": 78.52596807151315,
+          "cost_ratio": 1.5500266140928778,
+          "dijkstra_cost": 50.66104501532634,
+          "solvable": true
+        },
+        {
+          "source": "Node_614",
+          "destination": "Node_8",
+          "reached": true,
+          "reasonable": false,
+          "cost": 449.2918747528613,
+          "cost_ratio": 7.360792749569175,
+          "dijkstra_cost": 61.03851718677424,
+          "solvable": true
+        },
+        {
+          "source": "Node_3",
+          "destination": "Node_271",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1269.780674322433,
+          "cost_ratio": 27.61063598214856,
+          "dijkstra_cost": 45.98882384105168,
+          "solvable": true
+        },
+        {
+          "source": "Node_34",
+          "destination": "Node_586",
+          "reached": true,
+          "reasonable": false,
+          "cost": 196.48750331562053,
+          "cost_ratio": 4.078560594631901,
+          "dijkstra_cost": 48.1756979592831,
+          "solvable": true
+        },
+        {
+          "source": "Node_38",
+          "destination": "Node_505",
+          "reached": true,
+          "reasonable": false,
+          "cost": 168.96071551757282,
+          "cost_ratio": 3.504845499323597,
+          "dijkstra_cost": 48.207749970770664,
+          "solvable": true
+        },
+        {
+          "source": "Node_226",
+          "destination": "Node_325",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1643.7239448244502,
+          "cost_ratio": 35.243217111952376,
+          "dijkstra_cost": 46.63944099095874,
+          "solvable": true
+        },
+        {
+          "source": "Node_408",
+          "destination": "Node_25",
+          "reached": true,
+          "reasonable": false,
+          "cost": 688.1607608798499,
+          "cost_ratio": 17.961359942166972,
+          "dijkstra_cost": 38.313399603127486,
+          "solvable": true
+        },
+        {
+          "source": "Node_279",
+          "destination": "Node_350",
+          "reached": true,
+          "reasonable": false,
+          "cost": 589.1907534263903,
+          "cost_ratio": 11.867479126205264,
+          "dijkstra_cost": 49.647507036718885,
+          "solvable": true
+        },
+        {
+          "source": "Node_605",
+          "destination": "Node_322",
+          "reached": true,
+          "reasonable": false,
+          "cost": 915.5423306943084,
+          "cost_ratio": 15.291436719835637,
+          "dijkstra_cost": 59.87287836117398,
+          "solvable": true
+        },
+        {
+          "source": "Node_55",
+          "destination": "Node_593",
+          "reached": true,
+          "reasonable": true,
+          "cost": 68.41541946655859,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 68.41541946655859,
+          "solvable": true
+        }
+      ]
+    },
+    "cold": {
+      "train": [
+        {
+          "source": "Node_576",
+          "destination": "Node_245",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4750.65760891515,
+          "cost_ratio": 94.89373653533931,
+          "dijkstra_cost": 50.06292071917688,
+          "solvable": true
+        },
+        {
+          "source": "Node_562",
+          "destination": "Node_150",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1809.3277665671828,
+          "cost_ratio": 46.71756235896663,
+          "dijkstra_cost": 38.7290705081044,
+          "solvable": true
+        },
+        {
+          "source": "Node_41",
+          "destination": "Node_451",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 41.375814949576196,
+          "solvable": true
+        },
+        {
+          "source": "Node_482",
+          "destination": "Node_250",
+          "reached": true,
+          "reasonable": false,
+          "cost": 929.783612235122,
+          "cost_ratio": 14.081443978307753,
+          "dijkstra_cost": 66.02899629238587,
+          "solvable": true
+        },
+        {
+          "source": "Node_177",
+          "destination": "Node_599",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 49.700304699372055,
+          "solvable": true
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_590",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 60.1674535023668,
+          "solvable": true
+        },
+        {
+          "source": "Node_53",
+          "destination": "Node_468",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 56.446037396136134,
+          "solvable": true
+        },
+        {
+          "source": "Node_49",
+          "destination": "Node_178",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 45.907145579787894,
+          "solvable": true
+        },
+        {
+          "source": "Node_446",
+          "destination": "Node_76",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 53.395734350035035,
+          "solvable": true
+        },
+        {
+          "source": "Node_249",
+          "destination": "Node_354",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.289405711065335,
+          "solvable": true
+        },
+        {
+          "source": "Node_607",
+          "destination": "Node_14",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 40.979708974338095,
+          "solvable": true
+        },
+        {
+          "source": "Node_569",
+          "destination": "Node_30",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_87",
+          "destination": "Node_602",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 72.6355423625247,
+          "solvable": true
+        },
+        {
+          "source": "Node_174",
+          "destination": "Node_101",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.91713559082949,
+          "solvable": true
+        },
+        {
+          "source": "Node_120",
+          "destination": "Node_581",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 63.07650600272861,
+          "solvable": true
+        },
+        {
+          "source": "Node_614",
+          "destination": "Node_147",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1807.540008687871,
+          "cost_ratio": 33.29396429344042,
+          "dijkstra_cost": 54.290320995027706,
+          "solvable": true
+        },
+        {
+          "source": "Node_221",
+          "destination": "Node_301",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 43.7265645068045,
+          "solvable": true
+        },
+        {
+          "source": "Node_530",
+          "destination": "Node_15",
+          "reached": true,
+          "reasonable": true,
+          "cost": 4.275543943280711,
+          "cost_ratio": 1.0,
+          "dijkstra_cost": 4.275543943280711,
+          "solvable": true
+        },
+        {
+          "source": "Node_600",
+          "destination": "Node_10",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 46.751107827372124,
+          "solvable": true
+        },
+        {
+          "source": "Node_52",
+          "destination": "Node_543",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.468437889006324,
+          "solvable": true
+        }
+      ],
+      "held_out": [
+        {
+          "source": "Node_110",
+          "destination": "Node_550",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4022.2009834858277,
+          "cost_ratio": 50.98626798957504,
+          "dijkstra_cost": 78.88792692785891,
+          "solvable": true
+        },
+        {
+          "source": "Node_615",
+          "destination": "Node_49",
+          "reached": true,
+          "reasonable": false,
+          "cost": 885.0053766720549,
+          "cost_ratio": 18.188659727304167,
+          "dijkstra_cost": 48.656986822592344,
+          "solvable": true
+        },
+        {
+          "source": "Node_24",
+          "destination": "Node_384",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 57.71811986372988,
+          "solvable": true
+        },
+        {
+          "source": "Node_275",
+          "destination": "Node_456",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 56.70933694950682,
+          "solvable": true
+        },
+        {
+          "source": "Node_13",
+          "destination": "Node_539",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 61.31155404096667,
+          "solvable": true
+        },
+        {
+          "source": "Node_68",
+          "destination": "Node_609",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 67.34241042078752,
+          "solvable": true
+        },
+        {
+          "source": "Node_228",
+          "destination": "Node_148",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_558",
+          "destination": "Node_24",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1128.6654767852751,
+          "cost_ratio": 27.80855187592536,
+          "dijkstra_cost": 40.58699215338834,
+          "solvable": true
+        },
+        {
+          "source": "Node_253",
+          "destination": "Node_498",
+          "reached": true,
+          "reasonable": false,
+          "cost": 668.2673101248636,
+          "cost_ratio": 13.79454107931597,
+          "dijkstra_cost": 48.44433071621988,
+          "solvable": true
+        },
+        {
+          "source": "Node_547",
+          "destination": "Node_42",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1733.0713493495384,
+          "cost_ratio": 33.656920419495314,
+          "dijkstra_cost": 51.49227343882836,
+          "solvable": true
+        },
+        {
+          "source": "Node_594",
+          "destination": "Node_51",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 69.91026211087636,
+          "solvable": true
+        },
+        {
+          "source": "Node_528",
+          "destination": "Node_42",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1938.1572187704462,
+          "cost_ratio": 41.40071523837912,
+          "dijkstra_cost": 46.814582975458926,
+          "solvable": true
+        },
+        {
+          "source": "Node_180",
+          "destination": "Node_75",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1034.2114473684944,
+          "cost_ratio": 20.653715118373704,
+          "dijkstra_cost": 50.073870073304725,
+          "solvable": true
+        },
+        {
+          "source": "Node_150",
+          "destination": "Node_5",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 26.14984732586698,
+          "solvable": true
+        },
+        {
+          "source": "Node_47",
+          "destination": "Node_509",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 52.843267789261525,
+          "solvable": true
+        },
+        {
+          "source": "Node_623",
+          "destination": "Node_28",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1949.342152969636,
+          "cost_ratio": 27.96266353479026,
+          "dijkstra_cost": 69.71232016379005,
+          "solvable": true
+        },
+        {
+          "source": "Node_17",
+          "destination": "Node_588",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 40.18927298721214,
+          "solvable": true
+        },
+        {
+          "source": "Node_277",
+          "destination": "Node_545",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3300.0414833216137,
+          "cost_ratio": 48.014280507743386,
+          "dijkstra_cost": 68.73041621001501,
+          "solvable": true
+        },
+        {
+          "source": "Node_542",
+          "destination": "Node_21",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1328.5203721222088,
+          "cost_ratio": 18.820747459173813,
+          "dijkstra_cost": 70.58807706782373,
+          "solvable": true
+        },
+        {
+          "source": "Node_25",
+          "destination": "Node_152",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 56.053431075148964,
+          "solvable": true
+        },
+        {
+          "source": "Node_499",
+          "destination": "Node_11",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 66.6147253320604,
+          "solvable": true
+        },
+        {
+          "source": "Node_230",
+          "destination": "Node_600",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 59.0132491431436,
+          "solvable": true
+        },
+        {
+          "source": "Node_575",
+          "destination": "Node_32",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 57.64854670469234,
+          "solvable": true
+        },
+        {
+          "source": "Node_497",
+          "destination": "Node_202",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 54.23120860409783,
+          "solvable": true
+        },
+        {
+          "source": "Node_476",
+          "destination": "Node_43",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2481.351321370395,
+          "cost_ratio": 46.94941993983185,
+          "dijkstra_cost": 52.85158633589887,
+          "solvable": true
+        },
+        {
+          "source": "Node_277",
+          "destination": "Node_574",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4947.363605389848,
+          "cost_ratio": 66.71850174747938,
+          "dijkstra_cost": 74.15279833643385,
+          "solvable": true
+        },
+        {
+          "source": "Node_589",
+          "destination": "Node_65",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 59.421965283928095,
+          "solvable": true
+        },
+        {
+          "source": "Node_275",
+          "destination": "Node_429",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 18.1071541185417,
+          "solvable": true
+        },
+        {
+          "source": "Node_50",
+          "destination": "Node_77",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.44803731448118,
+          "solvable": true
+        },
+        {
+          "source": "Node_582",
+          "destination": "Node_87",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_601",
+          "destination": "Node_224",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2571.0297140921575,
+          "cost_ratio": 64.61822240332042,
+          "dijkstra_cost": 39.78799816009864,
+          "solvable": true
+        },
+        {
+          "source": "Node_500",
+          "destination": "Node_352",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 54.05762903980751,
+          "solvable": true
+        },
+        {
+          "source": "Node_424",
+          "destination": "Node_32",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 65.15457079722626,
+          "solvable": true
+        },
+        {
+          "source": "Node_565",
+          "destination": "Node_56",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 58.94017139454852,
+          "solvable": true
+        },
+        {
+          "source": "Node_158",
+          "destination": "Node_573",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3456.3188458384034,
+          "cost_ratio": 66.98665177856402,
+          "dijkstra_cost": 51.59712799594558,
+          "solvable": true
+        },
+        {
+          "source": "Node_527",
+          "destination": "Node_48",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1141.8914914409281,
+          "cost_ratio": 27.364356984893234,
+          "dijkstra_cost": 41.729154902902366,
+          "solvable": true
+        },
+        {
+          "source": "Node_31",
+          "destination": "Node_535",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.79250344873749,
+          "solvable": true
+        },
+        {
+          "source": "Node_146",
+          "destination": "Node_604",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 83.51286852762235,
+          "solvable": true
+        },
+        {
+          "source": "Node_604",
+          "destination": "Node_244",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 93.7747798730592,
+          "solvable": true
+        },
+        {
+          "source": "Node_526",
+          "destination": "Node_171",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2715.65214698139,
+          "cost_ratio": 53.93016394029423,
+          "dijkstra_cost": 50.35497666923232,
+          "solvable": true
+        },
+        {
+          "source": "Node_27",
+          "destination": "Node_545",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2586.0718821348637,
+          "cost_ratio": 34.8832251034158,
+          "dijkstra_cost": 74.13511435562857,
+          "solvable": true
+        },
+        {
+          "source": "Node_83",
+          "destination": "Node_525",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 39.11008255225876,
+          "solvable": true
+        },
+        {
+          "source": "Node_552",
+          "destination": "Node_71",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2118.5941372780553,
+          "cost_ratio": 32.21440056627242,
+          "dijkstra_cost": 65.76543719693373,
+          "solvable": true
+        },
+        {
+          "source": "Node_16",
+          "destination": "Node_605",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_176",
+          "destination": "Node_173",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1797.7605544146425,
+          "cost_ratio": 32.857235948655244,
+          "dijkstra_cost": 54.71429663846145,
+          "solvable": true
+        },
+        {
+          "source": "Node_54",
+          "destination": "Node_596",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1810.0997673104546,
+          "cost_ratio": 27.51620485894147,
+          "dijkstra_cost": 65.78304590294026,
+          "solvable": true
+        },
+        {
+          "source": "Node_128",
+          "destination": "Node_622",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2635.31885540225,
+          "cost_ratio": 37.34639316157632,
+          "dijkstra_cost": 70.56421336327564,
+          "solvable": true
+        },
+        {
+          "source": "Node_100",
+          "destination": "Node_617",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_614",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 63.88987702749725,
+          "solvable": true
+        },
+        {
+          "source": "Node_425",
+          "destination": "Node_33",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.64590843795047,
+          "solvable": true
+        },
+        {
+          "source": "Node_172",
+          "destination": "Node_378",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 94.33204950326656,
+          "solvable": true
+        },
+        {
+          "source": "Node_354",
+          "destination": "Node_97",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 46.04491590284844,
+          "solvable": true
+        },
+        {
+          "source": "Node_175",
+          "destination": "Node_177",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 72.07806175835776,
+          "solvable": true
+        },
+        {
+          "source": "Node_248",
+          "destination": "Node_581",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 63.90570672020055,
+          "solvable": true
+        },
+        {
+          "source": "Node_590",
+          "destination": "Node_98",
+          "reached": true,
+          "reasonable": false,
+          "cost": 783.6300947027084,
+          "cost_ratio": 13.979416475206783,
+          "dijkstra_cost": 56.05599461841035,
+          "solvable": true
+        },
+        {
+          "source": "Node_18",
+          "destination": "Node_571",
+          "reached": true,
+          "reasonable": false,
+          "cost": 666.6999385290285,
+          "cost_ratio": 10.633868281755525,
+          "dijkstra_cost": 62.69589963540194,
+          "solvable": true
+        },
+        {
+          "source": "Node_99",
+          "destination": "Node_3",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 69.73249479036056,
+          "solvable": true
+        },
+        {
+          "source": "Node_616",
+          "destination": "Node_156",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 55.51140457955455,
+          "solvable": true
+        },
+        {
+          "source": "Node_230",
+          "destination": "Node_375",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3542.012018543911,
+          "cost_ratio": 104.52599863012286,
+          "dijkstra_cost": 33.88642122499804,
+          "solvable": true
+        },
+        {
+          "source": "Node_478",
+          "destination": "Node_20",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2240.56035483999,
+          "cost_ratio": 25.870477336958334,
+          "dijkstra_cost": 86.60684245045395,
+          "solvable": true
+        },
+        {
+          "source": "Node_41",
+          "destination": "Node_593",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 42.94207890886682,
+          "solvable": true
+        },
+        {
+          "source": "Node_7",
+          "destination": "Node_597",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1547.4676800258364,
+          "cost_ratio": 27.290648195722945,
+          "dijkstra_cost": 56.7032218849371,
+          "solvable": true
+        },
+        {
+          "source": "Node_376",
+          "destination": "Node_197",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4051.3657132516987,
+          "cost_ratio": 103.14559243395821,
+          "dijkstra_cost": 39.2781273309928,
+          "solvable": true
+        },
+        {
+          "source": "Node_577",
+          "destination": "Node_198",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1912.2231252056274,
+          "cost_ratio": 29.836357169146954,
+          "dijkstra_cost": 64.09036848449483,
+          "solvable": true
+        },
+        {
+          "source": "Node_22",
+          "destination": "Node_434",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 67.02597238821001,
+          "solvable": true
+        },
+        {
+          "source": "Node_570",
+          "destination": "Node_49",
+          "reached": true,
+          "reasonable": false,
+          "cost": 978.4389569277874,
+          "cost_ratio": 24.736261898428392,
+          "dijkstra_cost": 39.55484304562413,
+          "solvable": true
+        },
+        {
+          "source": "Node_75",
+          "destination": "Node_276",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3406.2673053619005,
+          "cost_ratio": 47.04212190423938,
+          "dijkstra_cost": 72.40887884045324,
+          "solvable": true
+        },
+        {
+          "source": "Node_599",
+          "destination": "Node_133",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 46.94537165991434,
+          "solvable": true
+        },
+        {
+          "source": "Node_534",
+          "destination": "Node_16",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.0233171577031,
+          "solvable": true
+        },
+        {
+          "source": "Node_588",
+          "destination": "Node_43",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2229.6467952216212,
+          "cost_ratio": 39.34341621187935,
+          "dijkstra_cost": 56.67140807534659,
+          "solvable": true
+        },
+        {
+          "source": "Node_235",
+          "destination": "Node_625",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.50394041552894,
+          "solvable": true
+        },
+        {
+          "source": "Node_7",
+          "destination": "Node_444",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 57.811447664980214,
+          "solvable": true
+        },
+        {
+          "source": "Node_625",
+          "destination": "Node_157",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 60.43984029283097,
+          "solvable": true
+        },
+        {
+          "source": "Node_599",
+          "destination": "Node_478",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 54.83887254954218,
+          "solvable": true
+        },
+        {
+          "source": "Node_90",
+          "destination": "Node_625",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 72.70130219339016,
+          "solvable": true
+        },
+        {
+          "source": "Node_453",
+          "destination": "Node_99",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1076.292202251696,
+          "cost_ratio": 14.845211083654865,
+          "dijkstra_cost": 72.50096992131921,
+          "solvable": true
+        },
+        {
+          "source": "Node_180",
+          "destination": "Node_624",
+          "reached": true,
+          "reasonable": false,
+          "cost": 5596.704269262733,
+          "cost_ratio": 96.44746404953737,
+          "dijkstra_cost": 58.02852697493583,
+          "solvable": true
+        },
+        {
+          "source": "Node_428",
+          "destination": "Node_100",
+          "reached": true,
+          "reasonable": false,
+          "cost": 575.8934309744074,
+          "cost_ratio": 13.154521849333399,
+          "dijkstra_cost": 43.77912307041328,
+          "solvable": true
+        },
+        {
+          "source": "Node_498",
+          "destination": "Node_7",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 56.504080781961875,
+          "solvable": true
+        },
+        {
+          "source": "Node_52",
+          "destination": "Node_197",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3851.872644466934,
+          "cost_ratio": 95.29245785150981,
+          "dijkstra_cost": 40.42158982266093,
+          "solvable": true
+        },
+        {
+          "source": "Node_127",
+          "destination": "Node_424",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 48.71702367086865,
+          "solvable": true
+        },
+        {
+          "source": "Node_608",
+          "destination": "Node_67",
+          "reached": true,
+          "reasonable": false,
+          "cost": 509.76544764457765,
+          "cost_ratio": 9.232057291183747,
+          "dijkstra_cost": 55.21688520405779,
+          "solvable": true
+        },
+        {
+          "source": "Node_507",
+          "destination": "Node_122",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_522",
+          "destination": "Node_277",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_501",
+          "destination": "Node_68",
+          "reached": true,
+          "reasonable": false,
+          "cost": 253.23485479846573,
+          "cost_ratio": 5.249849204488787,
+          "dijkstra_cost": 48.23659593535409,
+          "solvable": true
+        },
+        {
+          "source": "Node_24",
+          "destination": "Node_515",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_58",
+          "destination": "Node_615",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 52.680070484378746,
+          "solvable": true
+        },
+        {
+          "source": "Node_77",
+          "destination": "Node_420",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 44.82432461113481,
+          "solvable": true
+        },
+        {
+          "source": "Node_611",
+          "destination": "Node_45",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2005.1874609269257,
+          "cost_ratio": 26.527391635163607,
+          "dijkstra_cost": 75.58931871269743,
+          "solvable": true
+        },
+        {
+          "source": "Node_604",
+          "destination": "Node_600",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 69.8002192803546,
+          "solvable": true
+        },
+        {
+          "source": "Node_569",
+          "destination": "Node_9",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.719040278355045,
+          "solvable": true
+        },
+        {
+          "source": "Node_276",
+          "destination": "Node_450",
+          "reached": true,
+          "reasonable": false,
+          "cost": 831.9120088693537,
+          "cost_ratio": 10.31494608365765,
+          "dijkstra_cost": 80.65112528192296,
+          "solvable": true
+        },
+        {
+          "source": "Node_373",
+          "destination": "Node_554",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 54.85454017684823,
+          "solvable": true
+        },
+        {
+          "source": "Node_20",
+          "destination": "Node_602",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 74.03823938667382,
+          "solvable": true
+        },
+        {
+          "source": "Node_81",
+          "destination": "Node_518",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 67.7656265480897,
+          "solvable": true
+        },
+        {
+          "source": "Node_527",
+          "destination": "Node_63",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3010.622307779605,
+          "cost_ratio": 67.42732618858491,
+          "dijkstra_cost": 44.649884222893704,
+          "solvable": true
+        },
+        {
+          "source": "Node_227",
+          "destination": "Node_625",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 50.36179612276233,
+          "solvable": true
+        },
+        {
+          "source": "Node_456",
+          "destination": "Node_73",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1520.694570015214,
+          "cost_ratio": 24.92955428506686,
+          "dijkstra_cost": 60.99966941350935,
+          "solvable": true
+        },
+        {
+          "source": "Node_353",
+          "destination": "Node_623",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 36.385610389361744,
+          "solvable": true
+        },
+        {
+          "source": "Node_570",
+          "destination": "Node_74",
+          "reached": true,
+          "reasonable": false,
+          "cost": 1018.9193426787464,
+          "cost_ratio": 17.666583408523792,
+          "dijkstra_cost": 57.674951580458796,
+          "solvable": true
+        },
+        {
+          "source": "Node_478",
+          "destination": "Node_124",
+          "reached": true,
+          "reasonable": false,
+          "cost": 589.4376142004733,
+          "cost_ratio": 18.393420658791996,
+          "dijkstra_cost": 32.046111766531254,
+          "solvable": true
+        },
+        {
+          "source": "Node_619",
+          "destination": "Node_178",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 43.862021204428146,
+          "solvable": true
+        },
+        {
+          "source": "Node_497",
+          "destination": "Node_82",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 44.450825308549135,
+          "solvable": true
+        },
+        {
+          "source": "Node_117",
+          "destination": "Node_624",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 48.39792983120654,
+          "solvable": true
+        },
+        {
+          "source": "Node_603",
+          "destination": "Node_148",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_54",
+          "destination": "Node_548",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4056.5802847569257,
+          "cost_ratio": 87.54514308649794,
+          "dijkstra_cost": 46.33701130340114,
+          "solvable": true
+        },
+        {
+          "source": "Node_126",
+          "destination": "Node_468",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 52.54732123508326,
+          "solvable": true
+        },
+        {
+          "source": "Node_1",
+          "destination": "Node_221",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2383.2010938223825,
+          "cost_ratio": 32.35475794002535,
+          "dijkstra_cost": 73.65844300983558,
+          "solvable": true
+        },
+        {
+          "source": "Node_126",
+          "destination": "Node_300",
+          "reached": true,
+          "reasonable": false,
+          "cost": 526.5162232787811,
+          "cost_ratio": 8.659859394917905,
+          "dijkstra_cost": 60.79962725350605,
+          "solvable": true
+        },
+        {
+          "source": "Node_622",
+          "destination": "Node_6",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3749.6550708897207,
+          "cost_ratio": 82.9761893072515,
+          "dijkstra_cost": 45.1895309027168,
+          "solvable": true
+        },
+        {
+          "source": "Node_593",
+          "destination": "Node_109",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 64.04329672473455,
+          "solvable": true
+        },
+        {
+          "source": "Node_20",
+          "destination": "Node_252",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 54.6276101692695,
+          "solvable": true
+        },
+        {
+          "source": "Node_573",
+          "destination": "Node_202",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 61.89376713549733,
+          "solvable": true
+        },
+        {
+          "source": "Node_148",
+          "destination": "Node_555",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 51.04431320197579,
+          "solvable": true
+        },
+        {
+          "source": "Node_87",
+          "destination": "Node_549",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 60.217269727321394,
+          "solvable": true
+        },
+        {
+          "source": "Node_8",
+          "destination": "Node_601",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 42.61866124397169,
+          "solvable": true
+        },
+        {
+          "source": "Node_298",
+          "destination": "Node_578",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 72.42408619414002,
+          "solvable": true
+        },
+        {
+          "source": "Node_505",
+          "destination": "Node_67",
+          "reached": true,
+          "reasonable": true,
+          "cost": 127.55428768090962,
+          "cost_ratio": 1.9272788026492476,
+          "dijkstra_cost": 66.18361988186288,
+          "solvable": true
+        },
+        {
+          "source": "Node_541",
+          "destination": "Node_10",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 68.3425692481208,
+          "solvable": true
+        },
+        {
+          "source": "Node_167",
+          "destination": "Node_579",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_249",
+          "destination": "Node_581",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 64.3168244936179,
+          "solvable": true
+        },
+        {
+          "source": "Node_98",
+          "destination": "Node_591",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 44.28118563233966,
+          "solvable": true
+        },
+        {
+          "source": "Node_375",
+          "destination": "Node_379",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 42.19718795782195,
+          "solvable": true
+        },
+        {
+          "source": "Node_350",
+          "destination": "Node_205",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_428",
+          "destination": "Node_197",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 68.3871099378713,
+          "solvable": true
+        },
+        {
+          "source": "Node_17",
+          "destination": "Node_600",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 69.25753018895055,
+          "solvable": true
+        },
+        {
+          "source": "Node_589",
+          "destination": "Node_34",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3235.9564783777178,
+          "cost_ratio": 55.74078906756256,
+          "dijkstra_cost": 58.0536539311538,
+          "solvable": true
+        },
+        {
+          "source": "Node_74",
+          "destination": "Node_430",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 63.05859193581961,
+          "solvable": true
+        },
+        {
+          "source": "Node_69",
+          "destination": "Node_482",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 57.18624304484952,
+          "solvable": true
+        },
+        {
+          "source": "Node_494",
+          "destination": "Node_81",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 42.87639690315984,
+          "solvable": true
+        },
+        {
+          "source": "Node_596",
+          "destination": "Node_255",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 71.93789665579047,
+          "solvable": true
+        },
+        {
+          "source": "Node_557",
+          "destination": "Node_120",
+          "reached": true,
+          "reasonable": false,
+          "cost": 264.98112596688327,
+          "cost_ratio": 5.457891639399453,
+          "dijkstra_cost": 48.550089205515974,
+          "solvable": true
+        },
+        {
+          "source": "Node_70",
+          "destination": "Node_608",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 68.13339710009112,
+          "solvable": true
+        },
+        {
+          "source": "Node_297",
+          "destination": "Node_376",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 62.35251782371403,
+          "solvable": true
+        },
+        {
+          "source": "Node_540",
+          "destination": "Node_52",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 55.196120040567976,
+          "solvable": true
+        },
+        {
+          "source": "Node_48",
+          "destination": "Node_558",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": NaN,
+          "dijkstra_cost": Infinity,
+          "solvable": false
+        },
+        {
+          "source": "Node_84",
+          "destination": "Node_523",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 60.898630757145426,
+          "solvable": true
+        },
+        {
+          "source": "Node_606",
+          "destination": "Node_76",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 66.26434530956115,
+          "solvable": true
+        },
+        {
+          "source": "Node_75",
+          "destination": "Node_564",
+          "reached": true,
+          "reasonable": false,
+          "cost": 3816.9472504952805,
+          "cost_ratio": 62.83278529468094,
+          "dijkstra_cost": 60.74770094297254,
+          "solvable": true
+        },
+        {
+          "source": "Node_274",
+          "destination": "Node_526",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 24.612963306289636,
+          "solvable": true
+        },
+        {
+          "source": "Node_459",
+          "destination": "Node_50",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 50.66104501532634,
+          "solvable": true
+        },
+        {
+          "source": "Node_614",
+          "destination": "Node_8",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 61.03851718677424,
+          "solvable": true
+        },
+        {
+          "source": "Node_3",
+          "destination": "Node_271",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2234.971726907737,
+          "cost_ratio": 48.59814929454014,
+          "dijkstra_cost": 45.98882384105168,
+          "solvable": true
+        },
+        {
+          "source": "Node_34",
+          "destination": "Node_586",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 48.1756979592831,
+          "solvable": true
+        },
+        {
+          "source": "Node_38",
+          "destination": "Node_505",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 48.207749970770664,
+          "solvable": true
+        },
+        {
+          "source": "Node_226",
+          "destination": "Node_325",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2994.1415325318144,
+          "cost_ratio": 64.19762906489899,
+          "dijkstra_cost": 46.63944099095874,
+          "solvable": true
+        },
+        {
+          "source": "Node_408",
+          "destination": "Node_25",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 38.313399603127486,
+          "solvable": true
+        },
+        {
+          "source": "Node_279",
+          "destination": "Node_350",
+          "reached": true,
+          "reasonable": false,
+          "cost": 2121.4694451628884,
+          "cost_ratio": 42.73063385828954,
+          "dijkstra_cost": 49.647507036718885,
+          "solvable": true
+        },
+        {
+          "source": "Node_605",
+          "destination": "Node_322",
+          "reached": true,
+          "reasonable": false,
+          "cost": 4902.635367511577,
+          "cost_ratio": 81.88407675904905,
+          "dijkstra_cost": 59.87287836117398,
+          "solvable": true
+        },
+        {
+          "source": "Node_55",
+          "destination": "Node_593",
+          "reached": false,
+          "reasonable": false,
+          "cost": null,
+          "cost_ratio": Infinity,
+          "dijkstra_cost": 68.41541946655859,
+          "solvable": true
+        }
+      ]
+    }
+  }
+}
