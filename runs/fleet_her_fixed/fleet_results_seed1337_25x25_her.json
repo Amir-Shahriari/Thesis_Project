@@ -1,0 +1,1016 @@
+{
+  "scale": "25x25",
+  "seed": 1337,
+  "grid_seed": 1173222464,
+  "oracle_pool": "classical_only",
+  "n_train_queries": 20,
+  "n_eval_queries": 20,
+  "ablation": {
+    "her_k": 4,
+    "her_strategy": "future",
+    "goal_relative": false,
+    "iterations": 8,
+    "episodes_per_iteration": 25
+  },
+  "config": {
+    "grid": {
+      "grid_width": 25,
+      "grid_height": 25,
+      "extra_edges": 2,
+      "deactivate_prob": 0.15,
+      "node_deactivate_prob": 0.05
+    },
+    "train": {
+      "n_iterations": 8,
+      "episodes_per_iteration": 25,
+      "grad_steps_per_episode": 4,
+      "batch_size": 64,
+      "hidden_dim": 64,
+      "expert_ratio": 0.4,
+      "pre_seed_n_states": 3,
+      "pre_seed_k_paths": 5
+    }
+  },
+  "arms": {
+    "warm": {
+      "checkpoint": "fleet_25x25_seed1337_her_warm.pt",
+      "train_seconds": 1790.9131839000038,
+      "training_log": {
+        "iteration": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "mean_return": [
+          -91.6351214586458,
+          -95.05490199935215,
+          -80.49313854486877,
+          -87.37016191112015,
+          -70.52318342517415,
+          -72.17047593900939,
+          -78.90621253114055,
+          -68.11239348417364
+        ],
+        "goal_reach_rate": [
+          0.022,
+          0.002,
+          0.046,
+          0.016,
+          0.126,
+          0.108,
+          0.116,
+          0.108
+        ],
+        "expert_pool_size": [
+          1470,
+          1551,
+          1627,
+          1698,
+          1788,
+          1873,
+          1951,
+          2029
+        ],
+        "online_pool_size": [
+          8282,
+          16462,
+          23671,
+          30892,
+          37585,
+          44405,
+          51557,
+          57658
+        ],
+        "mean_loss": [
+          1099.2907789916992,
+          819.0638698577881,
+          778.4205310211181,
+          566.417502380371,
+          446.764208442688,
+          408.90604359436037,
+          400.0157791824341,
+          401.0556459197998
+        ]
+      },
+      "train_queries": {
+        "summary": {
+          "n": 20,
+          "reach": 18,
+          "reach_rate": 0.9,
+          "reasonable_rate": 0.15,
+          "mean_cost_ratio": 17.503325136286943,
+          "median_cost_ratio": 14.91812410699319
+        },
+        "rows": [
+          {
+            "source": "Node_576",
+            "destination": "Node_245",
+            "cost": 1743.63771282138,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 34.828925036198896,
+            "dijkstra_cost": 50.06292071917688,
+            "eval_ms": 26.411700004246086
+          },
+          {
+            "source": "Node_562",
+            "destination": "Node_150",
+            "cost": 410.9845249869317,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 10.611783851123656,
+            "dijkstra_cost": 38.7290705081044,
+            "eval_ms": 5.132200021762401
+          },
+          {
+            "source": "Node_41",
+            "destination": "Node_451",
+            "cost": 1514.9466812757125,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 36.61430434958067,
+            "dijkstra_cost": 41.375814949576196,
+            "eval_ms": 17.01169996522367
+          },
+          {
+            "source": "Node_482",
+            "destination": "Node_250",
+            "cost": 1069.5898907044436,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 16.19879069444197,
+            "dijkstra_cost": 66.02899629238587,
+            "eval_ms": 19.563600013498217
+          },
+          {
+            "source": "Node_177",
+            "destination": "Node_599",
+            "cost": 605.9223296248862,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 12.19152142607572,
+            "dijkstra_cost": 49.700304699372055,
+            "eval_ms": 10.26760000968352
+          },
+          {
+            "source": "Node_74",
+            "destination": "Node_590",
+            "cost": 271.8215268018126,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 4.517750228387512,
+            "dijkstra_cost": 60.1674535023668,
+            "eval_ms": 5.239400023128837
+          },
+          {
+            "source": "Node_53",
+            "destination": "Node_468",
+            "cost": 769.7804371364216,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 13.637457519544409,
+            "dijkstra_cost": 56.446037396136134,
+            "eval_ms": 12.25139998132363
+          },
+          {
+            "source": "Node_49",
+            "destination": "Node_178",
+            "cost": 968.710022789239,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 21.101508502757902,
+            "dijkstra_cost": 45.907145579787894,
+            "eval_ms": 10.90609998209402
+          },
+          {
+            "source": "Node_446",
+            "destination": "Node_76",
+            "cost": 53.395734350035035,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 53.395734350035035,
+            "eval_ms": 2.605399989988655
+          },
+          {
+            "source": "Node_249",
+            "destination": "Node_354",
+            "cost": 1181.0872354845333,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 18.961285984379206,
+            "dijkstra_cost": 62.289405711065335,
+            "eval_ms": 15.998699993360788
+          },
+          {
+            "source": "Node_607",
+            "destination": "Node_14",
+            "cost": 1789.5512252781268,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 43.66920288279162,
+            "dijkstra_cost": 40.979708974338095,
+            "eval_ms": 27.270100021269172
+          },
+          {
+            "source": "Node_569",
+            "destination": "Node_30",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": NaN,
+            "dijkstra_cost": Infinity,
+            "eval_ms": 47.9858000180684
+          },
+          {
+            "source": "Node_87",
+            "destination": "Node_602",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": Infinity,
+            "dijkstra_cost": 72.6355423625247,
+            "eval_ms": 27.407800022047013
+          },
+          {
+            "source": "Node_174",
+            "destination": "Node_101",
+            "cost": 1644.891732414263,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 26.143779702743092,
+            "dijkstra_cost": 62.91713559082949,
+            "eval_ms": 23.362500010989606
+          },
+          {
+            "source": "Node_120",
+            "destination": "Node_581",
+            "cost": 765.0868918252032,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 12.129506535953443,
+            "dijkstra_cost": 63.07650600272861,
+            "eval_ms": 10.082599997986108
+          },
+          {
+            "source": "Node_614",
+            "destination": "Node_147",
+            "cost": 1242.0229169483923,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 22.877428134236776,
+            "dijkstra_cost": 54.290320995027706,
+            "eval_ms": 18.48159998189658
+          },
+          {
+            "source": "Node_221",
+            "destination": "Node_301",
+            "cost": 128.18218688132927,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.931448841844921,
+            "dijkstra_cost": 43.7265645068045,
+            "eval_ms": 3.3928999910131097
+          },
+          {
+            "source": "Node_530",
+            "destination": "Node_15",
+            "cost": 4.275543943280711,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 4.275543943280711,
+            "eval_ms": 1.4053999911993742
+          },
+          {
+            "source": "Node_600",
+            "destination": "Node_10",
+            "cost": 1490.101316795784,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 31.873069667096754,
+            "dijkstra_cost": 46.751107827372124,
+            "eval_ms": 19.528399978298694
+          },
+          {
+            "source": "Node_52",
+            "destination": "Node_543",
+            "cost": 245.61197123871202,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 4.772089096008387,
+            "dijkstra_cost": 51.468437889006324,
+            "eval_ms": 6.120999983977526
+          }
+        ]
+      },
+      "held_out": {
+        "summary": {
+          "n": 20,
+          "reach": 18,
+          "reach_rate": 0.9,
+          "reasonable_rate": 0.3,
+          "mean_cost_ratio": 11.473975871998109,
+          "median_cost_ratio": 5.053248739633059
+        },
+        "rows": [
+          {
+            "source": "Node_110",
+            "destination": "Node_550",
+            "cost": 609.1740017840451,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 7.722018127578886,
+            "dijkstra_cost": 78.88792692785891,
+            "eval_ms": 10.581200011074543
+          },
+          {
+            "source": "Node_615",
+            "destination": "Node_49",
+            "cost": 122.82201226102083,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.52424205199637,
+            "dijkstra_cost": 48.656986822592344,
+            "eval_ms": 2.3808999685570598
+          },
+          {
+            "source": "Node_24",
+            "destination": "Node_384",
+            "cost": 128.9318042392571,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.2338185052399457,
+            "dijkstra_cost": 57.71811986372988,
+            "eval_ms": 3.8022000226192176
+          },
+          {
+            "source": "Node_275",
+            "destination": "Node_456",
+            "cost": 100.8932708149531,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.7791297913567041,
+            "dijkstra_cost": 56.70933694950682,
+            "eval_ms": 2.974200004246086
+          },
+          {
+            "source": "Node_13",
+            "destination": "Node_539",
+            "cost": 1627.307092356893,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 26.541605702402713,
+            "dijkstra_cost": 61.31155404096667,
+            "eval_ms": 20.3899999614805
+          },
+          {
+            "source": "Node_68",
+            "destination": "Node_609",
+            "cost": 1388.6788372890287,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 20.621163225549854,
+            "dijkstra_cost": 67.34241042078752,
+            "eval_ms": 22.048900020308793
+          },
+          {
+            "source": "Node_228",
+            "destination": "Node_148",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": NaN,
+            "dijkstra_cost": Infinity,
+            "eval_ms": 26.389499951619655
+          },
+          {
+            "source": "Node_558",
+            "destination": "Node_24",
+            "cost": 40.58699215338834,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 40.58699215338834,
+            "eval_ms": 2.005700021982193
+          },
+          {
+            "source": "Node_253",
+            "destination": "Node_498",
+            "cost": 252.66503107976985,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 5.215574812248853,
+            "dijkstra_cost": 48.44433071621988,
+            "eval_ms": 5.885399994440377
+          },
+          {
+            "source": "Node_547",
+            "destination": "Node_42",
+            "cost": 177.3690766241511,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 3.4445765311733902,
+            "dijkstra_cost": 51.49227343882836,
+            "eval_ms": 5.842599959578365
+          },
+          {
+            "source": "Node_594",
+            "destination": "Node_51",
+            "cost": 341.92568561520335,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 4.890922667017263,
+            "dijkstra_cost": 69.91026211087636,
+            "eval_ms": 7.20059999730438
+          },
+          {
+            "source": "Node_528",
+            "destination": "Node_42",
+            "cost": 75.42577627057665,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.6111598454292808,
+            "dijkstra_cost": 46.814582975458926,
+            "eval_ms": 3.239799989387393
+          },
+          {
+            "source": "Node_180",
+            "destination": "Node_75",
+            "cost": 1221.7312011254191,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 24.398577528297455,
+            "dijkstra_cost": 50.073870073304725,
+            "eval_ms": 19.303300010506064
+          },
+          {
+            "source": "Node_150",
+            "destination": "Node_5",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": Infinity,
+            "dijkstra_cost": 26.14984732586698,
+            "eval_ms": 14.099499967414886
+          },
+          {
+            "source": "Node_47",
+            "destination": "Node_509",
+            "cost": 240.21975040664483,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 4.545891282966054,
+            "dijkstra_cost": 52.843267789261525,
+            "eval_ms": 4.439599986653775
+          },
+          {
+            "source": "Node_623",
+            "destination": "Node_28",
+            "cost": 2218.6180407737625,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 31.825336404829002,
+            "dijkstra_cost": 69.71232016379005,
+            "eval_ms": 27.57870004279539
+          },
+          {
+            "source": "Node_17",
+            "destination": "Node_588",
+            "cost": 1292.9311048045704,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 32.17104985243125,
+            "dijkstra_cost": 40.18927298721214,
+            "eval_ms": 20.5841000424698
+          },
+          {
+            "source": "Node_277",
+            "destination": "Node_545",
+            "cost": 529.3655051374469,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 7.702055863009757,
+            "dijkstra_cost": 68.73041621001501,
+            "eval_ms": 10.674299963284284
+          },
+          {
+            "source": "Node_542",
+            "destination": "Node_21",
+            "cost": 145.43425654052612,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.060323252619381,
+            "dijkstra_cost": 70.58807706782373,
+            "eval_ms": 6.163100013509393
+          },
+          {
+            "source": "Node_25",
+            "destination": "Node_152",
+            "cost": 1471.0729856633013,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 26.244120251819783,
+            "dijkstra_cost": 56.053431075148964,
+            "eval_ms": 14.931299956515431
+          }
+        ]
+      }
+    },
+    "cold": {
+      "checkpoint": "fleet_25x25_seed1337_her_cold.pt",
+      "train_seconds": 1124.376862700039,
+      "training_log": {
+        "iteration": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "mean_return": [
+          -87.36280853596824,
+          -85.96159426838095,
+          -88.6393206956363,
+          -94.31752993421624,
+          -78.13806364705161,
+          -79.35053444829515,
+          -84.712793768554,
+          -62.344451140880295
+        ],
+        "goal_reach_rate": [
+          0.04,
+          0.056,
+          0.048,
+          0.052,
+          0.08,
+          0.078,
+          0.066,
+          0.146
+        ],
+        "expert_pool_size": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "online_pool_size": [
+          8094,
+          15641,
+          22982,
+          31178,
+          37862,
+          45168,
+          52767,
+          58663
+        ],
+        "mean_loss": [
+          1431.7989908547765,
+          912.4247451171875,
+          649.663968536377,
+          486.532363861084,
+          449.5220249328613,
+          380.50998980712893,
+          369.88812687683105,
+          373.9556543045044
+        ]
+      },
+      "train_queries": {
+        "summary": {
+          "n": 20,
+          "reach": 19,
+          "reach_rate": 0.95,
+          "reasonable_rate": 0.15,
+          "mean_cost_ratio": 13.711867550446607,
+          "median_cost_ratio": 10.594976632615206
+        },
+        "rows": [
+          {
+            "source": "Node_576",
+            "destination": "Node_245",
+            "cost": 550.5808520245788,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 10.997777279376265,
+            "dijkstra_cost": 50.06292071917688,
+            "eval_ms": 10.427300003357232
+          },
+          {
+            "source": "Node_562",
+            "destination": "Node_150",
+            "cost": 508.6248912513131,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 13.132896931902325,
+            "dijkstra_cost": 38.7290705081044,
+            "eval_ms": 8.706599997822195
+          },
+          {
+            "source": "Node_41",
+            "destination": "Node_451",
+            "cost": 281.6287271927361,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 6.806602541507663,
+            "dijkstra_cost": 41.375814949576196,
+            "eval_ms": 7.006500032730401
+          },
+          {
+            "source": "Node_482",
+            "destination": "Node_250",
+            "cost": 543.5392280008568,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 8.231826296343915,
+            "dijkstra_cost": 66.02899629238587,
+            "eval_ms": 11.374699999578297
+          },
+          {
+            "source": "Node_177",
+            "destination": "Node_599",
+            "cost": 315.4892401367756,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 6.347833117827177,
+            "dijkstra_cost": 49.700304699372055,
+            "eval_ms": 6.299200002104044
+          },
+          {
+            "source": "Node_74",
+            "destination": "Node_590",
+            "cost": 637.4727639015381,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 10.594976632615206,
+            "dijkstra_cost": 60.1674535023668,
+            "eval_ms": 11.344500002451241
+          },
+          {
+            "source": "Node_53",
+            "destination": "Node_468",
+            "cost": 1521.7913073509724,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 26.96010876141932,
+            "dijkstra_cost": 56.446037396136134,
+            "eval_ms": 17.7657000022009
+          },
+          {
+            "source": "Node_49",
+            "destination": "Node_178",
+            "cost": 648.2466963804179,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 14.12082341851874,
+            "dijkstra_cost": 45.907145579787894,
+            "eval_ms": 9.348099993076175
+          },
+          {
+            "source": "Node_446",
+            "destination": "Node_76",
+            "cost": 53.395734350035035,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 53.395734350035035,
+            "eval_ms": 3.1683999695815146
+          },
+          {
+            "source": "Node_249",
+            "destination": "Node_354",
+            "cost": 769.1770208416391,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 12.34844051024554,
+            "dijkstra_cost": 62.289405711065335,
+            "eval_ms": 13.178399996832013
+          },
+          {
+            "source": "Node_607",
+            "destination": "Node_14",
+            "cost": 262.03187807152517,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 6.3941859185874685,
+            "dijkstra_cost": 40.979708974338095,
+            "eval_ms": 5.61829999787733
+          },
+          {
+            "source": "Node_569",
+            "destination": "Node_30",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": NaN,
+            "dijkstra_cost": Infinity,
+            "eval_ms": 47.86380002042279
+          },
+          {
+            "source": "Node_87",
+            "destination": "Node_602",
+            "cost": 1184.58882315398,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 16.308666317127305,
+            "dijkstra_cost": 72.6355423625247,
+            "eval_ms": 16.71369996620342
+          },
+          {
+            "source": "Node_174",
+            "destination": "Node_101",
+            "cost": 645.1191080231878,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 10.253472316645283,
+            "dijkstra_cost": 62.91713559082949,
+            "eval_ms": 13.240900007076561
+          },
+          {
+            "source": "Node_120",
+            "destination": "Node_581",
+            "cost": 517.7636592701953,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 8.208502532587925,
+            "dijkstra_cost": 63.07650600272861,
+            "eval_ms": 9.582799975760281
+          },
+          {
+            "source": "Node_614",
+            "destination": "Node_147",
+            "cost": 3345.7245293887427,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 61.6265379918304,
+            "dijkstra_cost": 54.290320995027706,
+            "eval_ms": 48.06669999379665
+          },
+          {
+            "source": "Node_221",
+            "destination": "Node_301",
+            "cost": 1034.8391031224594,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 23.66614241924776,
+            "dijkstra_cost": 43.7265645068045,
+            "eval_ms": 14.74499999312684
+          },
+          {
+            "source": "Node_530",
+            "destination": "Node_15",
+            "cost": 4.275543943280711,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 4.275543943280711,
+            "eval_ms": 1.3787999632768333
+          },
+          {
+            "source": "Node_600",
+            "destination": "Node_10",
+            "cost": 46.751107827372124,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.0,
+            "dijkstra_cost": 46.751107827372124,
+            "eval_ms": 1.9133000168949366
+          },
+          {
+            "source": "Node_52",
+            "destination": "Node_543",
+            "cost": 1107.9451315501922,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 21.526690472703265,
+            "dijkstra_cost": 51.468437889006324,
+            "eval_ms": 14.957999985199422
+          }
+        ]
+      },
+      "held_out": {
+        "summary": {
+          "n": 20,
+          "reach": 19,
+          "reach_rate": 0.95,
+          "reasonable_rate": 0.15,
+          "mean_cost_ratio": 17.821507730026294,
+          "median_cost_ratio": 10.247191836786282
+        },
+        "rows": [
+          {
+            "source": "Node_110",
+            "destination": "Node_550",
+            "cost": 741.9078625304352,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 9.404580541315173,
+            "dijkstra_cost": 78.88792692785891,
+            "eval_ms": 13.910399982705712
+          },
+          {
+            "source": "Node_615",
+            "destination": "Node_49",
+            "cost": 122.82201226102083,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.52424205199637,
+            "dijkstra_cost": 48.656986822592344,
+            "eval_ms": 3.2905000261962414
+          },
+          {
+            "source": "Node_24",
+            "destination": "Node_384",
+            "cost": 591.448646702265,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 10.247191836786282,
+            "dijkstra_cost": 57.71811986372988,
+            "eval_ms": 11.350899992976338
+          },
+          {
+            "source": "Node_275",
+            "destination": "Node_456",
+            "cost": 100.8932708149531,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 1.7791297913567041,
+            "dijkstra_cost": 56.70933694950682,
+            "eval_ms": 3.4604999818839133
+          },
+          {
+            "source": "Node_13",
+            "destination": "Node_539",
+            "cost": 1696.7806631329006,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 27.67472933403644,
+            "dijkstra_cost": 61.31155404096667,
+            "eval_ms": 24.46849999250844
+          },
+          {
+            "source": "Node_68",
+            "destination": "Node_609",
+            "cost": 3442.801286609633,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 51.123820265674595,
+            "dijkstra_cost": 67.34241042078752,
+            "eval_ms": 53.888199967332184
+          },
+          {
+            "source": "Node_228",
+            "destination": "Node_148",
+            "cost": null,
+            "reached": false,
+            "reasonable": false,
+            "cost_ratio": NaN,
+            "dijkstra_cost": Infinity,
+            "eval_ms": 42.4625999876298
+          },
+          {
+            "source": "Node_558",
+            "destination": "Node_24",
+            "cost": 146.82118386323378,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 3.6174443109348933,
+            "dijkstra_cost": 40.58699215338834,
+            "eval_ms": 3.801400016527623
+          },
+          {
+            "source": "Node_253",
+            "destination": "Node_498",
+            "cost": 343.3055209598791,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 7.086598491181865,
+            "dijkstra_cost": 48.44433071621988,
+            "eval_ms": 7.205299974884838
+          },
+          {
+            "source": "Node_547",
+            "destination": "Node_42",
+            "cost": 648.5912766054821,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 12.595895137082918,
+            "dijkstra_cost": 51.49227343882836,
+            "eval_ms": 11.865900014527142
+          },
+          {
+            "source": "Node_594",
+            "destination": "Node_51",
+            "cost": 149.93916651548494,
+            "reached": true,
+            "reasonable": true,
+            "cost_ratio": 2.1447375819830894,
+            "dijkstra_cost": 69.91026211087636,
+            "eval_ms": 4.3314999784342945
+          },
+          {
+            "source": "Node_528",
+            "destination": "Node_42",
+            "cost": 816.166514057285,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 17.434022951462254,
+            "dijkstra_cost": 46.814582975458926,
+            "eval_ms": 13.693599961698055
+          },
+          {
+            "source": "Node_180",
+            "destination": "Node_75",
+            "cost": 694.6607535129183,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 13.872719494139007,
+            "dijkstra_cost": 50.073870073304725,
+            "eval_ms": 12.970700045116246
+          },
+          {
+            "source": "Node_150",
+            "destination": "Node_5",
+            "cost": 1265.5084262938103,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 48.394486228682155,
+            "dijkstra_cost": 26.14984732586698,
+            "eval_ms": 19.780500035267323
+          },
+          {
+            "source": "Node_47",
+            "destination": "Node_509",
+            "cost": 1317.7522082643245,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 24.93699317611296,
+            "dijkstra_cost": 52.843267789261525,
+            "eval_ms": 21.723699988797307
+          },
+          {
+            "source": "Node_623",
+            "destination": "Node_28",
+            "cost": 539.9153375471102,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 7.744905581661487,
+            "dijkstra_cost": 69.71232016379005,
+            "eval_ms": 11.447899974882603
+          },
+          {
+            "source": "Node_17",
+            "destination": "Node_588",
+            "cost": 2929.1999785842277,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 72.88511985564587,
+            "dijkstra_cost": 40.18927298721214,
+            "eval_ms": 45.71019997820258
+          },
+          {
+            "source": "Node_277",
+            "destination": "Node_545",
+            "cost": 217.03431798883122,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 3.157762311894835,
+            "dijkstra_cost": 68.73041621001501,
+            "eval_ms": 5.62720000743866
+          },
+          {
+            "source": "Node_542",
+            "destination": "Node_21",
+            "cost": 855.0082738737348,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 12.112644364177962,
+            "dijkstra_cost": 70.58807706782373,
+            "eval_ms": 12.032300001010299
+          },
+          {
+            "source": "Node_25",
+            "destination": "Node_152",
+            "cost": 553.338371065496,
+            "reached": true,
+            "reasonable": false,
+            "cost_ratio": 9.871623564374742,
+            "dijkstra_cost": 56.053431075148964,
+            "eval_ms": 7.81989999813959
+          }
+        ]
+      }
+    }
+  }
+}

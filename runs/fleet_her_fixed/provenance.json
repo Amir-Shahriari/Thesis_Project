@@ -1,0 +1,5 @@
+{
+  "commit": "fa4902b1a881b796cdfdd5d33f3f60451d55787e",
+  "torch": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 5080"
+}
