@@ -53,6 +53,7 @@ def relabel_trajectory(
     strategy: str = "future",
     rng: np.random.Generator | None = None,
     iteration: int = 0,
+    original_goal: str | None = None,
 ) -> list[Transition]:
     """Produce hindsight transitions from one failed (or any) trajectory.
 
@@ -64,6 +65,10 @@ def relabel_trajectory(
         strategy: "future" or "final".
         rng: generator for future-goal sampling; a fresh default is used if None.
         iteration: stamped onto the produced transitions for staleness tracking.
+        original_goal: the episode's own destination. Relabels to it are
+            skipped: those transitions are already stored with their real
+            reward, and the arriving step's reward already carries the +100
+            bonus, so relabelling it would add the bonus a second time.
 
     Returns:
         New Transition objects tagged is_expert=False. They are ordinary online
@@ -99,6 +104,8 @@ def relabel_trajectory(
         for j in set(int(t) for t in targets):
             goal = moves[j][3]          # next_state of the chosen future step
             if goal == s:               # goal == current state is degenerate
+                continue
+            if goal == original_goal:   # already stored as real experience
                 continue
             reached = (j == i)
             out.append(Transition(

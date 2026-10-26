@@ -307,7 +307,7 @@ def train_gnn_dqn(
                 if her_k > 0 and len(traj) >= 2:
                     for t in relabel_trajectory(
                         traj, k=her_k, strategy=her_strategy,
-                        rng=her_rng, iteration=iteration,
+                        rng=her_rng, iteration=iteration, original_goal=dst,
                     ):
                         buffer.add_online_transition(t)
 
