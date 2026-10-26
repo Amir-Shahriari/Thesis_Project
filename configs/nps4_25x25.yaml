@@ -1,0 +1,6 @@
+# 25x25 single-query A/B with pre-population kept off the evaluation state.
+# discover_all_paths restores the graph RNG, so training replays the
+# pre-population states; with pre_seed_n_states == n_iterations (5) the
+# evaluation state is one of them. 4 < 5 leaves state 5 undemonstrated.
+# Everything else is the run_multi_seed_warm_vs_cold.py default.
+pre_seed_n_states: 4
