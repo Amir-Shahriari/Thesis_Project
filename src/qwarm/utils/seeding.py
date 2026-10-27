@@ -19,7 +19,6 @@ def set_global_seed(seed: int) -> np.random.Generator:
         # WDDM note: CUDA graphs (deferred) would cut batch_infer overhead to
         # ~10-30 ms on Linux/WSL2; on Windows WDDM the driver adds ~15 µs per
         # kernel launch regardless — see GPU2 gate comment in test_batch_infer.py.
-        # TODO(perf): CUDA graphs on Linux/WSL2 cuts batch_infer to 10-30 ms; deferred to PhD Y1
         os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
         torch.use_deterministic_algorithms(True, warn_only=True)
         torch.backends.cudnn.deterministic = True

@@ -10,7 +10,8 @@ import json
 import math
 import pathlib
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\Demo\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs"
 d = json.load(open(RUNS / "learning_curves_25x25.json"))
 arms = d["sample_efficiency"]["arms"]
 

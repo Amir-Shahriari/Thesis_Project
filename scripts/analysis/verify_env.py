@@ -1,7 +1,9 @@
 """Regression check: defaults must reproduce the published env exactly."""
+import pathlib
 import sys
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 from qwarm.env.pathfinding_env import PathfindingEnv

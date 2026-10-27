@@ -4,9 +4,8 @@ import math
 import pathlib
 from statistics import median
 
-rows = json.loads(pathlib.Path(
-    r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\sweep_phase3_masked.json"
-).read_text())
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+rows = json.loads((ROOT / "runs" / "sweep_phase3_masked.json").read_text())
 rows = rows if isinstance(rows, list) else rows.get("cells", [])
 
 

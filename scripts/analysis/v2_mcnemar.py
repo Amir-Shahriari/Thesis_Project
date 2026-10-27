@@ -10,7 +10,8 @@ import json
 import math
 import pathlib
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\Demo\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs"
 
 
 def mcnemar_exact(b, c):

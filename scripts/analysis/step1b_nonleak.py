@@ -8,10 +8,12 @@ that keep the reward solution-agnostic:
   (b) normalise edge weights so per-step cost is O(1) (bonus unchanged)
   (c) invalid_penalty_mode='scaled', which removes the cheap escape hatch
 """
+import pathlib
 import heapq
 import sys
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 

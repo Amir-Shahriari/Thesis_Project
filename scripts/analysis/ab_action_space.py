@@ -11,8 +11,8 @@ import math
 import pathlib
 from statistics import median
 
-R = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
-D = pathlib.Path(r"C:\Users\amirh\Desktop\Demo\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+R = ROOT / "runs"
 
 
 def load(p):
@@ -61,7 +61,7 @@ print("\n" + "=" * 72)
 print(" FOR REFERENCE ONLY -- different codebase/torch/device/oracle pool")
 print("=" * 72)
 pub = summarise("PUBLISHED (reactive, June, full pool)",
-                load(D / "sweep_phase3_final.json"))
+                load(R / "sweep_phase3_final.json"))
 
 print("\n" + "=" * 72)
 print(" VERDICT")

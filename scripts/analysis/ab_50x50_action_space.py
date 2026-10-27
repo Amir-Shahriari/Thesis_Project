@@ -10,7 +10,8 @@ import os
 import pathlib
 from statistics import median
 
-R = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+R = ROOT / "runs"
 
 
 def _arm_dir(var, default):

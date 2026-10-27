@@ -12,10 +12,11 @@ import math
 import pathlib
 from statistics import median
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs"
 ABL = json.loads((RUNS / "demo_source_ablation_partial.json").read_text())
 FULL = json.loads(
-    (pathlib.Path(r"C:\Users\amirh\Desktop\Demo\runs\sweep_phase3_traced.json")
+    (ROOT / "runs" / "sweep_phase3_traced.json"
      ).read_text())
 
 

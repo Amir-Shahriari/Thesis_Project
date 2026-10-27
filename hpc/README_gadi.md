@@ -57,8 +57,8 @@ off-cluster when a run finishes.
 
 ```bash
 cd /scratch/<project>/$USER
-git clone <your-repo-url> qwarm-gnn-rl
-cd qwarm-gnn-rl
+git clone <your-repo-url> Thesis_Project
+cd Thesis_Project
 ```
 
 **The single most common Gadi mistake:** a job that cannot see its own files.
@@ -134,7 +134,7 @@ so a timed-out array task can simply be resubmitted.
 
 ```bash
 # from your local machine
-rsync -avz gadi:/scratch/<project>/$USER/qwarm-gnn-rl/runs/ ./runs/
+rsync -avz gadi:/scratch/<project>/$USER/Thesis_Project/runs/ ./runs/
 ```
 
 Do bulk data movement through the `copyq` queue rather than a login node when

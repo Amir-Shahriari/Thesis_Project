@@ -2,7 +2,8 @@
 import json
 import pathlib
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs"
 d = json.load(open(RUNS / "geometry_study_aggregate.json"))
 
 for scale, v in d["scales"].items():

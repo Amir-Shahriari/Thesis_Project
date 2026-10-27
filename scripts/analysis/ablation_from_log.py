@@ -10,8 +10,8 @@ import pathlib
 import re
 from statistics import median
 
-LOG = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs"
-                   r"\demo_source_ablation.log")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+LOG = ROOT / "runs" / "demo_source_ablation.log"
 text = LOG.read_text(errors="replace")
 
 pat = re.compile(

@@ -11,8 +11,9 @@ import math
 import pathlib
 from datetime import datetime
 
-R = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
-OUT = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\RESULTS_SUMMARY.md")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+R = ROOT / "runs"
+OUT = ROOT / "RESULTS_SUMMARY.md"
 
 
 def mcnemar(b, c):
@@ -121,7 +122,7 @@ _p = R / "sweep_phase3_unmasked_ctrl.json"
 L.append(row("25x25 reactive (A/B control)", sweep(_p), _p))
 _p = R / "sweep_phase3_masked.json"
 L.append(row("25x25 **masked**", sweep(_p), _p))
-_p = pathlib.Path(r"C:\Users\amirh\Desktop\Demo\runs\sweep_phase3_final.json")
+_p = ROOT / "runs" / "sweep_phase3_final.json"
 L.append(row("25x25 published (June, reference)", sweep(_p), _p))
 _p = R / "sweep_50x50" / "sweep_v1_50x50_1x.json"
 L.append(row("50x50 published reactive (reference)", sweep(_p), _p))

@@ -46,13 +46,13 @@ arrives (13 steps, cost 295.2) while the cold agent wanders until its step budge
 expires. Route quality is the standing limitation — the warm route costs 4.42×
 the Dijkstra optimum (66.7) even though it reaches.*
 
-Paper under review at IEEE ICDM 2026 (demo track).
+Paper accepted at IEEE ICDM 2026 (demo track).
 
 ## Quick start (one command)
 
 ```bash
-git clone https://github.com/Amir-Shahriari/qwarm-gnn-rl.git
-cd qwarm-gnn-rl
+git clone https://github.com/Amir-Shahriari/Thesis_Project.git
+cd Thesis_Project
 uv sync --extra dev
 uv run python scripts/run_demo.py
 ```

@@ -7,5 +7,5 @@ REM (Planned)") killed the masked arm four minutes in. A .bat wrapper is used
 REM rather than passing a command string to bash -c through Start-Process,
 REM because the nested quoting silently fails and the process exits without
 REM writing a log.
-cd /d C:\Users\amirh\Desktop\qwarm-gnn-rl
+cd /d "%~dp0.."
 "C:\Program Files\Git\bin\bash.exe" scripts/run_50x50_ab_gpu.sh > runs\ab_gpu_driver.log 2>&1

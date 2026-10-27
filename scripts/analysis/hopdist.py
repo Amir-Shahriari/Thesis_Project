@@ -5,10 +5,12 @@ graph is a rewired small-world, hop distances concentrate, and Spearman rho
 against hop distance is near zero for ANY embedding. Measure the hop
 distribution directly, with a pure-grid control.
 """
+import pathlib
 import sys
 from collections import deque, Counter
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 

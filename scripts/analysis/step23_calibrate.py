@@ -7,11 +7,13 @@
     p_deact holding solvable-query fraction fixed across densities, and size
     T_max to the resulting path lengths.
 """
+import pathlib
 import heapq
 import sys
 from collections import deque
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 

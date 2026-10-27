@@ -14,7 +14,8 @@ import json
 import pathlib
 import sys
 
-R = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+R = ROOT / "runs"
 
 
 def audit(root, label):

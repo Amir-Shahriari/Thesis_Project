@@ -9,10 +9,9 @@ import math
 import pathlib
 from statistics import median
 
-NEW = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs"
-                   r"\sweep_50x50_masked\sweep_v1_50x50_1x.json")
-OLD = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs"
-                   r"\sweep_50x50\sweep_v1_50x50_1x.json")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+NEW = ROOT / "runs" / "sweep_50x50_masked" / "sweep_v1_50x50_1x.json"
+OLD = ROOT / "runs" / "sweep_50x50" / "sweep_v1_50x50_1x.json"
 
 
 def mcnemar(b, c):

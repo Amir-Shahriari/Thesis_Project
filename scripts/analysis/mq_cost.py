@@ -11,7 +11,8 @@ import math
 import pathlib
 from statistics import median
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs" / "fleet"
 
 
 def wilcoxon_signed_rank(diffs):

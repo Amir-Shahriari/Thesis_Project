@@ -5,10 +5,12 @@ position -- must correlate strongly with hop distance. On a real grid they
 should reach rho ~ 0.9. If they do not on the as-used graph, the probe is
 measuring the generator, not the representation.
 """
+import pathlib
 import sys
 from collections import deque
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from scipy.stats import spearmanr
 from qwarm.env.dynamic_graph import DynamicGraph

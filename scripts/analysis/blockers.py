@@ -6,10 +6,12 @@ B2: a fixed +100 bonus against normalised step cost makes the
     reach-vs-efficiency weighting vary along the density axis being swept.
     Does bonus = beta * E[C*] remove that?
 """
+import pathlib
 import heapq
 import sys
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 

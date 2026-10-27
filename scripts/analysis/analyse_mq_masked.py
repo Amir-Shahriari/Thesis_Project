@@ -9,7 +9,8 @@ import json
 import math
 import pathlib
 
-RUNS = pathlib.Path(r"C:\Users\amirh\Desktop\qwarm-gnn-rl\runs\fleet")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+RUNS = ROOT / "runs" / "fleet"
 
 
 def mcnemar(b, c):

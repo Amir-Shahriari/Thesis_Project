@@ -9,10 +9,12 @@ If optimal return < -5, an optimal agent should terminate immediately and
 NO amount of training or warm-starting can fix it. That decides whether the
 high-diameter sweep is worth starting at all.
 """
+import pathlib
 import heapq
 import sys
 
-sys.path.insert(0, r"C:\Users\amirh\Desktop\qwarm-gnn-rl\src")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 import numpy as np
 from qwarm.env.dynamic_graph import DynamicGraph
 
