@@ -124,10 +124,14 @@ Full training/eval provenance and seeds: `scripts/run_multi_seed_warm_vs_cold.py
 **Scope of this package.** The table above covers every quantitative claim the
 paper makes about the demonstrated system. Figures the paper attributes to the
 thesis — the within-trajectory adaptation result (6/6 at Δ∈{15,30,50}) and the
-full 100×100 quality characterisation — are *not* reproduced here; the
-within-trajectory code path exists (`realtime_perturb` in
-`src/qwarm/env/pathfinding_env.py`) but its result artefacts are not part of
-this repository.
+full 100×100 quality characterisation — are not re-derived by
+`verify_demo_claims.py`. Their artefacts are committed
+(`runs/v3_realtime_25x25_aggregate.json`, `runs/sweep_v1_on_100x100.json`,
+`runs/sweep_100x100_masked.json`) and indexed, with every other thesis
+artefact, in Table S11 of
+[the supplementary material](supplementary/Shahriari_MRes_thesis_supplementary_material.pdf).
+The within-trajectory code path is `realtime_perturb` in
+`src/qwarm/env/pathfinding_env.py`.
 
 **Run-to-run variance.** `verify_demo_claims.py` re-derives the headline numbers
 from the committed artefacts; it does not retrain, and *retraining at the same
@@ -158,16 +162,15 @@ Three operating points appear in the results: 25×25, 50×50, and 100×100. They
 differ in more than grid size, and the differences are not recorded in the
 per-cell artefacts, so this table names the source of every value.
 
-There is **no `configs/` directory in this repository**. The
-`--config configs/default.yaml` invocation shown in the
-`scripts/run_multi_seed_warm_vs_cold.py` docstring and argparse help refers to a
-file that has never been committed. All configurations that *can* be read are
-hardcoded Python constants: `GRID_TEMPLATE`/`TRAIN_CFG` in
-`scripts/run_multi_seed_warm_vs_cold.py` (25×25) and `GRID_CFG`/`TRAIN_CFG` in
-`scripts/run_sweep_50x50.py` (50×50). The 100×100 column below is recovered from
-`runs/cold_4x_control_results.json`, which embeds `grid` and `training_config`
-blocks — but those record the **cold** arm, so several 100×100 *warm* values are
-genuinely unrecoverable and are marked as such rather than left blank.
+The 25×25 values are the `GRID_TEMPLATE`/`TRAIN_CFG` constants in
+`scripts/run_multi_seed_warm_vs_cold.py`, and the 50×50 values the
+`GRID_CFG`/`TRAIN_CFG` constants in `scripts/run_sweep_50x50.py`. The 100×100
+single-query sweeps run the 25×25 driver with `--config configs/default.yaml`
+(see `scripts/run_all_masked.sh`), which overrides the grid, iteration, episode,
+hidden-dimension, ρ and pre-seeding values; everything else keeps the driver's
+constants. `configs/nps4_25x25.yaml` is the 25×25 re-run with no
+demonstrations on the evaluation state, and `configs/fleet.yaml` the multi-query
+graph.
 
 Provenance: **[A]** read from a committed artefact · **[C]** code constant or
 library default · **[D]** derived from other recorded values · **[?]** not
@@ -182,24 +185,26 @@ was in effect when the artefacts were produced. That caveat applies to every
 **[C]** cell below; it bears most on node deactivation at 25×25, where the value
 comes from a class default the configuration never passes.
 
-| Parameter | 25×25 | 50×50 (1×) |
-|---|---|---|
-| Nodes | 625 **[C]** | 2,500 **[C]** |
-| Hidden dimension | 64 **[C]** | 128 **[C]** |
-| Expert ratio ρ (warm) | 0.40 **[C]** | 0.30 **[C]** |
-| Iterations N_it | 5 **[C]** | 10; 4× tier = 40 **[C]** |
-| Episodes per iteration N_ep | 100 **[C]** | 200 **[C]** |
-| Gradient steps per episode | 4 **[C]** | 4 **[C]** |
-| Batch size | 64 **[C]** | 64 **[C]** |
-| Extra edges E_extra | 2 **[C]** | 3 **[C]** |
-| Edge deactivation p_deact | 0.15 **[C]** | 0.22 **[C]** |
-| Node deactivation | 0.05 **[C]** (class default, not passed) | 0.05 **[C]** (passed explicitly) |
-| Pre-seed states N_ps | 5 **[C]** | 3 **[C]** |
-| Pre-seed k-paths K | 10 **[C]** | 3 **[C]** |
-| ε schedule | 0.40 → 0.05 over 5 iterations **[C/D]** | 0.40 → 0.05 over 10 (4×: 40) **[C/D]** |
-| T_max, training | 400 **[C]** | 400 **[C]** |
-| T_max, evaluation | 300 **[C]** | 300 and 1000, dual-budget **[C]** |
-| Effective oracle set | A\* + stochastic + QAOA **[D]** | A\* + stochastic **[D]** |
+| Parameter | 25×25 | 50×50 (1×) | 100×100 (1×) |
+|---|---|---|---|
+| Nodes | 625 **[C]** | 2,500 **[C]** | 10,000 **[C]** |
+| Hidden dimension | 64 **[C]** | 128 **[C]** | 128 **[C]** |
+| Expert ratio ρ (warm) | 0.40 **[C]** | 0.30 **[C]** | 0.30 **[C]** |
+| Iterations N_it | 5 **[C]** | 10; 4× tier = 40 **[C]** | 10 **[C]** |
+| Episodes per iteration N_ep | 100 **[C]** | 200 **[C]** | 200 **[C]** |
+| Gradient steps per episode | 4 **[C]** | 4 **[C]** | 4 **[C]** |
+| Batch size | 64 **[C]** | 64 **[C]** | 64 **[C]** |
+| Extra edges E_extra | 2 **[C]** | 3 **[C]** | 4 **[C]** |
+| Edge deactivation p_deact | 0.15 **[C]** | 0.22 **[C]** | 0.30 **[C]** |
+| Node deactivation | 0.05 **[C]** (class default, not passed) | 0.05 **[C]** (passed explicitly) | 0.05 **[C]** (class default, not passed) |
+| Pre-seed states N_ps | 5 **[C]** | 3 **[C]** | 3 **[C]** |
+| Pre-seed k-paths K | 10 **[C]** | 3 **[C]** | 3 **[C]** |
+| ε schedule | 0.40 → 0.05 over 5 iterations **[C/D]** | 0.40 → 0.05 over 10 (4×: 40) **[C/D]** | 0.40 → 0.05 over 10 **[C/D]** |
+| T_max, training | 400 **[C]** | 400 **[C]** | 400 **[C]** |
+| T_max, evaluation | 300 **[C]** | 300 and 1000, dual-budget **[C]** | 300 **[C]** |
+| Effective oracle set | A\* + stochastic + QAOA **[D]** | A\* + stochastic **[D]** | A\* + stochastic **[D]** |
+
+The 100×100 column is `configs/default.yaml` plus the driver's constants.
 
 Batch size and gradient steps per episode are identical across all three, as are
 γ (0.95), the learning rate (1e-4) and — between 25×25 and 50×50 — training
@@ -208,15 +213,11 @@ used. Only the ε decay *rate* differs, and it follows from the iteration count
 rather than being set independently
 (`eps_decay = (0.40 - 0.05) / (N_it - 1)`).
 
-The two **[?]** entries in the 100×100 column are marked so deliberately. ε and
-training T_max are trainer defaults in
-`src/qwarm/training/train_gnn_dqn.py`, and neither is exposed through
-`TRAIN_CFG`, so any run driven by `scripts/run_multi_seed_warm_vs_cold.py` would
-use 0.40 → 0.05 and 400. But the 100×100 values in this table come from
-`runs/cold_4x_control_results.json`, whose `checkpoint` paths point outside this
-repository, so the script that produced them is not available here and the
-defaults cannot be confirmed to apply. They are most likely the same; they are
-not evidenced.
+ε and training T_max are trainer defaults in
+`src/qwarm/training/train_gnn_dqn.py`; neither is exposed through `TRAIN_CFG` or
+the YAML configs. The 100×100 4× cold control
+(`runs/cold_4x_control_results.json`) embeds its own `grid` and
+`training_config` blocks; its `checkpoint` paths point outside this repository.
 
 **Training budget.** Total gradient steps are `N_it × N_ep × grad_steps × queries`,
 with one query per cell:
@@ -226,19 +227,16 @@ with one query per cell:
 | 25×25 | 2,000 **[D]** | not recorded |
 | 50×50 1× | 8,000 **[D]** | warm median 8,000 **[A]** |
 | 50×50 4× | 32,000 **[D]** | warm median 32,000 **[A]** |
+| 100×100 1× | 8,000 **[D]** | not recorded |
 | 100×100 4× | 32,000 **[D]** | `total_rollouts: 8000` (40 × 200) **[A]** |
 
 "1×" and "4×" refer to these totals. The 50×50 rows are corroborated per cell:
 those artefacts record `warm_grad_steps_total`/`cold_grad_steps_total`, which is
-what the check column reports. The 25×25 row is arithmetic only — that artefact
-records no gradient-step field.
-
-No 100×100 run at 1× is present in this repository, so its 8,000-step budget is
-not tabulated above: it would follow from dividing the recorded 40 iterations by
-the recorded `compute_multiplier: 4`. On that inference — and only on it — the
-50×50 1× budget would equal the 100×100 1× budget, making the 25×25 run a
-quarter of both. Treat that as a plausible reading of two recorded numbers, not
-as a measured correspondence.
+what the check column reports. The 25×25 and 100×100 1× rows are arithmetic
+only — those artefacts (`runs/sweep_phase3_final.json`,
+`runs/sweep_v1_on_100x100.json`, `runs/sweep_100x100_masked.json`) record no
+gradient-step field. The 50×50 and 100×100 1× budgets are equal, and the 25×25
+run is a quarter of both.
 
 Cold medians run ~40 steps short of warm (7,960 and 31,960). Those totals are
 artefact-recorded; the explanation is not, but follows from the trainer, where
@@ -254,11 +252,10 @@ contribute, while at 50×50 (2,500) the effective pool reduces to
 inferred from the size guard rather than observed — no artefact records which
 oracle produced a given seeded path.
 
-The same guard would apply at 100×100 (10,000 nodes), but the script that
-produced those runs is not in this repository, so which oracles it constructed
-is unknown; all that can be said is that QAOA could not have contributed at that
-size. In every case this follows from graph size rather than from a
-configuration choice, and it is not visible in the `oracle_pool` setting.
+The 100×100 sweeps use the same driver and pool, so the same guard leaves
+`ClassicalAStar` plus `QuantumInspiredStochasticOracle` at 10,000 nodes. In
+every case this follows from graph size rather than from a configuration
+choice, and it is not visible in the `oracle_pool` setting.
 
 **Warm/cold pairing.** Within each configuration the two arms are matched: the
 cold agent is built on a separate `DynamicGraph` constructed from the same
