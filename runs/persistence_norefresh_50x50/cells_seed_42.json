@@ -1,0 +1,157 @@
+[
+  {
+    "seed": 42,
+    "scenario_id": "seed191664964_s0",
+    "grid_seed": 191664964,
+    "source": "Node_2147",
+    "destination": "Node_215",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1826.8108996000083,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 66.72867919065835,
+        "strict": true,
+        "cost": 596.9927258303649,
+        "strict_1000": true,
+        "cost_1000": 596.9927258303649
+      },
+      "keep_no_refresh": {
+        "arm": "keep_no_refresh",
+        "train_s": 1923.2230775000062,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 66.72867919065835,
+        "expert_pool_size": 61,
+        "rl_steps_start": 0,
+        "strict": true,
+        "cost": 868.9443400785985,
+        "strict_1000": true,
+        "cost_1000": 868.9443400785985
+      }
+    }
+  },
+  {
+    "seed": 42,
+    "scenario_id": "seed191664964_s1",
+    "grid_seed": 191664964,
+    "source": "Node_1744",
+    "destination": "Node_504",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1877.4520597999945,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 56.56343485779666,
+        "strict": true,
+        "cost": 87.21077842980199,
+        "strict_1000": true,
+        "cost_1000": 87.21077842980199
+      },
+      "keep_no_refresh": {
+        "arm": "keep_no_refresh",
+        "train_s": 1895.0516288000072,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 56.56343485779666,
+        "expert_pool_size": 47,
+        "rl_steps_start": 0,
+        "strict": true,
+        "cost": 3434.3841592728263,
+        "strict_1000": true,
+        "cost_1000": 3434.3841592728263
+      }
+    }
+  },
+  {
+    "seed": 42,
+    "scenario_id": "seed191664964_s2",
+    "grid_seed": 191664964,
+    "source": "Node_321",
+    "destination": "Node_2100",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1922.758627999996,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.79796485559005,
+        "strict": true,
+        "cost": 685.6407830290825,
+        "strict_1000": true,
+        "cost_1000": 685.6407830290825
+      },
+      "keep_no_refresh": {
+        "arm": "keep_no_refresh",
+        "train_s": 1927.5042580000008,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 54.79796485559005,
+        "expert_pool_size": 51,
+        "rl_steps_start": 0,
+        "strict": true,
+        "cost": 2057.921917686865,
+        "strict_1000": true,
+        "cost_1000": 2057.921917686865
+      }
+    }
+  },
+  {
+    "seed": 42,
+    "scenario_id": "seed191664964_s3",
+    "grid_seed": 191664964,
+    "source": "Node_160",
+    "destination": "Node_2146",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1893.8041512999916,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 51.28783352584724,
+        "strict": true,
+        "cost": 463.1418220320155,
+        "strict_1000": true,
+        "cost_1000": 463.1418220320155
+      },
+      "keep_no_refresh": {
+        "arm": "keep_no_refresh",
+        "train_s": 1921.8558229000046,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 51.28783352584724,
+        "expert_pool_size": 52,
+        "rl_steps_start": 0,
+        "strict": true,
+        "cost": 51.287833525847255,
+        "strict_1000": true,
+        "cost_1000": 51.287833525847255
+      }
+    }
+  },
+  {
+    "seed": 42,
+    "scenario_id": "seed191664964_s4",
+    "grid_seed": 191664964,
+    "source": "Node_1896",
+    "destination": "Node_1752",
+    "arms": {
+      "persistent": {
+        "arm": "persistent",
+        "train_s": 1903.5558886000072,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 55.043989824581104,
+        "strict": true,
+        "cost": 728.460340384577,
+        "strict_1000": true,
+        "cost_1000": 728.460340384577
+      },
+      "keep_no_refresh": {
+        "arm": "keep_no_refresh",
+        "train_s": 1913.393112699996,
+        "grad_steps_total": 8000,
+        "dijkstra_cost": 55.043989824581104,
+        "expert_pool_size": 51,
+        "rl_steps_start": 0,
+        "strict": true,
+        "cost": 1054.6009927649818,
+        "strict_1000": true,
+        "cost_1000": 1054.6009927649818
+      }
+    }
+  }
+]

@@ -1,0 +1,41 @@
+arms=['persistent', 'keep_no_refresh']  n_pre=1000  iters=10  eps=200  torch=2.11.0+cu128  device=cuda:0  smoke=False
+  seed=2024 seed518677876_s0 persistent       reach=True cost=2772.3022136597374 steps=8000 t=1919s
+  seed=2024 seed518677876_s0 keep_no_refresh  reach=True cost=261.0482294830414 steps=8000 t=1929s
+  seed=2024 seed518677876_s1 persistent       reach=True cost=912.0340536526684 steps=8000 t=1909s
+  seed=2024 seed518677876_s1 keep_no_refresh  reach=True cost=279.195395011799 steps=8000 t=1930s
+  seed=2024 seed518677876_s2 persistent       reach=False cost=None steps=8000 t=1942s
+  seed=2024 seed518677876_s2 keep_no_refresh  reach=False cost=None steps=8000 t=1936s
+  seed=2024 seed518677876_s3 persistent       reach=True cost=619.545795369505 steps=8000 t=1968s
+  seed=2024 seed518677876_s3 keep_no_refresh  reach=True cost=62.7668631257607 steps=8000 t=1933s
+  seed=2024 seed518677876_s4 persistent       reach=True cost=1772.4468135934453 steps=8000 t=1949s
+  seed=2024 seed518677876_s4 keep_no_refresh  reach=False cost=None steps=8000 t=1787s
+{
+  "n_cells": 24,
+  "arms": {
+    "persistent": {
+      "reach": 21,
+      "n": 24,
+      "reach_1000": 21
+    },
+    "keep_no_refresh": {
+      "reach": 20,
+      "n": 24,
+      "reach_1000": 21
+    }
+  },
+  "tests": {
+    "persistent_vs_keep_no_refresh": {
+      "reach": {
+        "b_first_only": 1,
+        "c_second_only": 0,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 20,
+        "p": 0.4413337707519531,
+        "first_cheaper": 11
+      }
+    }
+  },
+  "eval_state_consistent_cells": 24
+}

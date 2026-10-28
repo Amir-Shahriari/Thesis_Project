@@ -1,0 +1,36 @@
+{
+  "label": "50x50 persistence ablation",
+  "recorded_at": "2026-10-28 20:36:59",
+  "torch_version": "2.11.0+cu128",
+  "torch_file": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_available": true,
+  "resolved_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "sys_executable": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\.venv\\Scripts\\python.exe",
+  "sys_prefix": "C:\\Users\\amirh\\Desktop\\Thesis_Project\\.venv",
+  "python": "3.11.15",
+  "git_rev": "b8f2ede",
+  "git_dirty_files": [],
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "arms": [
+    "persistent",
+    "keep_no_refresh"
+  ],
+  "n_pretrain": 1000,
+  "n_iterations": 10,
+  "episodes_per_iteration": 200,
+  "smoke": false,
+  "env": {
+    "QWARM_MASK_VISITED": "1",
+    "QWARM_SEEDS": "7",
+    "QWARM_ARMS": "persistent,keep_no_refresh",
+    "QWARM_N_PRETRAIN": null,
+    "QWARM_OUT_DIR": "runs/persistence_norefresh_50x50",
+    "QWARM_SMOKE": null,
+    "CUDA_VISIBLE_DEVICES": null
+  }
+}

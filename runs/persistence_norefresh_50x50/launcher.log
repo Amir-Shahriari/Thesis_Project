@@ -1,0 +1,38 @@
+torch 2.11.0+cu128  cuda=True
+started 2026-10-28 20:35:55
+[launch] seed 42
+[launch] seed 1337
+[launch] seed 2024
+[launch] seed 7
+[launch] seed 314159
+shards finished 2026-10-29 01:57:43, 0 non-zero exits
+{
+  "n_cells": 25,
+  "arms": {
+    "persistent": {
+      "reach": 22,
+      "n": 25,
+      "reach_1000": 22
+    },
+    "keep_no_refresh": {
+      "reach": 21,
+      "n": 25,
+      "reach_1000": 22
+    }
+  },
+  "tests": {
+    "persistent_vs_keep_no_refresh": {
+      "reach": {
+        "b_first_only": 1,
+        "c_second_only": 0,
+        "p_exact": 1.0
+      },
+      "cost": {
+        "n_both_reached": 21,
+        "p": 0.2942523956298828,
+        "first_cheaper": 12
+      }
+    }
+  },
+  "eval_state_consistent_cells": 25
+}
